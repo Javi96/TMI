@@ -26,3 +26,8 @@ En este documento se describen los principales riesgos del proeyctos. Están org
 | :------------- |
 | Un miembro del equipo abandona el proyecto a mitad del desarrollo | 
 | **Categoría:** |
+
+| **Algún miembro del equipo no cumple con la planificación fijada** |
+| :------------- |
+| Uno o varios miembros del equipo no se ajustan con los plazos de las tareas o no consideran las dependencias entre ellas | 
+| **Categoría:** |
