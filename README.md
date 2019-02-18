@@ -6,6 +6,10 @@
 
 ...
 
+## Documentación
+
+- [Documento de riesgos](https://github.com/Javi96/TMI/blob/master/riesgos.md)
+
 ## Reconocimiento de texto
 https://developers.google.com/vision/android/text-overview
 
