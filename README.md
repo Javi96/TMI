@@ -22,7 +22,7 @@ http://androidkt.com/vision-api/
 
 ## Autores
 
-* **Daniel Bastarrica Lacalle** - [danibastarrica](https://github.com/danibastarrica)
+* **Daniel Bastarrica Lacalle** - [danibastarrica](https://github.com/Dani-Basta)
 * **Aitor Cayón Ruano** - [Aitorcay](https://github.com/Aitorcay)
 * **Javier Cortés Tejada** - [Javi96](https://github.com/Javi96)
 * **Gabriel Sellés Salvà** - [bselles](https://github.com/bselles)
