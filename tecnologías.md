@@ -1,3 +1,5 @@
+# Tecnologías utilizadas
+
 La principal funcionalidad que debe implementar nuestra aplicación es el procesado tanto de imágenes como de texto.
 Para el desarrollo vamos a utilizar las siguientes tecnologías:
 
@@ -7,10 +9,15 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   
 - **Android Studio:** la aplicación se desarrollará de forma nativa para el sistema operativo Android usando Android Studio
   como entorno de trabajo.
-  
-- **Text Recognition API de Google:** para el reconocimeinto de texto en imágenes.
-
-- **Google Cloud Vision API:** para el reconocimiento de imágenes en general.
 
 - **SQLite:** para la gestión de la base de datos local asociada a la aplicación. En esta se almacenarán los productos de los que
   dispone el usuario y se utilizará como referencia para identificar los ingredientes pendientes para elaborar las recetas.
+  
+- **Text Recognition API de Google:** para el reconocimeinto de texto en imágenes.<br/>
+  https://developers.google.com/vision/android/text-overview
+
+- **Google Cloud Vision API:** para el reconocimiento de imágenes en general.<br/>
+  https://cloud.google.com/vision/?hl=es
+
+- **Stanford CoreNLP**: para el procesamiento de lenguaje natural.<br/>
+  https://stanfordnlp.github.io/CoreNLP/
