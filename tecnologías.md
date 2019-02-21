@@ -8,16 +8,23 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   en issues, las cuales serán asignadas a cada integrante del grupo y revisadas por el resto.
   
 - **Android Studio:** la aplicación se desarrollará de forma nativa para el sistema operativo Android usando Android Studio
-  como entorno de trabajo.
+  como entorno de trabajo. Será requisito necesario una versión de sistema oprativo igual o superior a Android 4.0.3 
+  IceCreamSandwich.
 
 - **SQLite:** para la gestión de la base de datos local asociada a la aplicación. En esta se almacenarán los productos de los que
   dispone el usuario y se utilizará como referencia para identificar los ingredientes pendientes para elaborar las recetas.
   
-- **Text Recognition API de Google:** para el reconocimeinto de texto en imágenes.<br/>
+- **Java:** 
+  
+- **Text Recognition API de Google:** para el reconocimiento de texto en imágenes.<br/>
   https://developers.google.com/vision/android/text-overview
-
-- **Google Cloud Vision API:** para el reconocimiento de imágenes en general.<br/>
-  https://cloud.google.com/vision/?hl=es
+  
+  Esta API nos permite la detección de texto a tres niveles:
+  - Bloque: un conjunto de líneas como podrían ser un párrafo o columna.
+  - Línea: un conjunto de palabras contiguas localizadas en el mismo eje.
+  - Palabras: un conjunto de caracteres alfanuméricos localizados en el mismo eje.
+  
+  ![texto](https://developers.google.com/vision/images/text-structure.png)
 
 - **Stanford CoreNLP**: para el procesamiento de lenguaje natural.<br/>
   https://stanfordnlp.github.io/CoreNLP/
