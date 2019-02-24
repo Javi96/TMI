@@ -16,7 +16,7 @@ https://developers.google.com/vision/android/text-overview
 ## Camara en para JS
 https://github.com/jhuckaby/webcamjs
 
-## Reconocimiento de cosas
+## Reconocimiento de objetos
 Tutorial
 http://androidkt.com/vision-api/
 
