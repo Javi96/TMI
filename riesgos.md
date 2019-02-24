@@ -69,7 +69,7 @@ A continuación tenemos una tabla con los distintos niveles de riesgo en base a 
 | **Categoría:** ![#6E6E6E](https://placehold.it/15/6E6E6E/000000?text=+) Riesgo intolerable|
 | **Impacto:** Extremadamente dañino |
 | **Probabilidad:** Alta |
-| **Plan de contingencia:** Sería necesario volver a buscar nuevas tecnologías que cumpliésen con las funciones necesitadas. En caso de que se llegase a este punto se tendría que volver a hacer la planificación temporal con el consiguiente reajuste de las tareas del proyecto |
+| **Plan de contingencia:** Sería necesario volver a buscar nuevas tecnologías que cumpliesen con las funciones necesitadas. En caso de que se llegase a este punto se tendría que volver a hacer la planificación temporal con el consiguiente reajuste de las tareas del proyecto |
 
 | **Falta de conocimiento técnico** |
 | :------------- |
