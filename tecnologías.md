@@ -6,7 +6,7 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
 ## Gestión del proyecto
 
 - **Github:** como plataforma para el control de versiones. Alojará el repositorio de todo el material y será utilizada como
-  herramienta de gestión para coordinadar la actividad del equipo y la distribución de las tareas. Seguiremos un sistema basado
+  herramienta de gestión para coordinar la actividad del equipo y la distribución de las tareas. Seguiremos un sistema basado
   en issues, las cuales serán asignadas a cada integrante del grupo y revisadas por el resto.
 
 ## Desarrollo de la aplicación
@@ -29,7 +29,7 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   https://developers.google.com/vision/android/text-overview
   
   Esta API nos permite la detección de texto a tres niveles:
-  - **Bloque:** un conjunto de líneas como podrían ser un párrafo o columna.
+  - **Bloque:** un conjunto de líneas como podrían ser un párrafo o una columna.
   - **Línea:** un conjunto de palabras contiguas localizadas en el mismo eje.
   - **Palabras:** un conjunto de caracteres alfanuméricos localizados en el mismo eje.
   
@@ -42,8 +42,8 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   
   Nuestro sistema debe ser capaz de, a partir de un documento, procesarlo y extraer la información sobre en qué día y momento se
   deben consumir los platos de la dieta. <br/>
-  Esta API compatible con Java nos proporciona funcionalidades para etiquetado de palabras en categorías gramaticales, para
-  extracción de sustantivos y para identificación de dependencias entre palabras.
+  Esta API compatible con Java nos proporciona funcionalidades para etiquetado de palabras en categorías gramaticales,
+  extracción de sustantivos e identificación de dependencias entre palabras.
   
   - **Etiquetado en categorías:** The/DT Itek/NNP Air/NNP Boeing/NNP 737/CD took/VBD off/RP bound/VBN for/IN Mashhad/NNP ,/,
   in/IN north-eastern/JJ Iran/NNP ,/, but/CC turned/VBD round/NN some/DT 10/CD minutes/NNS later/RB ./. 
