@@ -1,4 +1,4 @@
-# Título del proyecto
+# SLEZ - Shopping List EZ
 
 ## Motivación del proyecto
 
