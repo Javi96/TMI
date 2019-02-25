@@ -69,7 +69,7 @@ A continuación tenemos una tabla con los distintos niveles de riesgo en base a 
 | **Categoría:** ![#6E6E6E](https://placehold.it/15/6E6E6E/000000?text=+) Riesgo intolerable|
 | **Impacto:** Extremadamente dañino |
 | **Probabilidad:** Alta |
-| **Plan de contingencia:** Sería necesario volver a buscar nuevas tecnologías que cumpliesen con las funciones necesitadas. En caso de que se llegase a este punto se tendría que volver a hacer la planificación temporal con el consiguiente reajuste de las tareas del proyecto |
+| **Plan de contingencia:** Sería necesario volver a buscar nuevas tecnologías que satisfagan las necesidades de las diferentes funciones. En caso de que se llegase a este punto se tendría que volver a hacer la planificación temporal con el consiguiente reajuste de las tareas del proyecto |
 
 | **Falta de conocimiento técnico** |
 | :------------- |
@@ -77,7 +77,7 @@ A continuación tenemos una tabla con los distintos niveles de riesgo en base a 
 | **Categoría:** ![#F3F781](https://placehold.it/15/F3F781/000000?text=+) Riesgo trivial|
 | **Impacto:** Ligeramente daniño |
 | **Probabilidad:** Baja |
-| **Plan de contingencia:** Al tratarse de una aplicación sencilla y al contar con un equipo de desarrollo con expeiencia en Android no se debería llevar a cabo ninguna acción si se llega a este escenario, aunque convendría recurrir a otros proyectos o recursos online (YouTube, blogs) si se diese el caso|
+| **Plan de contingencia:** Al tratarse de una aplicación sencilla y al contar con un equipo de desarrollo con experiencia en Android no se debería llevar a cabo ninguna acción si se llega a este escenario, aunque convendría recurrir a otros proyectos o recursos online (YouTube, blogs) si se diese el caso|
 
 | **Malos tiempos de respuesta** |
 | :------------- |
