@@ -31,4 +31,4 @@ Al realizar pruebas de concepto sobre las tecnologías del sistema, no se espera
 
 ## Enlaces a la planificación temporal
 
-- [Planificación temporal del hito 1](https://github.com/Javi96/TMI/blob/master/planificacion%visio%project/planificacion.png)
+- [Planificación temporal del hito 1](https://github.com/Javi96/TMI/blob/master/planificacion%20visio%20project/planificacion.png)
