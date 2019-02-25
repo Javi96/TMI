@@ -35,21 +35,25 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   
   ![texto](https://developers.google.com/vision/images/text-structure.png)
   
-  Puede sernos de utilidad para la identificación de alimentos empaquetados o enlatados.
+  Esto puede sernos de utilidad para extraer más información y facilitar la identificación de alimentos almacenados en latas,
+  bricks, etc.
 
 - **Stanford CoreNLP:** para el procesamiento de lenguaje natural.<br/>
-  https://stanfordnlp.github.io/CoreNLP/
+  https://stanfordnlp.github.io/CoreNLP/ <br/>
+  https://nlp.stanford.edu/software/spanish-faq.shtml
   
   Nuestro sistema debe ser capaz de, a partir de un documento, procesarlo y extraer la información sobre en qué día y momento se
   deben consumir los platos de la dieta. <br/>
-  Esta API compatible con Java nos proporciona funcionalidades para etiquetado de palabras en categorías gramaticales,
-  extracción de sustantivos e identificación de dependencias entre palabras.
+  Esta API compatible con Java nos proporciona funcionalidades para etiquetado de palabras en categorías gramaticales y
+  extracción de sustantivos en su versión para español.
   
-  - **Etiquetado en categorías:** The/DT Itek/NNP Air/NNP Boeing/NNP 737/CD took/VBD off/RP bound/VBN for/IN Mashhad/NNP ,/,
-  in/IN north-eastern/JJ Iran/NNP ,/, but/CC turned/VBD round/NN some/DT 10/CD minutes/NNS later/RB ./. 
-  - **Extracción de sustantivos:** Karma of humans is AI --> Karma, humans, AI
-
-  ![texto](https://d1o2okarmduwny.cloudfront.net/wp-content/uploads/2017/02/analysis_sc.png)
+  | Name  | Description | Example |
+  | ------------- | ------------- | ------------- |
+  | grup.z *  | Numeral group  | el **2,85 %**  |
+  | grup.nom  | Noun group  | los **mercados europeos** permitieron  |
+  | grup.prep *  | Preposition group  | **a partir de** hoy  |
+  | grup.w *  | Date group  | desde el **19 de mayo** por  |
+  | sadv  | Adverbial phrase  | **Al final** se realizó  |
   
 - **OpenCV:** para análisis de imágenes y detección de objetos.<br/>
   https://opencv.org/
@@ -59,3 +63,20 @@ Para el desarrollo vamos a utilizar las siguientes tecnologías:
   y distinción de distintos alimentos haciendo uso de la cámara del móvil.
  
   ![texto](http://answers.opencv.org/upfiles/14285711591298042.png)
+  
+  ## Identificación de ingredientes
+  
+- **Edamam API:** para averiguar los ingredientes de cada receta utilizaremos la API buscador de recetas de Edamam.
+  https://developer.edamam.com/es/api-recetas-edamam-documentacion
+
+  Tras el procesado de la dieta se enviarán consultas HTTPS a las correspondientes URL para obtener los JSON de distintas
+  recetas. Entre la información devuelta encontraríamos:
+  
+  - Base con más de 200,000 de recetas.
+  - Base de datos de recetas normalizada.
+  - Lista de ingredientes.
+  - Nutrición detallada para cada receta
+  - Filtros por calorías y dietas
+  - Declaración de alérgenos
+  
+  **Ejemplo:** https://test-es.edamam.com/search?q=ensalada
