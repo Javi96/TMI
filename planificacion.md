@@ -8,15 +8,13 @@
 
 - **Duración total**: Aproximadamente 3 meses.
 
-Para ir informando al cliente sobre los avances del desarrollo y recibir el correspondiente *feedback*, se establecen distintos hitos.
+Para ir informando al cliente sobre los avances del desarrollo y recibir el correspondiente *feedback*, se establecen distintos hitos. Dichos hitos se sitúan en las siguientes fechas:
 
-Los hitos se sitúan en las siguientes fechas:
+- **25 de febrero**: entrega de la propuesta de proyecto.
 
-- **25 de febrero**: con el propósito de la entrega de la propuesta de proyecto.
+- **25 de marzo**: entrega de múltiples pruebas de concepto de las tecnologías utilizadas en el proyecto y los diseños iniciales de las vistas del sistema. 
 
-- **25 de marzo**: con el propósito de la entrega de múltiples pruebas de concepto de las tecnologías utilizadas en el proyecto y los diseños iniciales de las vistas del sistema. 
-
-- **16 de mayo**: con el propósito de la entrega definitiva del sistema y la documentación asociada al proyecto.
+- **16 de mayo**: entrega definitiva del sistema y la documentación asociada al proyecto.
 
 ## Equipo del proyecto
 
@@ -30,3 +28,7 @@ Al tener todos el rol de programador, no se crearán distinciones ni jerarquías
 Las actividades asociadas al hito II están enfocadas a la implementación de pruebas de concepto de las tecnologías que utilizará nuestra aplicación para realizar sus funcionalidades. Es decir, las implementaciones asociadas al hito II no serán fragmentos del sistema definitivo, sino que serán pequeños sistemas que utilicen las tecnologías que utiliza el sistema final.
 
 Al realizar pruebas de concepto sobre las tecnologías del sistema, no se espera que las implementaciones asociadas al hito II se puedan insertar al sistema definitivo sin realizar modificaciones. Aún así, las implementaciones se realizarán de forma que las modificaciones requeridas sean mínimas.
+
+## Enlaces a la planificación temporal
+
+- [Planificación temporal del hito 1](https://github.com/Javi96/TMI/blob/master/planificacion%visio%project/planificacion.png)
