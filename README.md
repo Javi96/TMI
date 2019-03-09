@@ -1,4 +1,4 @@
-# Título del proyecto
+# SLEZ - Shopping List EZ
 
 ## Motivación del proyecto
 
@@ -16,7 +16,7 @@ A continuación se recojen todos los ficheros con la documentación del proyecto
 - [Análisis de riesgos](https://github.com/Javi96/TMI/blob/master/riesgos.md)
 - [Funcionalidades del proyecto](https://github.com/Javi96/TMI/blob/master/funcionalidades.md)
 - [Tecnologías elegidas](https://github.com/Javi96/TMI/blob/master/tecnologias.md)
-- [Planificación temporal](https://github.com/Javi96/TMI/blob/master/riesgos.md)
+- [Planificación temporal](https://github.com/Javi96/TMI/blob/master/planificacion.md)
 
 ## Autores
 
