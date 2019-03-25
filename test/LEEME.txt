@@ -1,0 +1,15 @@
+FICHEROS:
+- first_try.h5: modelo generado por test_script
+- keras_test.ipynnb: notebook de python para testeo de modelos
+- test.model: modelo generado por train_network.py
+- test_script.py: entrena un modelo .h5
+	       utiliza dos directorios train y validation en data (data.zip)
+- train_network.py: entrena un modelo .model
+		    utiliza un directorio por clase.
+
+DIRECTORIOS:
+- data: contiene las imágenes con las que se va a entrenar el modelo.
+- pyimagesearch: contiene el generador de modelos utilizado por train_network.py
+- webscraping: contiene ficheros para descarga de imágenes desde Google Images y Flickr
+	       https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/
+	       credenciales necesarias en flickr_url
