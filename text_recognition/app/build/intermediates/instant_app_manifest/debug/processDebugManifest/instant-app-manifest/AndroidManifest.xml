@@ -10,6 +10,7 @@
         android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,15 +23,27 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.textrecognition2.DietActivity"
-            android:label="@string/title_activity_diet"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.textrecognition2.MainActivity" >
+            android:name="com.example.textrecognition2.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.textrecognition2.DandelionActivity"
+            android:label="@string/title_activity_dandelion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.textrecognition2.DietActivity"
+            android:label="@string/title_activity_diet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.textrecognition2.TextRecognitionActivity"
+            android:label="@string/title_activity_text_recognition"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

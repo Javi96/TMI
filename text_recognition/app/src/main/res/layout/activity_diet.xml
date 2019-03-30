@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c7b8a0"
+    android:background="#ffffff"
+    android:screenOrientation="portrait"
     tools:context=".DietActivity">
 
     <ListView

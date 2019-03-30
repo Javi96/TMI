@@ -1,4 +1,4 @@
-#Fri Mar 22 00:06:18 CET 2019
-base.0=C\:\\Users\\Javi\\Desktop\\TextRecognition2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+#Sat Mar 30 22:48:02 CET 2019
+base.0=C\:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

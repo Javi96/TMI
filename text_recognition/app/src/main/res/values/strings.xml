@@ -2,4 +2,7 @@
     <string name="app_name">TextRecognition2</string>
     <string name="title_activity_diet">DietActivity</string>
     <string name="add_new_items_to_listview">Add New Items To ListView</string>
+    <string name="title_activity_dandelion">DandelionActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_text_recognition">text_recognition</string>
 </resources>
