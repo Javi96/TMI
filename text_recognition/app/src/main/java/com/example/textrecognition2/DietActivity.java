@@ -10,10 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,21 +42,19 @@ public class DietActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra("food");
         String[] parts = message.split("\n");
-        String[] fruits = new String[] {
-                "Cape Gooseberry",
-                "Capuli cherry"
-        };
 
         final List<String> fruits_list = new ArrayList<>(Arrays.asList(parts));
         Log.v("info", message);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1, fruits_list);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
+                Toast.makeText(getApplicationContext(), (String) listView.getItemAtPosition(pos) , Toast.LENGTH_LONG).show();
+            }
+        });
+
         listView.setAdapter(arrayAdapter);
-
-
-
-
     }
 
 }

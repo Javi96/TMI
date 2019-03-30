@@ -1101,9 +1101,7 @@ id barrier
 id beginning
 id blocking
 id bottom
-id bottom_layout
 id buttonPanel
-id button_next
 id camera_input
 id cancel_action
 id center
@@ -1121,6 +1119,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id dandelion
 id dark
 id decor_content_parent
 id default_activity_button
@@ -1140,6 +1139,7 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id enviar
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1198,6 +1198,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id resultados
 id right
 id right_icon
 id right_side
@@ -1253,7 +1254,9 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id text_input
 id text_input_password_toggle
+id text_recognition
 id text_result
 id textinput_counter
 id textinput_error
@@ -1328,9 +1331,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_dandelion
 layout activity_diet
 layout activity_main
+layout activity_main2
+layout content_dandelion
 layout content_diet
+layout content_main
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1442,7 +1449,10 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_dandelion
 string title_activity_diet
+string title_activity_main
+string title_activity_text_recognition
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Javi\\Desktop\\TextRecognition2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+            "outputFile": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\values-gl\\values-gl.xml",
