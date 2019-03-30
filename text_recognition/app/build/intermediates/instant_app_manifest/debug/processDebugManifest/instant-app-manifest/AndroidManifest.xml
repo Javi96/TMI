@@ -23,6 +23,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.example.textrecognition2.TextRazorActivity"
+            android:label="@string/title_activity_text_razor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.textrecognition2.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -43,8 +47,7 @@
         <activity
             android:name="com.example.textrecognition2.TextRecognitionActivity"
             android:label="@string/title_activity_text_recognition"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

@@ -69,7 +69,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
         }
         catch (NullPointerException e){}
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_text_recognition);
 
         cameraView = (SurfaceView) findViewById(R.id.camera_input);
         textView = (TextView) findViewById(R.id.text_result);
