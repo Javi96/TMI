@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Javi\\Desktop\\android-vision-master\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Javi\\Desktop\\TextRecognition2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ae552482c41bf049bb6f77ab7b8855bb\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\fcc0c4338c128c76d6026b240be189bb\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
