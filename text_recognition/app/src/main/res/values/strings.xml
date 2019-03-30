@@ -5,4 +5,5 @@
     <string name="title_activity_dandelion">DandelionActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_text_recognition">text_recognition</string>
+    <string name="title_activity_text_razor">TextRazorActivity</string>
 </resources>

@@ -1256,6 +1256,7 @@ id textSpacerNoTitle
 id textStart
 id text_input
 id text_input_password_toggle
+id text_razor
 id text_recognition
 id text_result
 id textinput_counter
@@ -1334,10 +1335,12 @@ layout abc_tooltip
 layout activity_dandelion
 layout activity_diet
 layout activity_main
-layout activity_main2
+layout activity_text_razor
+layout activity_text_recognition
 layout content_dandelion
 layout content_diet
 layout content_main
+layout content_text_razor
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1452,6 +1455,7 @@ string status_bar_notification_info_overflow
 string title_activity_dandelion
 string title_activity_diet
 string title_activity_main
+string title_activity_text_razor
 string title_activity_text_recognition
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
