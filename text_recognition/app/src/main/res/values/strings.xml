@@ -6,4 +6,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_text_recognition">text_recognition</string>
     <string name="title_activity_text_razor">TextRazorActivity</string>
+    <string name="title_activity_card_component">CardComponentActivity</string>
+    <string name="title_activity_shop_cart">ShopCartActivity</string>
 </resources>

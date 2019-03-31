@@ -22,6 +22,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.example.textrecognition2.ShopCartActivity"
+            android:label="@string/title_activity_shop_cart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.textrecognition2.TextRazorActivity"
             android:label="@string/title_activity_text_razor"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -42,7 +46,7 @@
         <activity
             android:name="com.example.textrecognition2.DietActivity"
             android:label="@string/title_activity_diet"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.textrecognition2.TextRecognitionActivity"
             android:label="@string/title_activity_text_recognition"

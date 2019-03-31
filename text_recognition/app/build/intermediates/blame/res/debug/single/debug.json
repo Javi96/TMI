@@ -60,6 +60,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\background_semi.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
@@ -68,12 +72,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_shopping_cart.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_shopping_cart.xml"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\back_arrow_black.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -100,8 +112,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\right_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view_list_item.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\hamburguer_white.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -124,6 +144,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\background3.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_design_layout_snackbar.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     },
@@ -132,8 +156,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\pantry_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\hamburguer_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -160,6 +192,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable\\mtrl_snackbar_background.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\scan_diet.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -176,12 +212,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_stroke_color_selector.xml.flat",
-        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_btn_stroke_color_selector.xml"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector_colored.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_tabs_icon_color_selector_colored.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_stroke_color_selector.xml.flat",
+        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_btn_stroke_color_selector.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
@@ -204,8 +240,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\background2.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\pantry_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\background_semi.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
@@ -232,8 +280,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\shopping_cart.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -244,12 +300,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\card_inverted.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\button2.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\shopping_cart.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -288,8 +348,24 @@
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\activity_dandelion.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\shop_cart_item.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\hamburguer_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\background_semi.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\shopping_car_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -304,8 +380,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\background1.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_bg_color_selector.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_btn_bg_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\hamburguer_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\shopping_cart.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
@@ -320,16 +408,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\scan_diet.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\main_screen.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -380,6 +468,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_regular.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_regular.ttf"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -416,12 +508,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\button2.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\background3.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -432,24 +524,28 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_list_divider_material.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\general_background.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_spinner.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color-v23\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_card_component.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\content_card_component.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\shopping_car_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\hamburguer_black.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\button2.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -472,6 +568,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\right_arrow_inverted.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -484,12 +584,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\app_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\shopping_car_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -498,6 +598,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\background2.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
@@ -546,10 +650,6 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\app_icon.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -628,6 +728,14 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\hamburguer_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_pantry.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_pantry.xml"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
@@ -636,8 +744,28 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\scan_diet.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_black.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_black.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\back_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\scan_fridge_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\background1.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_text.xml.flat",
@@ -648,12 +776,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\general_background.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\shopping_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\hamburguer_white.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_colored_ripple_color.xml.flat",
@@ -668,20 +800,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\button2.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\background_semi.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\main_screen.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\right_arrow_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_textfield_search_material.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\app_icon.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -720,6 +848,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\card_inverted.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_ripple_color.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_tabs_ripple_color.xml"
     },
@@ -732,12 +864,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_out.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_light.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_light.ttf"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -760,8 +900,8 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\button1.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\card_inverted.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -796,10 +936,6 @@
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\button1.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
@@ -822,6 +958,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\background2.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
@@ -850,6 +990,14 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_focused.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\scan_fridge_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
@@ -896,12 +1044,24 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable-xxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\scan_fridge_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\pantry_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_black_italic.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_black_italic.ttf"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
@@ -932,20 +1092,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\general_background.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\main_screen.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
@@ -970,6 +1122,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\background1.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",
@@ -1008,6 +1164,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\background_semi.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
@@ -1018,6 +1178,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\hamburguer_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
@@ -1076,10 +1240,6 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\button1.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -1116,6 +1276,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\right_arrow_inverted.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1130,6 +1294,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_shop_cart.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\content_shop_cart.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -1152,6 +1320,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\right_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
@@ -1164,6 +1336,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\shop_cart_item.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
@@ -1172,8 +1348,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\shopping_car_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\back_arrow_red.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_hairline_italic.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_hairline_italic.ttf"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
@@ -1208,6 +1396,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\right_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1218,6 +1410,14 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\back_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\back_arrow_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -1268,6 +1468,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_shop_cart_item.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_shop_cart_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_dialog_material_background.xml"
     },
@@ -1288,8 +1492,8 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\app_icon.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\scan_diet.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1306,6 +1510,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\background2.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -1364,12 +1572,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\general_background.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\right_arrow_inverted.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_border.xml.flat",
@@ -1392,24 +1600,24 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
-        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\hamburguer_red.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\app_icon.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
+        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_scan_fridge.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_scan_fridge.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\main_screen.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1420,12 +1628,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\back_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\hamburguer_black.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -1448,6 +1664,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\pantry_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
@@ -1468,12 +1688,24 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\background3.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\right_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_text_recognition.xml.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\activity_text_recognition.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\background1.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_dark.xml.flat",
@@ -1528,12 +1760,24 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\pantry_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_hairline.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_hairline.ttf"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\card_inverted.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_text_razor.xml.flat",
@@ -1544,6 +1788,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\background3.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -1552,12 +1800,16 @@
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\shop_cart_item.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\button1.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\back_arrow_black.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
@@ -1576,6 +1828,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color-v23\\abc_tint_default.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\back_arrow_black.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
@@ -1592,10 +1848,6 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\general_background.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
@@ -1608,16 +1860,12 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\button2.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\button1.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\background3.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
@@ -1628,8 +1876,16 @@
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\content_text_razor.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\scan_fridge_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_text_color.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_chip_text_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -1652,8 +1908,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\shopping_car_card.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\card_inverted.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_ripple_color.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\color\\mtrl_chip_ripple_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\back_arrow_white.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -1674,6 +1942,14 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_card_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\card_inverted.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\scan_diet.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material.xml.flat",
@@ -1720,12 +1996,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\hamburguer_black.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_general_background.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\general_background.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\right_arrow_inverted.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\scan_fridge_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
@@ -1756,6 +2036,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\layout\\notification_action_tombstone.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_italic.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_italic.ttf"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
@@ -1780,6 +2064,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_background_semi.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\background_semi.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\layout\\notification_action.xml"
     },
@@ -1792,16 +2080,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_tooltip_enter.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\anim\\abc_tooltip_enter.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_tabs_default_indicator.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable\\mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_ultra.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\ultra.ttf"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1830,6 +2122,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_scan_fridge_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\scan_fridge_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -1872,6 +2168,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\hamburguer_black.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -1896,6 +2196,14 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\tooltip_frame_light.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_scan_diet.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_scan_diet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\shopping_cart.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -1908,6 +2216,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_bold_italic.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_bold_italic.ttf"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
@@ -1918,6 +2230,14 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_bold.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\shop_cart_item.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1940,16 +2260,20 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\hamburguer_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_button2.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\button2.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_mtrl_linear_out_slow_in.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\interpolator\\mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\background1.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -1984,6 +2308,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\56fa307ea12825855109d8b95d36c747\\res\\layout\\notification_template_lines_media.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\back_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_primary_text_material_light.xml"
     },
@@ -1996,12 +2324,28 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\9ab3f4b58600eee3e8f8ed41254a1b30\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_scan_diet.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\scan_diet.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_right_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\right_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_component_card.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\component_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\right_arrow_inverted.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_legacy_text_color_selector.xml.flat",
@@ -2016,8 +2360,40 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-mdpi\\back_arrow_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\back_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\back_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\hamburguer_white.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shop_cart.xml.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\layout\\activity_shop_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\background2.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_background2.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\background2.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\hamburguer_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -2032,16 +2408,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\main_screen.png"
-    },
-    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\e16fa75442f3c575eddefd37a7ebed04\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_design_password_eye.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
@@ -2052,8 +2428,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_back_arrow_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\back_arrow_white.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\font_lato_light_italic.ttf.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\font\\lato_light_italic.ttf"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
@@ -2080,8 +2464,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_shopping_car_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\shopping_car_card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_hamburguer_white.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\hamburguer_white.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_spinner_textfield_background_material.xml.flat",
@@ -2090,6 +2482,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_background1.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\background1.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",
@@ -2128,8 +2524,8 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_button1.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\button1.png"
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\shop_cart_item.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2142,6 +2538,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_pantry_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\pantry_card.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
@@ -2168,6 +2568,10 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_search_url_text.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxxhdpi\\back_arrow_black.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
@@ -2184,8 +2588,16 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\layout\\mtrl_layout_snackbar.xml"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_card.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\card.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shopping_cart.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\shopping_cart.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -2194,10 +2606,6 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_main_screen.png.flat",
-        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\main_screen.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
@@ -2228,6 +2636,14 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_hamburguer_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\hamburguer_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_back_arrow_black.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\back_arrow_black.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -2252,6 +2668,14 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_right_arrow_inverted.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\right_arrow_inverted.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_background3.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\background3.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\color\\abc_secondary_text_material_light.xml"
     },
@@ -2268,12 +2692,24 @@
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xxhdpi\\back_arrow_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_hamburguer_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-ldpi\\hamburguer_red.png"
+    },
+    {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f58b01012319a1a7671aab085c878e7a\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_back_arrow_red.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-xhdpi\\back_arrow_red.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
@@ -2306,6 +2742,10 @@
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_mtrl_fast_out_linear_in.xml.flat",
         "source": "C:\\Users\\Javi\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\1c022093b96912f7f7cf9fac90fd6bbc\\res\\interpolator\\mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shop_cart_item.png.flat",
+        "source": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\src\\main\\res\\drawable-hdpi\\shop_cart_item.png"
     },
     {
         "merged": "C:\\Users\\Javi\\Desktop\\github\\TMI\\text_recognition\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
