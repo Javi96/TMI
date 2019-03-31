@@ -2,47 +2,41 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="28"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.3.2"
-    timestamp="1553987691922"
+    timestamp="1553993449458"
     token="4341871732137679212"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="269" />
+        duration="171" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="11" />
     <task
         name="instant-run-transform"
-        duration="37" />
+        duration="50" />
     <task
         name="verifier"
-        duration="5" />
+        duration="4" />
 
     <artifact
-        location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
+        location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1553987521295"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1553991723839"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -51,13 +45,22 @@
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -66,20 +69,32 @@
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1553987691922"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1553993362309"
+        verifier="FIELD_ADDED" >
         <artifact
             location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1553993403414"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\builds\debug\1553993403414\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1553993449458"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Javi\Desktop\github\TMI\text_recognition\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
