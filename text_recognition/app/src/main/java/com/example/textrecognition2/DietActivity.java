@@ -76,9 +76,6 @@ public class DietActivity extends AppCompatActivity {
                 plates.remove(position);
                 arrayAdapter.notifyDataSetChanged();
                 Toast.makeText(getApplicationContext(), "You selected : " + plate.toString(), Toast.LENGTH_LONG).show();
-
-
-
             }
         });
     }

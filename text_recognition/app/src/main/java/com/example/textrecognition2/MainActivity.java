@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+
                     }
                 }, 1618);
                 startActivity(new Intent(getApplicationContext(), TextRecognitionActivity.class));

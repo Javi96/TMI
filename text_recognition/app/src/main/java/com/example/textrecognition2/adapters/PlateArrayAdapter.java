@@ -40,6 +40,7 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
         TextView ingredient1 = view.findViewById(R.id.component_card_text1);
         TextView ingredient2 = view.findViewById(R.id.component_card_text2);
         TextView ingredient3 = view.findViewById(R.id.component_card_text3);
+
         ArrayList<String> ingredients = plate.getIngredients();
         plateName.setText(plate.getName());
         ingredient1.setText(ingredients.get(0));
