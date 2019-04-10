@@ -23,7 +23,7 @@ from recipeconfig import edamam_endpoint, app_id, app_key, dandelion_endpoint, d
         -El tercer elemento será el nombre del ingrediente.
     
     -Input: string que represente el plato del cual se busque la cadena.
-    -Output: lista de diccionarios con tres campos: "num", "units" y "name".
+    -Output: lista de diccionarios con tres campos: "num", "units" y "name". Si sucede algún error, devuelve una lista vacia.
 '''
 #Dado un plato, devuelve su receta.
 def get_recipe(plate):
@@ -32,9 +32,17 @@ def get_recipe(plate):
     
     #contents es de tipo bytes. Es necesario pasarlo a json.
     contents = parse_bytes_to_JSON(contents)
-    best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar
-    return parse_recipe(best_hit)
-
+    
+    #En el caso de que encontremos alguna receta que encaje.
+    if contents['count'] !=0:
+        
+        best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
+        
+        return parse_recipe(best_hit)
+    
+    else:
+        #Si ninguna receta encaja.
+        return []
 
 
 
@@ -82,7 +90,6 @@ def parse_recipe(input):
     
     #Para cada ingrediente.
     for x in input:
-        print(x)
         d={"num":None, "units":None, "name":None }
         
         if((x.split()[0]).isdigit()):
@@ -97,7 +104,7 @@ def parse_recipe(input):
 
         
         if(d["name"]==None):
-            print("nada")
+            print()
         else:
             result.append(d)
             

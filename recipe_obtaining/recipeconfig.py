@@ -10,7 +10,7 @@ app_id=''
 app_key= ''
 
 #DANDELION
-dandelion_endpoint=''
+dandelion_endpoint='?'
 dandelion_key= ''
 
 '''
