@@ -37,12 +37,14 @@ def get_recipe(plate):
     if contents['count'] !=0:
         
         best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
-        
-        return parse_recipe(best_hit)
-    
+        result=parse_recipe(best_hit)
+        #actualmente result es una lista.
+        #Devolvemos el JSON correspondiente.        
+        return {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
     else:
         #Si ninguna receta encaja.
-        return []
+        return {"state":"Error"}
+
 
 
 
@@ -81,7 +83,7 @@ def get_best_hit(plate,contentJSON):
     -Output:
         Lista de ingredientes parseados del siguiente modo:
             Para cada ingrediente se crea un diccionario con 3 elementos:
-                1- Número de unidades de ese ingrediente (puede no indicar las unidades, en ese caso vale None).
+                1- Número de unidades de ese ingrediente.
                 2- Unidades (mg, gr, etc) de ese ingrediente.
                 3- Nombre del ingrediente
 '''
@@ -90,7 +92,7 @@ def parse_recipe(input):
     
     #Para cada ingrediente.
     for x in input:
-        d={"num":None, "units":None, "name":None }
+        d={"num":"", "units":"", "name":"" }
         
         if((x.split()[0]).isdigit()):
             d["num"]= int(x.split()[0])

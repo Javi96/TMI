@@ -5,14 +5,13 @@
 '''
 
 #EDAMAM
-edamam_endpoint= ''
-app_id=''
-app_key= ''
+edamam_endpoint= 
+app_id=
+app_key= 
 
 #DANDELION
-dandelion_endpoint='?'
-dandelion_key= ''
-
+dandelion_endpoint=
+dandelion_key= 
 '''
     DICCIONARIO DE MÉTRICAS
 '''

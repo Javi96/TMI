@@ -2,6 +2,7 @@
 
 
 import urllib.request
+import json
 
 '''
     Ejemplo de acceso a la API Rest implementada en Java
@@ -47,6 +48,23 @@ def parse_bytes_to_string(input):
 
 
 '''
+    Dado un objeto bytes, obtiene el json asociado.
+    
+    Se utiliza para formatear el resultado de las llamadas a APIs que devuelven un json.
+    
+    input: objeto tipo bytes a formatear.
+    
+    el resultado es un objeto json (diccionario)
+    
+'''    
+def parse_bytes_to_JSON(input):
+    decoded = input.decode('utf8') #Decodificamos usando utf-8. El resultado es un string con forma de json.
+    #Cambiamos ' por ".
+    decoded=decoded.replace("'",'"')    
+    return json.loads(decoded);  #Creamos el json a partir del string   
+
+
+'''
     EJEMPLO DE FUNCIONAMIENTO
 '''
 
@@ -56,10 +74,8 @@ plate=parse_blank_spaces(plate)
 
 result = urllib.request.urlopen('http://localhost:5555/recipe/'+plate).read()
 
-
-
 #Lo que devuelve la API es un objeto tipo bytes.
-#Procesamos el objeto tipo bytes para obtener un string.
-result = parse_bytes_to_string(result)
+#Procesamos el objeto tipo bytes para obtener un json.
+result = parse_bytes_to_JSON(result)
 
 print(result)
