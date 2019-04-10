@@ -1,24 +1,20 @@
 # -*- coding: utf-8 -*-
 
-
-'''
-    IMPORTS NECESARIOS
-'''
-
-from bottle import route, run, template
+from flask import Flask, request, jsonify
 from recipe_module import get_recipe
 
-'''
-    FUNCIONALIDADES PRINCIPALES DEL SERVICIO REST
-'''
+app = Flask(__name__)
 
-'''
-    ARRANQUE DEL SERVICIO DEL API REST
-'''
-@route('/recipe/<plate>')
-def index(plate):
-    #return get_recipe(plate)
+@app.route('/', methods=['GET'])
+def init():
+    return 'Active'
+
+
+@app.route('/recipe/<plate>', methods=['GET'])
+def recipe_obtaining(plate):
+    #return jsonify({'ip':'88.0.109.140','msg':'Welcome to Salk API','status':True, 'neural-network':connected})
     return str(get_recipe(plate))
 
-    
-run(host='localhost', port=8080)
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0', port=5555) 
+	  
