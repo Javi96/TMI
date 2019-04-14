@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IngrDatabase</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="measurements">
+        <item>Units</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>- - - -</item>
+    </string-array>
+</resources>
