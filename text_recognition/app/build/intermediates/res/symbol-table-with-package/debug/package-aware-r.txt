@@ -1058,6 +1058,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable diet
 drawable diet_schedule_post_it
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -1170,6 +1171,7 @@ id component_card_text2
 id component_card_text3
 id component_fridge_scan_card_view
 id component_ingredient_name
+id component_pantry_card_view
 id component_scan_diet_card_view
 id component_see_diet_card_view
 id component_see_pantry_card_view
@@ -1409,6 +1411,7 @@ layout activity_text_razor
 layout activity_text_recognition
 layout component_card
 layout component_card_ingredient
+layout component_diet
 layout component_diet_schedule
 layout component_pantry
 layout component_pantry_card

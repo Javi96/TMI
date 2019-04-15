@@ -34,10 +34,19 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.component_see_diet_card_view:
                 startActivity(new Intent(getApplicationContext(), DietScheduleActivity.class));
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
             case R.id.component_scan_diet_card_view:
                 startActivity(new Intent(getApplicationContext(), TextRecognitionActivity.class));
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+    }
+
 }

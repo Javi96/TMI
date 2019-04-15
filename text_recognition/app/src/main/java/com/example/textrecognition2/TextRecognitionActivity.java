@@ -151,4 +151,10 @@ public class TextRecognitionActivity extends AppCompatActivity{
             });
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+    }
 }

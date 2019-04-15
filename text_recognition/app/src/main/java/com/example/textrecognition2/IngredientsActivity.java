@@ -38,7 +38,7 @@ public class IngredientsActivity extends AppCompatActivity {
         listView = findViewById(R.id.ingredient_list);
 
         final ArrayList<Ingredient> ingredients = new ArrayList<>();
-        for (int i=0; i<5; i++){
+        for (int i=0; i<15; i++){
             ingredients.add(new Ingredient("ingrediente " + i));
         }
 
@@ -72,6 +72,7 @@ public class IngredientsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
     }
 }
 
