@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1c022093b96912f7f7cf9fac90fd6bbc\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\f58b01012319a1a7671aab085c878e7a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\38004ec3800300a534b7aed2ed17d8f3\AndroidManifest.xml:2:1-9:12
@@ -45,20 +45,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Javi\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\a4e4529dd5ebaf1d93381b5674760e81\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\c900966c6c4e774d3ca03ddeaf3f1c71\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\b3517465d5efd431d09bdec7dd449f4a\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:2:11-69
@@ -71,7 +71,7 @@ ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:8:5-45:19
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:8:5-61:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1c022093b96912f7f7cf9fac90fd6bbc\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\1c022093b96912f7f7cf9fac90fd6bbc\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Javi\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\38004ec3800300a534b7aed2ed17d8f3\AndroidManifest.xml:7:5-20
@@ -112,64 +112,96 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Javi\.grad
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:14:9-40
-activity#com.example.textrecognition2.ShopCartActivity
+activity#com.example.textrecognition2.IngredientsActivity
 ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:15:9-18:68
 	android:label
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:17:13-61
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:17:13-63
 	android:theme
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:18:13-56
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:16:13-45
-activity#com.example.textrecognition2.TextRazorActivity
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:16:13-48
+activity#com.example.textrecognition2.DietScheduleActivity
 ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:19:9-22:59
 	android:label
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:21:13-62
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:21:13-65
 	android:theme
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:20:13-46
-activity#com.example.textrecognition2.MainActivity
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:23:9-32:20
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:20:13-49
+activity#com.example.textrecognition2.DietActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:23:9-26:59
 	android:label
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:25:13-56
 	android:theme
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:26:13-56
 	android:name
 		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:24:13-41
+activity#com.example.textrecognition2.PantryActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:27:9-30:59
+	android:label
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:29:13-58
+	android:theme
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:30:13-56
+	android:name
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:28:13-43
+activity#com.example.textrecognition2.ShopCartActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:31:9-34:59
+	android:label
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:33:13-61
+	android:theme
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:32:13-45
+activity#com.example.textrecognition2.TextRazorActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:35:9-38:59
+	android:label
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:37:13-62
+	android:theme
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:38:13-56
+	android:name
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:36:13-46
+activity#com.example.textrecognition2.MainActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:39:9-48:20
+	android:label
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:41:13-56
+	android:theme
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:42:13-56
+	android:name
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:40:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:46:27-74
 activity#com.example.textrecognition2.DandelionActivity
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:33:9-36:59
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:49:9-52:59
 	android:label
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:35:13-61
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:51:13-61
 	android:theme
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:36:13-56
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:52:13-56
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:34:13-46
-activity#com.example.textrecognition2.DietActivity
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:37:9-40:47
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:50:13-46
+activity#com.example.textrecognition2.PlatesActivity
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:53:9-56:47
 	android:label
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:39:13-56
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:55:13-56
 	android:theme
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:40:13-44
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:56:13-44
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:54:13-43
 activity#com.example.textrecognition2.TextRecognitionActivity
-ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:41:9-44:59
+ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:57:9-60:59
 	android:label
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:43:13-68
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:59:13-68
 	android:theme
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:44:13-56
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:42:13-52
+		ADDED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml:58:13-52
 uses-sdk
 INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Javi\Desktop\github\TMI\text_recognition\app\src\main\AndroidManifest.xml

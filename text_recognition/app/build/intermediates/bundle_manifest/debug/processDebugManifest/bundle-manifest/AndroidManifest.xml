@@ -22,6 +22,22 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.example.textrecognition2.IngredientsActivity"
+            android:label="@string/title_activity_ingredients"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.textrecognition2.DietScheduleActivity"
+            android:label="@string/title_activity_diet_schedule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.textrecognition2.DietActivity"
+            android:label="@string/title_activity_diet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.textrecognition2.PantryActivity"
+            android:label="@string/title_activity_pantry"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.example.textrecognition2.ShopCartActivity"
             android:label="@string/title_activity_shop_cart"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -44,7 +60,7 @@
             android:label="@string/title_activity_dandelion"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.textrecognition2.DietActivity"
+            android:name="com.example.textrecognition2.PlatesActivity"
             android:label="@string/title_activity_diet"
             android:theme="@style/AppTheme" />
         <activity

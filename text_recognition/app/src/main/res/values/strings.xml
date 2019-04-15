@@ -8,4 +8,7 @@
     <string name="title_activity_text_razor">TextRazorActivity</string>
     <string name="title_activity_card_component">CardComponentActivity</string>
     <string name="title_activity_shop_cart">ShopCartActivity</string>
+    <string name="title_activity_pantry">PantryActivity</string>
+    <string name="title_activity_diet_schedule">DietScheduleActivity</string>
+    <string name="title_activity_ingredients">IngredientsActivity</string>
 </resources>

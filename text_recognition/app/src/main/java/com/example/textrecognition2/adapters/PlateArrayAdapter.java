@@ -2,9 +2,12 @@ package com.example.textrecognition2.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Animatable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
@@ -47,6 +50,8 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
         ingredient2.setText(ingredients.get(1));
         ingredient3.setText(ingredients.get(2));
 
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
+        view.startAnimation(animation);
         return view;
     }
 }

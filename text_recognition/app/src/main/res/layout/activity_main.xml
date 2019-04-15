@@ -11,8 +11,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:layout_weight="1">
+        android:layout_height="64dp">
 
         <Button
             android:id="@+id/act_main_menu"
@@ -25,8 +24,10 @@
             android:background="@drawable/hamburguer_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
