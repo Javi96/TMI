@@ -2,6 +2,7 @@
 
 from flask import Flask
 from recipe_module import get_recipe
+#import datetime
 
 app = Flask(__name__)
 
@@ -16,6 +17,9 @@ def init():
 #Se devuelve de esta forma para que pueda operarse el resultado independientemente del lenguaje del programa que llama a la API.
 @app.route('/recipe/<plate>', methods=['GET'])
 def recipe_obtaining(plate):
+        
+    #print(datetime.datetime.now()+'------------- Solicitada receta para plato: '+ plate)   
+    print('-Solicitada receta para plato: '+ str(plate))
     return str(get_recipe(plate))
 
 

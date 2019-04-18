@@ -93,22 +93,24 @@ def parse_recipe(input):
     #Para cada ingrediente.
     for x in input:
         d={"num":"", "units":"", "name":"" }
+        words=x.split()
         
-        if((x.split()[0]).isdigit()):
-            d["num"]= int(x.split()[0])
+        
+        if(len(words)!=0 and (words[0]).isdigit()):
+            d["num"]= int(words[0])
 
-        if(is_measure_unity(x.split()[1])):
-            d["units"]= x.split()[1]
+        if(len(words)>1 and is_measure_unity(words[1])):
+            d["units"]= words[1]
 
     
-        #PONER EL VALOR QUE CORRESPONDE.
-        d["name"]=get_entities_dandelion(x)
+        try:
+            d["name"]=get_entities_dandelion(x)
 
-        
-        if(d["name"]==None):
-            print()
-        else:
-            result.append(d)
+            if(d["name"]!=None):
+                result.append(d)
+
+        except Exception as e:
+            print(e)
             
     return result
 
@@ -213,7 +215,7 @@ def get_entities_dandelion(text):
     -Ouput: cadena de caracteres que contendrá la URL a utilizar para realizar la petición a la API.
 
 '''
-def genera_dandelion_URL(input):
+def genera_dandelion_URL(input):    
         textURL = "text="
         topEntitiesURL= "top_entities=10"
         includeURL = "include=types%2Ccategories"
