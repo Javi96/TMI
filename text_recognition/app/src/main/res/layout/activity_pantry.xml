@@ -44,7 +44,7 @@
             android:fontFamily="@font/ultra"
             android:textColor="@color/colorWhite"
             android:layout_weight="1"
-            android:text="Pantry" />
+            android:text="Inventario" />
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout

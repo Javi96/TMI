@@ -28,7 +28,6 @@ public class TextRecognitionActivity extends AppCompatActivity{
 
     SurfaceView cameraView;
     TextView textView;
-    Button nextButton;
 
 
     CameraSource cameraSource;
@@ -45,9 +44,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
                     }
                     try {
                         cameraSource.start(cameraView.getHolder());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    } catch (IOException e) {e.printStackTrace(); }
                 }
             }
         }
@@ -67,7 +64,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
         {
             this.getSupportActionBar().hide();
         }
-        catch (NullPointerException e){}
+        catch (NullPointerException e){e.printStackTrace();}
 
         setContentView(R.layout.activity_text_recognition);
 
@@ -78,9 +75,11 @@ public class TextRecognitionActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PlatesActivity.class);
+
                 intent.putExtra("food", textView.getText().toString());
                 setResult(RESULT_OK, intent);
                 startActivity(intent);
+
             }
         });
 
@@ -156,5 +155,11 @@ public class TextRecognitionActivity extends AppCompatActivity{
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 }

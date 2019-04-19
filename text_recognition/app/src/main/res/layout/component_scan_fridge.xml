@@ -61,7 +61,7 @@
                     android:fontFamily="@font/ultra"
                     android:textColor="@color/colorBlue"
                     android:textSize="24sp"
-                    android:text="scan fridge" />
+                    android:text="escanea nevera" />
             </LinearLayout>
 
             <LinearLayout

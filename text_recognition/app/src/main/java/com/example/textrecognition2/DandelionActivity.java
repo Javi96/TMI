@@ -33,9 +33,10 @@ public class DandelionActivity extends AppCompatActivity {
 
                 int SDK_INT = android.os.Build.VERSION.SDK_INT;
                 if (SDK_INT >= 8) {
-                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                    /*StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                             .permitAll().build();
-                    StrictMode.setThreadPolicy(policy);
+                    StrictMode.setThreadPolicy(policy);*/
+                    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
                     ArrayList<String> respuesta = QueryUtils.fetchEarthquakeData(URL);
 
@@ -50,23 +51,45 @@ public class DandelionActivity extends AppCompatActivity {
         });
     }
 
-    public String generaURL(String text) {
-        final String apiKey = "cf93e08cff2a412fb7516667a1640a2f";//PONER LA CREDENCIAL ASOCIADA A TU CUENTA
+    public static String generaURL(String text) {
+        final String apiKey = "cf93e08cff2a412fb7516667a1640a2f"; //PONER LA CREDENCIAL ASOCIADA A TU CUENTA
         final String endpoint = "https://api.dandelion.eu/datatxt/nex/v1/?";
 
         String textURL = "text=";
         String topEntitiesURL= "top_entities=10";
         String includeURL = "include=types%2Ccategories";
 
+
         String token = "token="+apiKey;
 
+        StringBuilder sb = new StringBuilder(endpoint + textURL);
+
+        /*
+        for ( String str : text.split(" "))
+            sb.append(str + '+');
+        sb.setCharAt(sb.length()-1, '&');
+        */
+        sb.append(text.replace( ' ', '+'));
+
+
+
+
+        sb.append('&' + topEntitiesURL + '&' + includeURL + '&' + token );
+
+        /*
         String[] splitText = text.split(" ");
         for (int i = 0; i < splitText.length-1; i++) {
             textURL = textURL + splitText[i] + "+";
         }
         textURL = textURL +  splitText[splitText.length-1];
 
+
         return  endpoint+textURL+"&"+topEntitiesURL+"&"+includeURL+"&"+token;
+        */
+
+
+        return "https://api.dandelion.eu/datatxt/nex/v1/?text=" + text.replace( ' ', '+') + "&top_entities=10&lang=es&include=types%2Ccategories&token=cf93e08cff2a412fb7516667a1640a2f";
+        //return sb.toString();
     }
 
 }

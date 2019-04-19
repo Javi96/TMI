@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(getApplicationContext(), DietActivity.class));
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     }
-                }, 750);
+                }, 150);
                 break;
             case R.id.pantry_flip_button:
             case R.id.component_pantry_card_view:
@@ -99,11 +99,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(getApplicationContext(), PantryActivity.class));
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     }
-                }, 750);
+                }, 150);
                 break;
             case R.id.shop_cart_flip_button:
             case R.id.component_shop_cart_card_view:
-                /*new Handler().postDelayed(new Runnable() {
+                /*
+                new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         final ObjectAnimator oa1 = ObjectAnimator.ofFloat(btn_shop_cart_flip, "scaleX", 1f, 0f);
@@ -120,29 +121,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         });
                         oa1.start();
                     }
-                }, 250);*/
+                }, 250);
+                //*/
+                //*
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         startActivity(new Intent(getApplicationContext(), IngredientsActivity.class));
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     }
-                }, 750);
+                }, 150);
                 break;
+                //*/
 
+            /*
+            case R.id.dandelion:
 
-
-            /*case R.id.dandelion:
                 dandelion.setBackground(changed);
+
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        dandelion.setBackground(normal);
+                        //dandelion.setBackground(normal);
+                        startActivity(new Intent(getApplicationContext(), DandelionActivity.class));
                     }
-                }, 1618);
-                //startActivity(new Intent(getApplicationContext(), DandelionActivity.class));
+                }, 150);
                 break;
-            case R.id.text_razor:
+
+                case R.id.text_razor:
                 text_razor.setBackground(changed);
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -151,7 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }, 1618);
                 //startActivity(new Intent(getApplicationContext(), TextRazorActivity.class));
-                break;*/
+                break;
+                */
             // Do something
             default:
                 break;
