@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.adapters.IngredientArrayAdapter;
@@ -34,6 +35,9 @@ public class IngredientsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients);
+
+        final TextView textView1 = (TextView) findViewById(R.id.cmp_tile_title);
+        textView1.setText("Shopping\ncart");
 
         listView = findViewById(R.id.ingredient_list);
 

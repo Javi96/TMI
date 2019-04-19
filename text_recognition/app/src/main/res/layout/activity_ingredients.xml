@@ -30,22 +30,8 @@
     </android.support.constraint.ConstraintLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textSize="30sp"
-            android:fontFamily="@font/ultra"
-            android:textColor="@color/colorWhite"
-            android:layout_weight="1"
-            android:text="Shopping\ncart" />
-    </LinearLayout>
+    <include
+        layout="@layout/component_title"/>
 
     <ListView
         android:id="@+id/ingredient_list"

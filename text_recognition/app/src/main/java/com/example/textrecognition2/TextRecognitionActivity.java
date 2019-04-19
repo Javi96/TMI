@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.textrecognition2.test.TestPlatesActivity;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
@@ -74,7 +75,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), PlatesActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TestPlatesActivity.class);
 
                 intent.putExtra("food", textView.getText().toString());
                 setResult(RESULT_OK, intent);

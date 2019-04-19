@@ -11,4 +11,19 @@
     <string name="title_activity_pantry">PantryActivity</string>
     <string name="title_activity_diet_schedule">DietScheduleActivity</string>
     <string name="title_activity_ingredients">IngredientsActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_text_recog_test">TextRecogTestActivity</string>
+    <string name="title_activity_test_plates">TestPlatesActivity</string>
+    <string name="shopping_ncart">Shopping\\ncart</string>
+
+    <string-array name="act_menu_days">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
 </resources>
+

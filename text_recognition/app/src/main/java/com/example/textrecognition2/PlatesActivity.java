@@ -26,7 +26,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class PlatesActivity extends AppCompatActivity {
+public class PlatesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ListView listView;
 
@@ -162,5 +162,14 @@ public class PlatesActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.act_plates_float_btn:
+                Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
+            break;
+        }
     }
 }

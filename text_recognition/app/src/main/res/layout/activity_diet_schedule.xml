@@ -48,14 +48,23 @@
     </LinearLayout>
 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/act_diet_schedule_float_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="8"
+        android:clickable="true"
+        android:layout_gravity="end"
+        app:srcCompat="@color/colorAccent" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true">
-
-        <GridLayout
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:columnCount="2"
+            android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_height="wrap_content">
             <include
@@ -87,7 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 layout="@layout/component_diet_schedule"/>
-        </GridLayout>
+
+
+        </LinearLayout>
 
     </ScrollView>
 
