@@ -31,9 +31,11 @@ public class Plate {
 
     @Override
     public String toString() {
-        return "Plate{" +
-                "name='" + name + '\'' +
-                ", ingredients=" + ingredients +
-                '}';
+        StringBuilder stringBuilder = new StringBuilder("");
+        stringBuilder.append(this.name + '_');
+        for (String ingredient: ingredients) {
+            stringBuilder.append(ingredient + '_');
+        }
+        return stringBuilder.toString();
     }
 }

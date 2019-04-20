@@ -63,7 +63,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
         //set content view AFTER ABOVE sequence (to avoid crash)
         try
         {
-            this.getSupportActionBar().hide();
+            //this.getSupportActionBar().hide();
         }
         catch (NullPointerException e){e.printStackTrace();}
 

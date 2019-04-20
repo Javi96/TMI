@@ -25,5 +25,8 @@
         <item>Sábado</item>
         <item>Domingo</item>
     </string-array>
+    <string name="title_activity_edit_plate">EditPlateActivity</string>
+
+    <item type="id" name="act_edit_plate_sub_layout" />
 </resources>
 

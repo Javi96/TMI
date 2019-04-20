@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.DietActivity;
+import com.example.textrecognition2.EditPlateActivity;
 import com.example.textrecognition2.MenuActivity;
 import com.example.textrecognition2.R;
 import com.example.textrecognition2.adapters.PlateArrayAdapter;
@@ -24,6 +25,8 @@ import com.example.textrecognition2.domain.Plate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TestPlatesActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -33,6 +36,8 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
     private ArrayAdapter<Plate> arrayAdapter;
 
     private ArrayList<String> arrayList;
+
+    ArrayList<Plate> plates = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +57,7 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
         ingredients.add("ingrediente 2");
         ingredients.add("ingrediente 3");
 
-        final ArrayList<Plate> plates = new ArrayList<>();
+        plates = new ArrayList<>();
         for (int i=0; i<parts.length; i++){
             plates.add(new Plate("Plate " + i, ingredients));
         }
@@ -60,7 +65,7 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
 
         Log.v("info", message);
 
-        final PlateArrayAdapter arrayAdapter = new PlateArrayAdapter
+        arrayAdapter = new PlateArrayAdapter
                 (this, android.R.layout.simple_list_item_1, plates);
 
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -94,7 +99,14 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 Plate plate = plates.get(position);
                 //plates.remove(position);
                 //arrayAdapter.notifyDataSetChanged();
-                Toast.makeText(getApplicationContext(), "sort : " + plate.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "sort : " + plate.toString(), Toast.LENGTH_LONG).show();
+
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
+                Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
+                intent.putExtra("plate", plate.toString());
+                intent.putExtra("pos", String.valueOf(position));
+                startActivityForResult(intent, 1);
 
             }
         });
@@ -115,6 +127,37 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
+        }
+    }
+
+
+
+
+    @Override
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK) {
+                String text = data.getStringExtra("plate");
+                String position = data.getStringExtra("pos");
+                Toast.makeText(getApplicationContext(), "Pos: " + position + "\nContenido: " + text, Toast.LENGTH_LONG).show();
+
+                Pattern pattern = Pattern.compile("_ *");
+                Matcher matcher = pattern.matcher(text);
+                if (matcher.find()) {
+                    String nombre = text.substring(0, matcher.start());
+                    String ingredientes = text.substring(matcher.end());
+
+                    ArrayList<String> newIngredients = new ArrayList<>();
+                    for (String ingredient : ingredientes.split("_")) {
+                        newIngredients.add(ingredient);
+                    }
+
+                    plates.set(Integer.parseInt(position), new Plate(nombre, newIngredients));
+                    arrayAdapter.notifyDataSetChanged();
+                }
+            }
         }
     }
 }
