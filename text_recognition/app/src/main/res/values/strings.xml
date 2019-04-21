@@ -27,6 +27,7 @@
     </string-array>
     <string name="title_activity_edit_plate">EditPlateActivity</string>
 
-    <item type="id" name="act_edit_plate_sub_layout" />
+    <item name="act_edit_plate_sub_layout" type="id" />
+    <string name="title_activity_logo">LogoActivity</string>
 </resources>
 

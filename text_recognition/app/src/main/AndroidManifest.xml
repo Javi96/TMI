@@ -14,9 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LogoActivity"
+            android:label="@string/title_activity_logo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".EditPlateActivity"
             android:label="@string/title_activity_edit_plate"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".test.TestPlatesActivity"
             android:label="@string/title_activity_test_plates"

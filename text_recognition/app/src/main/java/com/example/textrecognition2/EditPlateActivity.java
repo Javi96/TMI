@@ -35,9 +35,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         message = intent.getStringExtra("plate");
         position = intent.getStringExtra("pos");
         LinearLayout myRoot = (LinearLayout) findViewById(R.id.act_edit_plate_layout1);
-        layout = new LinearLayout(this);
-        layout.setId(R.id.act_edit_plate_sub_layout);
-        layout.setOrientation(LinearLayout.VERTICAL);
+        layout =  findViewById(R.id.act_edit_plate_sub_layout);
 
 
         //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
@@ -49,7 +47,6 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
             editText.setTextSize(28);
             layout.addView(editText);
         }
-        myRoot.addView(layout);
 
 
         btn_edit_plate.setOnClickListener(this);
