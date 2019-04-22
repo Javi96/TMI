@@ -15,6 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.adapters.PlateArrayAdapter;
+import com.example.textrecognition2.domain.FoodDatabase;
+import com.example.textrecognition2.domain.FoodRepository;
+import com.example.textrecognition2.domain.IngrCant;
+import com.example.textrecognition2.domain.Ingredient;
+import com.example.textrecognition2.domain.IngredientesPlatos;
 import com.example.textrecognition2.domain.Plate;
 
 import org.json.JSONArray;
@@ -90,17 +95,51 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                     //Toast.makeText(getApplicationContext(), "Plato : " + array.getJSONObject(i).getString("title"), Toast.LENGTH_LONG).show();
                 }
                 */
-                for( String str: query.split("\n")){
-                    JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest( new URL(cons+str.replace(' ', '+') )));
-                    if ( jsonResponse.getString("state").compareToIgnoreCase("Success") != 0 )
-                        continue;
-                    JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
-                    ingredients =  new ArrayList<String>();
-                    for ( int j = 0; j<ingredientes.length(); j++  ) {
-                        ingredients.add(ingredientes.getJSONObject(j).getString("name"));
 
+
+                /*
+                FoodDatabase db = FoodDatabase.getDatabase(getApplicationContext());
+                db.beginTransaction();
+                db.ingredientDao().insert(new Ingredient("leche", "ml"));
+                db.ingredientDao().insert(new Ingredient("huevo", "count"));
+                db.plateDao().insert(new Plate("flan"));
+                db.ingrPlatDao().insert(new IngredientesPlatos( db.ingredientDao().getIdByName("leche").getValue(), db.plateDao().getIdByName("flan").getValue(), 500 ));
+                db.ingrPlatDao().insert(new IngredientesPlatos( db.ingredientDao().getIdByName("huevo").getValue(), db.plateDao().getIdByName("flan").getValue(), 6 ));
+                //*/
+
+                FoodRepository fr = new FoodRepository(this.getApplication());
+                //ArrayList<Ingredient> aux =  new ArrayList<Ingredient>();
+                //aux.add(new Ingredient("leche", "ml"));
+                //aux.add(new Ingredient("huevo", "count"));
+                //fr.insertIngredient(aux.get(0));
+                //fr.insertIngredient(aux.get(1));
+                //Plate flan = new Plate("flan");
+
+                //fr.insertPlate(flan);
+                //fr.insertIngredientsPlate(flan, aux, new int[]{200,6});
+
+                for( String str: query.split("\n")){
+                    Plate plato;
+                    ingredients =  new ArrayList<String>();
+                    if ( (plato = fr.getPlate(str)) != null  ){
+                        for ( IngrCant ing : fr.getIngredientsForPlate(plato) )
+                            ingredients.add( ing.getNombre());
+                        plato.setIngredients(ingredients);
+                        plates.add(plato);
                     }
-                    plates.add(new Plate( str , ingredients));
+                    else {
+                        JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest( new URL(cons+str.replace(' ', '+') )));
+                        if ( jsonResponse.getString("state").compareToIgnoreCase("Success") != 0 )
+                            continue;
+                        JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
+
+                        for ( int j = 0; j<ingredientes.length(); j++  ) {
+                            JSONObject act = ingredientes.getJSONObject(j);
+                            ingredients.add(act.getString("name"));
+                            fr.insertIngredient(new Ingredient(act.getString("name"), act.getString("units")));
+                        }
+                        plates.add(new Plate( str , ingredients));
+                    }
                 }
             }
             catch (IOException e) { e.printStackTrace(); this.onBackPressed(); }

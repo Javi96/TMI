@@ -10,6 +10,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.example.textrecognition2.domain.FoodRepository;
+
+import java.util.ArrayList;
+
 public class DietActivity extends AppCompatActivity implements View.OnClickListener{
 
 
@@ -27,6 +31,8 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
 
         see_diet.setOnClickListener(this);
         scan_diet.setOnClickListener(this);
+
+        FoodRepository fr = new FoodRepository(this.getApplication());
     }
 
     @Override

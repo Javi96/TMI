@@ -43,7 +43,7 @@ public class IngredientsActivity extends AppCompatActivity {
 
         final ArrayList<Ingredient> ingredients = new ArrayList<>();
         for (int i=0; i<15; i++){
-            ingredients.add(new Ingredient("ingrediente " + i));
+            ingredients.add(new Ingredient("ingrediente " + i, ""));
         }
 
         final IngredientArrayAdapter arrayAdapter = new IngredientArrayAdapter

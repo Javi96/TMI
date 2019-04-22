@@ -52,6 +52,7 @@ public class DandelionActivity extends AppCompatActivity {
     }
 
     public static String generaURL(String text) {
+        /*
         final String apiKey = "cf93e08cff2a412fb7516667a1640a2f"; //PONER LA CREDENCIAL ASOCIADA A TU CUENTA
         final String endpoint = "https://api.dandelion.eu/datatxt/nex/v1/?";
 
@@ -68,7 +69,7 @@ public class DandelionActivity extends AppCompatActivity {
         for ( String str : text.split(" "))
             sb.append(str + '+');
         sb.setCharAt(sb.length()-1, '&');
-        */
+        * /
         sb.append(text.replace( ' ', '+'));
 
 
@@ -86,7 +87,6 @@ public class DandelionActivity extends AppCompatActivity {
 
         return  endpoint+textURL+"&"+topEntitiesURL+"&"+includeURL+"&"+token;
         */
-
 
         return "https://api.dandelion.eu/datatxt/nex/v1/?text=" + text.replace( ' ', '+') + "&top_entities=10&lang=es&include=types%2Ccategories&token=cf93e08cff2a412fb7516667a1640a2f";
         //return sb.toString();
