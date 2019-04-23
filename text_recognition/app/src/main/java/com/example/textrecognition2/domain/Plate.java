@@ -15,7 +15,7 @@ public class Plate {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    private int id;
+    private long id;
 
     @NonNull
     @ColumnInfo(name = "nombre")
@@ -33,12 +33,12 @@ public class Plate {
         this.ingredients = ingredients;
     }
 
-    public int getId(){ return this.id; }
+    public long getId(){ return this.id; }
     public String getName() {
         return name;
     }
 
-    public void setId(int id){ this.id = id; }
+    public void setId(long id){ this.id = id; }
 
     @Ignore
     private ArrayList<String> ingredients;
@@ -62,6 +62,7 @@ public class Plate {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder(this.name);
+        stringBuilder.append(", id: " + this.id);
         if(this.ingredients != null)
             for (String ingredient: ingredients)
                 stringBuilder.append('_' + ingredient );

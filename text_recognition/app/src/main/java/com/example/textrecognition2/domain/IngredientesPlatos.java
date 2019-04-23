@@ -18,27 +18,27 @@ public class IngredientesPlatos {
 
     @NonNull
     @ColumnInfo(name = "ingrId")
-    private int ingrId;
+    private long ingrId;
 
     @NonNull
     @ColumnInfo(name = "platId")
-    private int platId;
+    private long platId;
 
     @NonNull
     @ColumnInfo(name = "quantity")
     private int quantity;
 
-    public IngredientesPlatos(@NonNull int ingrId, @NonNull int platId, @NonNull int quantity) {
+    public IngredientesPlatos(@NonNull long ingrId, @NonNull long platId, @NonNull int quantity) {
         this.ingrId = ingrId;
         this.platId = platId;
         this.quantity = quantity;
     }
 
-    public void setIngrId(int ingrId) {
+    public void setIngrId(long ingrId) {
         this.ingrId = ingrId;
     }
 
-    public void setPlatId(int platId) {
+    public void setPlatId(long platId) {
         this.platId = platId;
     }
 
@@ -46,11 +46,11 @@ public class IngredientesPlatos {
         this.quantity = quantity;
     }
 
-    public int getIngrId() {
+    public long getIngrId() {
         return ingrId;
     }
 
-    public int getPlatId() {
+    public long getPlatId() {
         return platId;
     }
 

@@ -2,6 +2,7 @@ package com.example.textrecognition2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,9 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.textrecognition2.domain.FoodDatabase;
 import com.example.textrecognition2.domain.FoodRepository;
 
 import java.util.ArrayList;
@@ -32,7 +35,21 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
         see_diet.setOnClickListener(this);
         scan_diet.setOnClickListener(this);
 
+        /*
         FoodRepository fr = new FoodRepository(this.getApplication());
+        if ( fr.getPlate("flan") != null)
+            Toast.makeText(getApplicationContext(), "Plato : " + fr.getPlate("flan").toString(), Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
+        //*/
+
+        /*
+        FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
+        if ( db.plateDao().findByName("flan") != null)
+            Toast.makeText(getApplicationContext(), "Plato : " + db.plateDao().findByName("flan").toString(), Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
+        //*/
     }
 
     @Override

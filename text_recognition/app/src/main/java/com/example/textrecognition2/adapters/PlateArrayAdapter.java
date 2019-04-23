@@ -14,8 +14,11 @@ import android.widget.TextView;
 import com.example.textrecognition2.R;
 import com.example.textrecognition2.domain.Plate;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class PlateArrayAdapter extends ArrayAdapter<Plate> {
 
@@ -45,10 +48,15 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
         TextView ingredient3 = view.findViewById(R.id.component_card_text3);
 
         ArrayList<String> ingredients = plate.getIngredients();
-        plateName.setText(plate.getName());
-        ingredient1.setText(ingredients.get(0));
-        ingredient2.setText(ingredients.get(1));
-        ingredient3.setText(ingredients.get(2));
+        plateName.setText(StringUtils.capitalize( plate.getName()) );
+        StringBuilder sb = new StringBuilder();
+        for (String str : ingredients)
+            sb.append(str+'\n');
+        sb.deleteCharAt(sb.length()-1);
+        ingredient1.setText(sb.toString());
+        //ingredient1.setText(ingredients.get(0));
+        //ingredient2.setText(ingredients.get(1));
+        //ingredient3.setText(ingredients.get(2));
 
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
         view.startAnimation(animation);

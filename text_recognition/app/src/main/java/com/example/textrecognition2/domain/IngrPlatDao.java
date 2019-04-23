@@ -25,15 +25,15 @@ public interface IngrPlatDao {
     void deleteAll();
 
     @Query("SELECT * FROM ingr_plat_table")
-    LiveData<List<IngredientesPlatos>> getAll();
+    List<IngredientesPlatos> getAll();
 
-    @Query(value = "SELECT id, nombre, unidades, quantity FROM ingr_plat_table INNER JOIN ingredients_table ON ingr_plat_table.ingrId = ingredients_table.id WHERE platId IS :platId")
-    LiveData<List<IngrCant>> getRecipeForPlate(int platId);
+    @Query(value = "SELECT id, nombre, unidades, quantity FROM ingr_plat_table INNER JOIN ingredients_table ON ingr_plat_table.ingrId = ingredients_table.id WHERE platId = :platId")
+    List<IngrCant> getRecipeForPlate(long platId);
 
-    @Query("SELECT * FROM ingr_plat_table  WHERE platId IS :platId")
-    LiveData<List<IngredientesPlatos>> getIngredientsForPlate(int platId);
+    @Query("SELECT * FROM ingr_plat_table  WHERE platId = :platId")
+    List<IngredientesPlatos> getIngredientsForPlate(long platId);
 
     @Query("SELECT plates_table.id, plates_table.nombre FROM ingr_plat_table INNER JOIN plates_table ON ingr_plat_table.platId = plates_table.id  WHERE ingrId = :ingrId")
-    LiveData<List<Plate>> loadPlatesWithIngredient(int ingrId);
+    List<Plate> loadPlatesWithIngredient(long ingrId);
 
 }

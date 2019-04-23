@@ -20,11 +20,11 @@ public class FoodRepository {
     public FoodRepository(Application application) {
         FoodDatabase db = FoodDatabase.getDatabase(application);
         ingredientDao = db.ingredientDao();
-        mAllIngredients = ingredientDao.getAll();
+        //mAllIngredients = ingredientDao.getAll();
         plateDao = db.plateDao();
-        mAllPlates = plateDao.getAll();
+        //mAllPlates = plateDao.getAll();
         ingrPlatDao = db.ingrPlatDao();
-        mAllIngPla = ingrPlatDao.getAll();
+        //mAllIngPla = ingrPlatDao.getAll();
     }
 
     public LiveData<List<Ingredient>> getAllIngredients() {
@@ -39,162 +39,58 @@ public class FoodRepository {
         return mAllIngPla;
     }
 
-    /*
-    private static class insertIngredientAsyncTask extends AsyncTask<Ingredient, Void, Void> {
 
-        private IngredientDao mAsyncTaskDao;
 
-        insertIngredientAsyncTask(IngredientDao dao) {
-            mAsyncTaskDao = dao;
-        }
-
-        @Override
-        protected Void doInBackground(final Ingredient... params) {
-            mAsyncTaskDao.insert(params[0]);
-            return null;
-        }
-    }
-    */
-
-    /*
-    private static class insertPlateAsyncTask extends AsyncTask<Plate, Void, Void> {
-
-        private PlateDao mAsyncTaskDao;
-
-        insertPlateAsyncTask(PlateDao dao) {
-            mAsyncTaskDao = dao;
-        }
-
-        @Override
-        protected Void doInBackground(final Plate... params) {
-            mAsyncTaskDao.insert(params[0]);
-            return null;
-        }
-    }
-    */
-
-    @SuppressLint("StaticFieldLeak")
     public void insertIngredient (final Ingredient ingredient) {
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                ingredientDao.insert(ingredient);
-                return null;
-            }
-        }.execute();
+        ingredientDao.insert(ingredient);
     }
 
-    @SuppressLint("StaticFieldLeak")
     public void insertIngredients (final List<Ingredient> ingredients) {
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                for (Ingredient ing : ingredients)
-                    ingredientDao.insert(ing);
-                return null;
-            }
-        }.execute();
+         for (Ingredient ing : ingredients)
+             ingredientDao.insert(ing);
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public void insertPlate (final Plate plate) {
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                plateDao.insert(plate);
-                return null;
-            }
-        }.execute();
+    public void insertPlate (Plate plate) {
+        plateDao.insert(plate);
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public void insertPlates (final List<Plate> plates) {
-        new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                for (Plate pla : plates)
-                    plateDao.insert(pla);
-                return null;
-            }
-        }.execute();
+    public void insertPlates ( List<Plate> plates) {
+        for (Plate pla : plates)
+            plateDao.insert(pla);
+        //plateDao.insertAll(plates);
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public void insertIngredientsPlate (final Plate plate, final List<Ingredient> ingredients, final int[] cantidades) {
-        new AsyncTask<Void, Void,  Void>() {
-
-            @Override
-            protected Void doInBackground(Void... params) {
-                int id = plate.getId();
-                for(int i = 0; i < ingredients.size(); i++){
-                    ingrPlatDao.insert(new IngredientesPlatos(ingredients.get(i).getId(), id, cantidades[i]));
-                }
-                return null;
-            }
-        }.execute();
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    public void insertIngredientsPlate (final String plate, final List<String> ingredients, final int[] cantidades) {
-        new AsyncTask<Void, Void,  Void>() {
-
-            @Override
-            protected Void doInBackground(Void... params) {
-                int id = ingredientDao.findByName(plate).getValue().getId();
-                for(int i = 0; i < ingredients.size(); i++){
-                    ingrPlatDao.insert(new IngredientesPlatos( ingredientDao.findByName(ingredients.get(i)).getValue().getId(),
-                                        id, cantidades[i]));
-                }
-                return null;
-            }
-        }.execute();
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    public List<IngrCant> getIngredientsForPlate (final Plate plate) {
-        return new AsyncTask<Void, Void,  List<IngrCant>>() {
-            @Override
-            protected List<IngrCant> doInBackground(Void... params) {
-                return ingrPlatDao.getRecipeForPlate(plate.getId()).getValue();
-            }
-        }.doInBackground();
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    public Plate getPlate (final String name) {
-        final Plate[] plato = new Plate[1];
-
-        new AsyncTask<Void, Void,  Plate>() {
-
-            @Override
-            protected Plate doInBackground(Void... params) {
-                //resul = plateDao.findByName(name).getValue();
-                //plato[0] = plateDao.findByName(name).getValue();
-                return plateDao.findByName(name).getValue();
-            }
-
-
-            @Override
-            protected void onPostExecute(Plate resul) {
-                super.onPostExecute(resul);
-                plato[0] = resul;
-            }
-
-        }.execute();
-
-        return plato[0];
+    public void insertIngredientsPlate (Plate plate, List<Ingredient> ingredients, int[] cantidades) {
+        long id = plate.getId();
+        for(int i = 0; i < ingredients.size(); i++)
+            ingrPlatDao.insert(new IngredientesPlatos(ingredients.get(i).getId(), id, cantidades[i]));
 
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public Ingredient getIngredient (final String name) {
-        //new insertIngredientAsyncTask(ingredientDao).execute(ingredient);
-        return new AsyncTask<Void, Void,  Ingredient>() {
-            @Override
-            protected Ingredient doInBackground(Void... params) {
-                return ingredientDao.findByName(name).getValue();
-            }
-        }.doInBackground();
+    public void insertIngredientsPlate (String plate, List<String> ingredients, int[] cantidades) {
+        long id = ingredientDao.findByName(plate).getId();
+        for(int i = 0; i < ingredients.size(); i++)
+            ingrPlatDao.insert(new IngredientesPlatos(
+                    ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
+    }
+
+    public void insertPlateWithIngredients (String plate, List<String> ingredients, int[] cantidades) {
+        int id = (int) plateDao.insert(new Plate(plate));
+        for(int i = 0; i < ingredients.size(); i++)
+            ingrPlatDao.insert(new IngredientesPlatos(
+                    ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
+    }
+
+    public List<IngrCant> getIngredientsForPlate (Plate plate) {
+        return ingrPlatDao.getRecipeForPlate(plate.getId());
+    }
+
+    public Plate getPlate (String name) {
+        return plateDao.findByName(name);
+    }
+
+    public Ingredient getIngredient(String name) {
+        return ingredientDao.findByName(name);
     }
 
 }

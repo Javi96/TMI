@@ -48,7 +48,9 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
 
         listView = findViewById(R.id.diet_list_food);
 
-        String query = DandelionActivity.generaURL(getIntent().getStringExtra("food")); //.replace('\n',' '));
+        String query;
+        //query = DandelionActivity.generaURL(getIntent().getStringExtra("food")).replace('\n',' ');
+        query = getIntent().getStringExtra("food");
 
         //Toast.makeText(getApplicationContext(), getIntent().getStringExtra("food"), Toast.LENGTH_LONG).show();
 
@@ -97,8 +99,9 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                 */
 
 
+
+                //FoodDatabase db = FoodDatabase.getDatabase(getApplicationContext());
                 /*
-                FoodDatabase db = FoodDatabase.getDatabase(getApplicationContext());
                 db.beginTransaction();
                 db.ingredientDao().insert(new Ingredient("leche", "ml"));
                 db.ingredientDao().insert(new Ingredient("huevo", "count"));
@@ -118,32 +121,40 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                 //fr.insertPlate(flan);
                 //fr.insertIngredientsPlate(flan, aux, new int[]{200,6});
 
-                for( String str: query.split("\n")){
-                    Plate plato;
+                for( String str: query.split("\n") ){
+                    Plate plato = fr.getPlate(str);
+                    Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
                     ingredients =  new ArrayList<String>();
-                    if ( (plato = fr.getPlate(str)) != null  ){
-                        for ( IngrCant ing : fr.getIngredientsForPlate(plato) )
+                    if ( plato != null  ){
+                    //if ( plato != null  ){
+                        for ( IngrCant ing : fr.getIngredientsForPlate(plato) ) // db.ingrPlatDao().getRecipeForPlate(plato.getId()) ) //
                             ingredients.add( ing.getNombre());
                         plato.setIngredients(ingredients);
                         plates.add(plato);
                     }
                     else {
-                        JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest( new URL(cons+str.replace(' ', '+') )));
-                        if ( jsonResponse.getString("state").compareToIgnoreCase("Success") != 0 )
-                            continue;
-                        JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
+                        try {
+                            JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest(new URL(cons + str.replace(' ', '+'))));
+                            if (jsonResponse.getString("state").compareToIgnoreCase("Success") != 0)
+                                continue;
+                            //fr.insertPlate(new Plate(str));
+                            JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
+                            ArrayList<String> nuevos = new ArrayList<String>();
+                            int[] cantidades = new int[ingredientes.length()];
+                            for (int j = 0; j < ingredientes.length(); j++) {
+                                JSONObject act = ingredientes.getJSONObject(j);
+                                String nombre = act.getString("name");
+                                ingredients.add(nombre);
+                                nuevos.add(nombre);
+                                fr.insertIngredient(new Ingredient(nombre, act.getString("units")));
 
-                        for ( int j = 0; j<ingredientes.length(); j++  ) {
-                            JSONObject act = ingredientes.getJSONObject(j);
-                            ingredients.add(act.getString("name"));
-                            fr.insertIngredient(new Ingredient(act.getString("name"), act.getString("units")));
-                        }
-                        plates.add(new Plate( str , ingredients));
+                            }
+                            plates.add(new Plate(str, ingredients));
+                        } catch (JSONException e) { e.printStackTrace(); continue; } //this.onBackPressed(); }
                     }
                 }
             }
             catch (IOException e) { e.printStackTrace(); this.onBackPressed(); }
-            catch (JSONException e) { e.printStackTrace(); this.onBackPressed(); }
 
             //Toast.makeText(getApplicationContext(), "La longitud de respuesta es : " + respuesta.size(), Toast.LENGTH_LONG).show();
 

@@ -75,9 +75,10 @@ public class TextRecognitionActivity extends AppCompatActivity{
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TestPlatesActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PlatesActivity.class);
 
                 intent.putExtra("food", textView.getText().toString());
+                //intent.putExtra("food", "flan");
                 setResult(RESULT_OK, intent);
                 startActivity(intent);
 

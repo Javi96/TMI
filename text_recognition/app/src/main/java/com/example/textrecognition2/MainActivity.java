@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //dandelion = findViewById(R.id.dandelion);
         //text_razor = findViewById(R.id.text_razor);
 
+        FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
+        db.inTransaction();
+
         cv_scan_diet_cart = findViewById(R.id.component_scan_diet_card_view);
         cv_shop_cart = findViewById(R.id.component_shop_cart_card_view);
         cv_pantry_cart = findViewById(R.id.component_pantry_card_view);
@@ -85,13 +88,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         /*
         FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
-        FoodRepository fr = new FoodRepository(this.getApplication());
 
         //SystemClock.sleep(5000);
 
-        //if ( fr.getPlate("flan") != null)
-        if ( db.plateDao().findByName("flan").getValue() != null)
-            Toast.makeText(getApplicationContext(), "Plato : " + fr.getPlate("flan").toString() , Toast.LENGTH_LONG).show();
+        if ( db.plateDao().findByName("flan") != null)
+            Toast.makeText(getApplicationContext(), "Plato : " + db.plateDao().findByName("flan").toString(), Toast.LENGTH_LONG).show();
         else
             Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
         //*/

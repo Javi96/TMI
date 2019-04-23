@@ -24,15 +24,15 @@ public interface PlateDao {
     void deleteAll();
 
     @Query("SELECT id FROM plates_table WHERE nombre LIKE :name LIMIT 1")
-    LiveData<Integer> getIdByName(String name);
+    long getIdByName(String name);
 
     @Query("SELECT * FROM plates_table")
-    LiveData<List<Plate>> getAll();
+    List<Plate> getAll();
 
     @Query("SELECT * FROM plates_table WHERE id IN (:platIds)")
-    LiveData<List<Plate>> loadAllByIds(int[] platIds);
+    List<Plate> loadAllByIds(long[] platIds);
 
     @Query("SELECT * FROM plates_table WHERE nombre LIKE :name LIMIT 1")
-    LiveData<Plate> findByName(String name);
+    Plate findByName(String name);
 
 }

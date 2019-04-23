@@ -24,18 +24,18 @@ public interface IngredientDao {
     void deleteAll();
 
     @Query("SELECT id FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
-    LiveData<Integer> getIdByName(String name);
+    Integer getIdByName(String name);
 
     @Query("SELECT * FROM ingredients_table WHERE id = :id LIMIT 1")
-    LiveData<Ingredient> findById(int id);
+    Ingredient findById(long id);
 
     @Query("SELECT * FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
-    LiveData<Ingredient> findByName(String name);
+    Ingredient findByName(String name);
 
     @Query("SELECT * FROM ingredients_table")
-    LiveData<List<Ingredient>> getAll();
+    List<Ingredient> getAll();
 
     @Query("SELECT * FROM ingredients_table WHERE id IN (:ingrIds)")
-    LiveData<List<Ingredient>> loadAllByIds(int[] ingrIds);
+    List<Ingredient> loadAllByIds(long[] ingrIds);
 
 }

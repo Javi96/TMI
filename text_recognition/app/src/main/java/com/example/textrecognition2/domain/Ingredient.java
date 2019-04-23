@@ -12,7 +12,7 @@ public class Ingredient {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    private int id;
+    private long id;
 
     @NonNull
 
@@ -23,17 +23,17 @@ public class Ingredient {
     @ColumnInfo(name = "unidades")
     private String units;
 
-    public Ingredient(/*@NonNull int id,*/ @NonNull String name, @NonNull String units) {
+    public Ingredient(/*@NonNull long id,*/ @NonNull String name, @NonNull String units) {
         //this.id = id;
         this.name = name;
         this.units = units;
     }
 
-    public int getId(){ return this.id; }
+    public long getId(){ return this.id; }
     public String getName() { return this.name; }
     public String getUnits() { return this.units; }
 
-    public void setId(int id) { this.id = id; }
+    public void setId(long id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setUnits(String units) { this.units = units; }
 

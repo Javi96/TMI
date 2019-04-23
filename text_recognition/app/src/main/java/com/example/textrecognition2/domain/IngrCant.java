@@ -1,19 +1,19 @@
 package com.example.textrecognition2.domain;
 
 public class IngrCant {
-    private int id;
+    private long id;
     private String nombre;
     private String unidades;
     private int quantity;
 
-    public IngrCant(int id, String nombre, String unidades, int quantity) {
+    public IngrCant(long id, String nombre, String unidades, int quantity) {
         this.id = id;
         this.nombre = nombre;
         this.unidades = unidades;
         this.quantity = quantity;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -27,7 +27,7 @@ public class IngrCant {
         return quantity;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
