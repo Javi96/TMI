@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.textrecognition2.test.TestPlatesActivity;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
@@ -28,7 +29,6 @@ public class TextRecognitionActivity extends AppCompatActivity{
 
     SurfaceView cameraView;
     TextView textView;
-    Button nextButton;
 
 
     CameraSource cameraSource;
@@ -45,9 +45,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
                     }
                     try {
                         cameraSource.start(cameraView.getHolder());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    } catch (IOException e) {e.printStackTrace(); }
                 }
             }
         }
@@ -65,9 +63,9 @@ public class TextRecognitionActivity extends AppCompatActivity{
         //set content view AFTER ABOVE sequence (to avoid crash)
         try
         {
-            this.getSupportActionBar().hide();
+            //this.getSupportActionBar().hide();
         }
-        catch (NullPointerException e){}
+        catch (NullPointerException e){e.printStackTrace();}
 
         setContentView(R.layout.activity_text_recognition);
 
@@ -77,10 +75,13 @@ public class TextRecognitionActivity extends AppCompatActivity{
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), DietActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TestPlatesActivity.class);
+
                 intent.putExtra("food", textView.getText().toString());
+                //intent.putExtra("food", "flan");
                 setResult(RESULT_OK, intent);
                 startActivity(intent);
+
             }
         });
 
@@ -150,5 +151,17 @@ public class TextRecognitionActivity extends AppCompatActivity{
                 }
             });
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 }
