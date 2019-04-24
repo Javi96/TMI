@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
-from recipe_module import get_recipe
+from recipe_module import get_recipe, get_recipe_spacy
 #import datetime
 
 app = Flask(__name__)
@@ -22,6 +22,12 @@ def recipe_obtaining(plate):
     print('-Solicitada receta para plato: '+ str(plate))
     return str(get_recipe(plate))
 
+@app.route('/recipeSpacy/<plate>', methods=['GET'])
+def recipe_obtaining_spacy(plate):
+        
+    #print(datetime.datetime.now()+'------------- Solicitada receta para plato: '+ plate)   
+    print('-Solicitada receta para plato: '+ str(plate))
+    return str(get_recipe_spacy(plate))
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=5555) 
