@@ -4,6 +4,12 @@
     PARÁMETROS DE CONFIGURACIÓN DEL MÓDULO DE OBTENCIÓN DE RECETAS 
 '''
 
+edamam_endpoint= 'https://api.edamam.com/search?app_id='
+app_id='15922492'
+app_key= '6e6eb78799275ae68820a8ce0cf6fbf1'
+
+dandelion_endpoint='https://api.dandelion.eu/datatxt/nex/v1/?'
+dandelion_key= 'cf93e08cff2a412fb7516667a1640a2f'
 
 
 '''

@@ -9,12 +9,31 @@
 import urllib.request
 import json
 import difflib
+from pathlib import Path
 from recipeconfig import edamam_endpoint, app_id, app_key, dandelion_endpoint, dandelion_key, measures_dict
 from spacy_module import get_ingredient_name
+
+
+'''
+    Diccionario que leerá las consultas que se han realizado previamente.
+    De esta forma, reducimos el tiempo de respuesta y evitamos realizar requests que 
+    se han realizado previamente a otras APIs.
+'''
+
+cache_file='cache'
+
+#Si no existe el fichero, lo crea
+my_file = Path(cache_file)        
+if not my_file.is_file():
+    with open(cache_file, "w+") as myfile:
+        myfile.write('')
+        
+
+
 '''
     IMPLEMENTACIÓN DE LA FUNCIONALIDAD DEL SERVICIO REST.
 '''
-
+        
 '''
     Dado un plato (en forma de texto), devuelve su receta.
     La receta consistirá en una lista de tuplas de tres elementos:
@@ -56,8 +75,13 @@ def get_recipe(plate):
     -Output: lista de diccionarios con tres campos: "num", "units" y "name". Si sucede algún error, devuelve una lista vacia.
 '''
 def get_recipe_spacy(plate):
-    plate=parse_blank_spaces(plate)
-    contents = get_edamam_recipe(plate)
+    
+    if plate in system_cache:
+        print('Devolucion realizada por cache')
+        return system_cache[plate]
+    
+    parsed_plate=parse_blank_spaces(plate)
+    contents = get_edamam_recipe(parsed_plate)
     
     #contents es de tipo bytes. Es necesario pasarlo a json.
     contents = parse_bytes_to_JSON(contents)
@@ -67,11 +91,57 @@ def get_recipe_spacy(plate):
         best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
         result=parse_recipe_spacy(best_hit)
         #actualmente result es una lista.
-        #Devolvemos el JSON correspondiente.        
-        return {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
+        #Devolvemos el JSON correspondiente.           
+        
+        
+        '''
+            Si se ha realizado correctamente, se almacena el resultado en en el diccionario y en el almacenamiento permanente.
+        '''
+        
+        result= {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
+        
+        #Almacenamos en el diccionario.
+        system_cache[plate]=result
+        
+        #Almacenamos en el almacenamiento permanente.
+        save_result(plate,result)
+        
+        return result
     else:
         #Si ninguna receta encaja.
         return {"state":"Error"}
+
+
+def load_cache():
+
+    with open(cache_file, "r") as myfile:
+        lines = myfile.readlines()
+        
+    #Para cada línea, crea una entrada en la caché.
+    cache = {}
+    for x in lines:
+        parsed_line=x.split('&&&&')
+        cache[parsed_line[0]]= json.loads(parsed_line[1].replace("'",'"'))
+    
+    return cache
+
+system_cache={}
+        
+system_cache=load_cache()
+
+print(system_cache)
+
+'''
+    Dada la consulta introducida por el usuario y un objeto json resultado de una consulta,
+    se graba el resultado en el almacenamiento permanente (un fichero).
+    
+    El fichero en el que se almacenará será el que indique el parámetro cache_file.
+'''
+def save_result(user_input,json_result):
+    with open(cache_file, "a") as myfile:
+        line=user_input+ "&&&&" + str(json_result)+ '\n'
+        myfile.write(line)
+
 
 
 '''
