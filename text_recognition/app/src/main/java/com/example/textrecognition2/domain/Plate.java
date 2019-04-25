@@ -62,7 +62,6 @@ public class Plate {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder(this.name);
-        stringBuilder.append(", id: " + this.id);
         if(this.ingredients != null)
             for (String ingredient: ingredients)
                 stringBuilder.append('_' + ingredient );

@@ -44,8 +44,6 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
 
         TextView plateName = view.findViewById(R.id.component_card_plate_name);
         TextView ingredient1 = view.findViewById(R.id.component_card_text1);
-        TextView ingredient2 = view.findViewById(R.id.component_card_text2);
-        TextView ingredient3 = view.findViewById(R.id.component_card_text3);
 
         ArrayList<String> ingredients = plate.getIngredients();
         plateName.setText(StringUtils.capitalize( plate.getName()) );
@@ -54,9 +52,6 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
             sb.append(str+'\n');
         sb.deleteCharAt(sb.length()-1);
         ingredient1.setText(sb.toString());
-        //ingredient1.setText(ingredients.get(0));
-        //ingredient2.setText(ingredients.get(1));
-        //ingredient3.setText(ingredients.get(2));
 
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
         view.startAnimation(animation);
