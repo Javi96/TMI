@@ -67,6 +67,7 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
 
         arrayAdapter = new PlateArrayAdapter
                 (this, android.R.layout.simple_list_item_1, plates);
+        arrayAdapter.setNotifyOnChange(true);
 
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
@@ -106,8 +107,9 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
                 intent.putExtra("plate", plate.toString());
                 intent.putExtra("pos", String.valueOf(position));
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 startActivityForResult(intent, 1);
-
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
             }
         });
 
@@ -123,8 +125,18 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.act_plates_float_btn:
-                Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                //Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+
+                StringBuilder stringBuilder = new StringBuilder("");
+
+                for(Plate plate: plates){
+                    stringBuilder.append(plate.toString() + "-");
+                }
+
+                intent.putExtra("plates", stringBuilder.toString());
+                startActivityForResult(intent, 2);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
         }
@@ -136,7 +148,7 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected  void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
         if (requestCode == 1) {
             if(resultCode == RESULT_OK) {
                 String text = data.getStringExtra("plate");
@@ -157,6 +169,37 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                     plates.set(Integer.parseInt(position), new Plate(nombre, newIngredients));
                     arrayAdapter.notifyDataSetChanged();
                 }
+            }
+        }else if(requestCode==2){
+            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
+            if(resultCode == RESULT_OK) {
+
+                String text = data.getStringExtra("plates");
+                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
+                plates.clear();
+                arrayAdapter.notifyDataSetChanged();
+                String[] info = text.split("-");
+
+                for(int i=0; i<info.length; i++){
+                    String[] ingredients = info[i].split("_");
+                    ArrayList<String> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j++) {
+                        ingredientsPlate.add(ingredients[j]);
+                    }
+                    plates.add(new Plate(ingredients[0], ingredientsPlate));
+                    arrayAdapter.notifyDataSetChanged();
+
+                }
+
+                /*for(int i=0; i<9; i++){
+                    ArrayList<String> d = new ArrayList<String>();
+                    d.add("hola");
+                    d.add("como");
+                    plates.add(new Plate("Plate " + i, d));
+                    arrayAdapter.notifyDataSetChanged();
+                }*/
+
+
             }
         }
     }

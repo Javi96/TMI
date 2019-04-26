@@ -26,6 +26,9 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
     private String message;
 
     private String position;
+
+    private StringBuilder initialInfo = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +69,15 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         }
         btn_edit_plate.setOnClickListener(this);
 
+        initialInfo = new StringBuilder("");
+        int count = layout.getChildCount();
+        EditText edt = null;
+        for(int i=0; i<count; i++) {
+            edt =  (EditText) layout.getChildAt(i);
+
+            initialInfo.append( edt.getText() + "_");
+        }
+
     }
 
     @Override
@@ -83,17 +95,13 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                 }
 
 
-                Log.e("vvvv", stringBuilder.toString());
-                final RoundButton btn = (RoundButton) findViewById(R.id.btn_edit_plate);
+                final RoundButton btn = findViewById(R.id.btn_edit_plate);
 
                 btn.startAnimation();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-
-                        //btn.revertAnimation();
                         btn.setResultState(RoundButton.ResultState.SUCCESS);
-
                     }
                 }, 1614);
                 new Handler().postDelayed(new Runnable() {
@@ -107,12 +115,27 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
 
 
-                        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
                         finish();
 
                     }
                 }, 2000);
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+
+        Intent intent = new Intent();
+        intent.putExtra("plate", initialInfo.toString());
+        intent.putExtra("pos", String.valueOf(position));
+        setResult(RESULT_OK, intent);
+
+
+
+        finish();
+        super.onBackPressed();
+
     }
 }
