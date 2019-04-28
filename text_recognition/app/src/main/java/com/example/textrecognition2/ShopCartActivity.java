@@ -12,12 +12,15 @@ import com.example.textrecognition2.R;
 
 public class ShopCartActivity extends AppCompatActivity {
 
+    private TextView title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_cart);
 
-
+        title = findViewById(R.id.cmp_tile_title);
+        title.setText("Shopping\ncart");
 
 
 

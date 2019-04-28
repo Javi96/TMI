@@ -1,12 +1,15 @@
 package com.example.textrecognition2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,11 +23,18 @@ import com.example.textrecognition2.domain.Plate;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView textView;
 
@@ -33,6 +43,10 @@ public class MenuActivity extends AppCompatActivity {
     private LinearLayout layout;
 
     private String plates;
+
+
+    private String day;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,28 +101,12 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //textView.setText(parent.getItemAtPosition(position).toString());
                 //button3.setText("Estos son los platos para el " + parent.getItemAtPosition(position).toString());
-
+                day = parent.getItemAtPosition(position).toString();
             }
 
             @Override
@@ -116,6 +114,11 @@ public class MenuActivity extends AppCompatActivity {
 
             }
         });
+
+
+        FloatingActionButton floatingActionButton = findViewById(R.id.act_menu_confirm);
+        floatingActionButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -129,5 +132,24 @@ public class MenuActivity extends AppCompatActivity {
 
         finish();
         super.onBackPressed();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.act_menu_confirm:
+                SharedPreferences prefs =
+                        getSharedPreferences("menus",Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString(this.day, this.plates);
+                editor.apply();
+
+
+
+                String data = prefs.getString(this.day, "");
+                Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG*2).show();
+
+
+        }
     }
 }
