@@ -139,13 +139,6 @@ def delete_parenthesis_text(inputString):
     
     return inputString
 
-#print('6 slices pickled jalapeño')
-#print(delete_single_chars('6 slices pickled jalapeño'))
-#print(delete_measures('6 tablespoon pickled jalapeño'))
-#print(get_label_similarity('tablespoon','TablepoonS'))
-
-#print(get_root('Esto es una prueba, asfdsf asdfsad asass ffdsdsfv este deberia quedarse'))
-
 '''
     Dada una sentencia que representa un ingrediente de un plato, se encargará de eliminar los elementos superficiales y parsear dicha sentencia
     para devolver el propio ingrediente de la sentencia.
@@ -176,26 +169,21 @@ def get_ingredient_name(stringInput):
     for chunk in doc.noun_chunks:
         
         #chunk text
-        ct=chunk.text
-        #print(ct)        
+        ct=chunk.text        
     
         #Eliminamos el primer número si lo es.
         if ct[0].isdigit():
             ct=ct[2:]
-        #print(ct)        
     
         #Si aún tiene números, lo desechamos.
         
         if not  hasNumbers(ct):
             ct=delete_single_chars(ct)
-            #print(ct)
             ct=delete_measures(ct)
             
             ct=delete_parenthesis_text(ct)
             
-            #print(ct)
             ct=get_root(ct)
-            #print(ct)
             result.append(ct)
     
     if len(result)==0:

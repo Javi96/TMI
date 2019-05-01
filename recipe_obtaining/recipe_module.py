@@ -33,36 +33,6 @@ if not my_file.is_file():
 '''
     IMPLEMENTACIÓN DE LA FUNCIONALIDAD DEL SERVICIO REST.
 '''
-        
-'''
-    Dado un plato (en forma de texto), devuelve su receta.
-    La receta consistirá en una lista de tuplas de tres elementos:
-        -El primer elemento hará referencia al número de unidades que se utilicen.
-        -El segundo elemento hará referencia a las unidades/métrica que se utilice (ml, kg, etc).
-        -El tercer elemento será el nombre del ingrediente.
-    
-    -Input: string que represente el plato del cual se busque la cadena.
-    -Output: lista de diccionarios con tres campos: "num", "units" y "name". Si sucede algún error, devuelve una lista vacia.
-'''
-#Dado un plato, devuelve su receta.
-def get_recipe(plate):
-    plate=parse_blank_spaces(plate)
-    contents = get_edamam_recipe(plate)
-    
-    #contents es de tipo bytes. Es necesario pasarlo a json.
-    contents = parse_bytes_to_JSON(contents)
-    
-    #En el caso de que encontremos alguna receta que encaje.
-    if contents['count'] !=0:
-        
-        best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
-        result=parse_recipe(best_hit)
-        #actualmente result es una lista.
-        #Devolvemos el JSON correspondiente.        
-        return {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
-    else:
-        #Si ninguna receta encaja.
-        return {"state":"Error"}
 
 '''
     Dado un plato (en forma de texto), devuelve su receta.
@@ -72,10 +42,12 @@ def get_recipe(plate):
         -El tercer elemento será el nombre del ingrediente.
     
     -Input: string que represente el plato del cual se busque la cadena.
+            booleano (spacy) que indicará si se desea realizar el procesamiento del lenguaje natural mediante el módulo de 
+            spacy(spacy ==true) o mediante la API de dandelion (spacy==false)
     -Output: lista de diccionarios con tres campos: "num", "units" y "name". Si sucede algún error, devuelve una lista vacia.
-'''
-def get_recipe_spacy(plate):
-    
+'''     
+
+def get_recipe(plate, spacy):
     if plate in system_cache:
         print('Devolucion realizada por cache')
         return system_cache[plate]
@@ -89,11 +61,12 @@ def get_recipe_spacy(plate):
     #En el caso de que encontremos alguna receta que encaje.
     if contents['count'] !=0:
         best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
-        result=parse_recipe_spacy(best_hit)
+        
+        #En función del valor de spacy (booleano), se realizará el parseo utilizando el módulo de spacy (spacy==true) o dandelion (spacy==false)
+        result= parse_recipe(best_hit,spacy)
+        
         #actualmente result es una lista.
-        #Devolvemos el JSON correspondiente.           
-        
-        
+        #Devolvemos el JSON correspondiente.        
         '''
             Si se ha realizado correctamente, se almacena el resultado en en el diccionario y en el almacenamiento permanente.
         '''
@@ -111,7 +84,6 @@ def get_recipe_spacy(plate):
         #Si ninguna receta encaja.
         return {"state":"Error"}
 
-
 def load_cache():
 
     with open(cache_file, "r") as myfile:
@@ -128,8 +100,6 @@ def load_cache():
 system_cache={}
         
 system_cache=load_cache()
-
-print(system_cache)
 
 '''
     Dada la consulta introducida por el usuario y un objeto json resultado de una consulta,
@@ -175,7 +145,8 @@ def get_best_hit(plate,contentJSON):
         Lista de ingredientes sin parsear. Un ejemplo de ingrediente podría ser:
         
             "3 medium-sized Yukon Gold potatoes (about 1 1/2 pounds), peeled and quartered lengthwise"
-    
+        valor booleano (spacy) que determinará si se utiliza el procesamiento de las sentencias en lenguaje natural 
+        utilizando spacy (spacy==true) o la API de dandelion (spacy==false)
     -Output:
         Lista de ingredientes parseados del siguiente modo:
             Para cada ingrediente se crea un diccionario con 3 elementos:
@@ -183,9 +154,10 @@ def get_best_hit(plate,contentJSON):
                 2- Unidades (mg, gr, etc) de ese ingrediente.
                 3- Nombre del ingrediente
 '''
-def parse_recipe(input):
+
+def parse_recipe(input, spacy):
     result=[]
-    print(input)
+    #print(input)
     
     #Para cada ingrediente.
     for x in input:
@@ -201,8 +173,14 @@ def parse_recipe(input):
 
     
         try:
-            d["name"]=get_entities_dandelion(x)
+            if spacy:
+                #Usamos el módulo de spacy
+                d['name']=get_ingredient_name(x)
+            else:
+                #Usamos la API de dandelion
+                d["name"]=get_entities_dandelion(x)
 
+            
             if(d["name"]!=None):
                 result.append(d)
 
@@ -211,48 +189,6 @@ def parse_recipe(input):
             
     return result
 
-'''
-    Dada una receta, se parsea tal y como se explica abajo.
-
-    -Input: 
-        Lista de ingredientes sin parsear. Un ejemplo de ingrediente podría ser:
-        
-            "3 medium-sized Yukon Gold potatoes (about 1 1/2 pounds), peeled and quartered lengthwise"
-    
-    -Output:
-        Lista de ingredientes parseados del siguiente modo:
-            Para cada ingrediente se crea un diccionario con 3 elementos:
-                1- Número de unidades de ese ingrediente.
-                2- Unidades (mg, gr, etc) de ese ingrediente.
-                3- Nombre del ingrediente
-'''
-def parse_recipe_spacy(input):
-    result=[]
-    print(input)
-    
-    #Para cada ingrediente.
-    for x in input:
-        d={"num":"", "units":"", "name":"" }
-        words=x.split()
-        
-        
-        if(len(words)!=0 and (words[0]).isdigit()):
-            d["num"]= int(words[0])
-
-        if(len(words)>1 and is_measure_unity(words[1])):
-            d["units"]= words[1]
-
-        try:
-            d["name"]=get_ingredient_name(x)
-            
-
-            if(d["name"]!=""):
-                result.append(d)
-
-        except Exception as e:
-            print(e)
-            
-    return result
 
 
 '''
