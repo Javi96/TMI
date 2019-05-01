@@ -18,12 +18,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.example.textrecognition2.domain.FoodRepository;
 import com.example.textrecognition2.domain.IngrCant;
 import com.google.android.gms.vision.text.Line;
 
 import java.util.ArrayList;
 import java.util.List;
+=======
+import com.google.android.gms.vision.text.Line;
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
 
 public class DietScheduleActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,11 +54,14 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         Typeface font1 = Typeface.createFromAsset(getAssets(), "ultra.ttf");
         Typeface font2 = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
 
+<<<<<<< HEAD
         StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
         FoodRepository fr = new FoodRepository(this.getApplication());
 
+=======
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
         for(String day: days){
             String data = prefs.getString(day, "");
             if(!data.equalsIgnoreCase("")) {
@@ -66,10 +73,16 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
                 child.setTextColor(getResources().getColor(R.color.colorWhite));
                 layout.addView(child);
 
+<<<<<<< HEAD
                 String[] plates = data.split("_");
 
                 for(int i=0; i< plates.length; i++) {
                     /*
+=======
+                String[] plates = data.split("-");
+
+                for(int i=0; i< plates.length; i++) {
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
                     String[] ingredients = plates[i].split("_");
                     child = new TextView(getApplicationContext());
                     child.setTextSize(22);
@@ -85,6 +98,7 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
                         child.setTextColor(getResources().getColor(R.color.colorBlue));
                         layout.addView(child);
                     }
+<<<<<<< HEAD
                     */
                     List<IngrCant> ingredients = fr.getIngredientsForPlate(plates[i]);
                     child = new TextView(getApplicationContext());
@@ -101,11 +115,16 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
                         child.setTextColor(getResources().getColor(R.color.colorBlue));
                         layout.addView(child);
                     }
+=======
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
                 }
                      Log.e(day, data);
             }
         }
+<<<<<<< HEAD
         StrictMode.setThreadPolicy(old);
+=======
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
     }
 
     @Override

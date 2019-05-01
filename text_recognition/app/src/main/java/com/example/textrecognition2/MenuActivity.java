@@ -119,6 +119,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         FloatingActionButton floatingActionButton = findViewById(R.id.act_menu_confirm);
         floatingActionButton.setOnClickListener(this);
 
+<<<<<<< HEAD
     }
 
     @Override
@@ -135,10 +136,29 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+=======
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent();
+        intent.putExtra("plates", plates);
+        setResult(RESULT_OK, intent);
+
+
+
+        finish();
+        super.onBackPressed();
+    }
+
+    @Override
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.act_menu_confirm:
                 SharedPreferences prefs =
+<<<<<<< HEAD
                         getSharedPreferences("menus", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
 
@@ -149,6 +169,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 editor.putString(this.day, sb.toString());
+=======
+                        getSharedPreferences("menus",Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString(this.day, this.plates);
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
                 editor.apply();
 
 

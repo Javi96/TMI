@@ -141,6 +141,7 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 intent.putExtra("plate", plate.toString());
                 intent.putExtra("pos", String.valueOf(position));
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+<<<<<<< HEAD
                 */
                 Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
                 StringBuilder stringBuilder = new StringBuilder();
@@ -152,6 +153,8 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 intent.putExtra("plates", stringBuilder.toString());
                 intent.putExtra("plate", actual.toString());
                 intent.putExtra("pos", String.valueOf(position));
+=======
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
                 startActivityForResult(intent, 1);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
             }
@@ -173,7 +176,11 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
 
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
 
+<<<<<<< HEAD
                 StringBuilder stringBuilder = new StringBuilder();
+=======
+                StringBuilder stringBuilder = new StringBuilder("");
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
 
                 for(Plate plate: plates){
                     stringBuilder.append(plate.toString() + "-");
@@ -193,10 +200,14 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
     protected  void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+<<<<<<< HEAD
 
         if( requestCode == 1){
 
             //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
+=======
+        if (requestCode == 1) {
+>>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
             if(resultCode == RESULT_OK) {
 
                 String text = data.getStringExtra("plates");
@@ -248,6 +259,37 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 for(int i=0; i<info.length; i++){
                     String[] ingredients;
                     ingredients = info[i].split("_");
+                    ArrayList<String> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j++) {
+                        ingredientsPlate.add(ingredients[j]);
+                    }
+                    plates.add(new Plate(ingredients[0], ingredientsPlate));
+                    arrayAdapter.notifyDataSetChanged();
+
+                }
+
+                /*for(int i=0; i<9; i++){
+                    ArrayList<String> d = new ArrayList<String>();
+                    d.add("hola");
+                    d.add("como");
+                    plates.add(new Plate("Plate " + i, d));
+                    arrayAdapter.notifyDataSetChanged();
+                }*/
+
+
+            }
+        }else if(requestCode==2){
+            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
+            if(resultCode == RESULT_OK) {
+
+                String text = data.getStringExtra("plates");
+                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
+                plates.clear();
+                arrayAdapter.notifyDataSetChanged();
+                String[] info = text.split("-");
+
+                for(int i=0; i<info.length; i++){
+                    String[] ingredients = info[i].split("_");
                     ArrayList<String> ingredientsPlate = new ArrayList<>();
                     for(int j=1; j<ingredients.length; j++) {
                         ingredientsPlate.add(ingredients[j]);
