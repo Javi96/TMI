@@ -34,8 +34,8 @@ public class Ingredient {
     public String getUnits() { return this.units; }
 
     public void setId(long id) { this.id = id; }
-    public void setName(String name) { this.name = name; }
-    public void setUnits(String units) { this.units = units; }
+    public void setName(@NonNull String name) { this.name = name; }
+    public void setUnits(@NonNull String units) { this.units = units; }
 
     @Override
     public String toString() {

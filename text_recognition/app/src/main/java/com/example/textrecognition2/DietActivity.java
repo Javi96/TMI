@@ -10,6 +10,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.domain.FoodDatabase;
@@ -23,15 +24,19 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
     CardView see_diet;
     CardView scan_diet;
 
+    private TextView title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
 
-
+        title = findViewById(R.id.cmp_tile_title);
         see_diet = findViewById(R.id.component_see_diet_card_view);
         scan_diet = findViewById(R.id.component_scan_diet_card_view);
 
+
+        title.setText("Diet");
         see_diet.setOnClickListener(this);
         scan_diet.setOnClickListener(this);
 

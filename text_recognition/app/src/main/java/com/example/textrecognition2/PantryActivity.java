@@ -5,6 +5,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 
 public class PantryActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -13,17 +14,20 @@ public class PantryActivity extends AppCompatActivity implements View.OnClickLis
     private ConstraintLayout layout_fridge;
     private ConstraintLayout layout_pantry;
 
+    private TextView title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantry);
 
+        title = findViewById(R.id.cmp_tile_title);
         scan_fridge = findViewById(R.id.component_fridge_scan_card_view);
         see_pantry = findViewById(R.id.component_see_pantry_card_view);
         layout_fridge = findViewById(R.id.cmp_scan_fridge_layout);
         layout_pantry = findViewById(R.id.cmp_see_pantry_layout);
 
-
+        title.setText("Pantry");
         scan_fridge.setOnClickListener(this);
         see_pantry.setOnClickListener(this);
     }

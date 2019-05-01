@@ -39,6 +39,9 @@ public class Plate {
     }
 
     public void setId(long id){ this.id = id; }
+    public void setName(@NonNull String name) {
+        this.name = name;
+    }
 
     @Ignore
     private ArrayList<String> ingredients;
@@ -46,10 +49,6 @@ public class Plate {
     @Ignore
     public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Ignore
@@ -62,7 +61,6 @@ public class Plate {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder(this.name);
-        stringBuilder.append(", id: " + this.id);
         if(this.ingredients != null)
             for (String ingredient: ingredients)
                 stringBuilder.append('_' + ingredient );

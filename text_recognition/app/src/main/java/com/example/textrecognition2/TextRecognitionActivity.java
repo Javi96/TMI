@@ -1,7 +1,9 @@
 package com.example.textrecognition2;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -75,9 +77,14 @@ public class TextRecognitionActivity extends AppCompatActivity{
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), PlatesActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TestPlatesActivity.class);
 
                 intent.putExtra("food", textView.getText().toString());
+
+                SharedPreferences.Editor editor = getSharedPreferences("menus", Context.MODE_PRIVATE).edit();
+                editor.putBoolean("TestPlatesFirstCall", true);
+                editor.apply();
+
                 //intent.putExtra("food", "flan");
                 setResult(RESULT_OK, intent);
                 startActivity(intent);

@@ -6,25 +6,28 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    android:background="@drawable/background1"
+    android:background="@drawable/background2"
     tools:context=".MenuActivity">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Titulo de la vista"
+    <include
+        layout="@layout/component_box1"/>
+
+    <include
+        layout="@layout/component_sub_title1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner"/>
+
+
+
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/act_menu_spinner"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -36,55 +39,53 @@
 
     </android.support.v7.widget.AppCompatSpinner>
 
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+    <include
+        layout="@layout/component_sub_title2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner"/>
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_subtitle"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Selecciona un plato para modificarlo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
+        android:padding="16dp"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_text"
-        app:layout_constraintVertical_bias="0.207">
+        <ScrollView
+            android:id="@+id/scoll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <LinearLayout
+                android:id="@+id/act_menu_sub_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/act_menu_confirm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/scoll"
+            app:layout_constraintEnd_toEndOf="@+id/scoll"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="@+id/scoll"
+            app:layout_constraintTop_toTopOf="@+id/scoll"
+            app:layout_constraintVertical_bias="0.892"
+            app:srcCompat="@color/colorRed"
+            app:background="@drawable/white_tick"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:clickable="true"
-        app:srcCompat="@color/colorPrimary" />
+
+    </android.support.constraint.ConstraintLayout>
+
 
 
 </LinearLayout>

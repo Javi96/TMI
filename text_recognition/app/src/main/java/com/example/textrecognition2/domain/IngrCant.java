@@ -41,4 +41,8 @@ public class IngrCant {
         this.quantity = quantity;
     }
 
+    @Override
+    public String toString() {
+        return nombre + ' ' + quantity + ' ' + unidades ;
+    }
 }

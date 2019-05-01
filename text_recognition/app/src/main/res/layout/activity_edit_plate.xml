@@ -19,13 +19,61 @@
 
 
     </LinearLayout>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <Button
+    <!--<Button
         android:id="@+id/btn_edit_plate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="64dp"
         android:clickable="true"
-        app:srcCompat="@color/colorAccent" />
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />-->
+    <com.marozzi.roundbutton.RoundButton
+        android:id="@+id/btn_edit_plate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="prenota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rb_animation_alpha="false"
+        app:rb_animation_corner_radius="20dp"
+        app:rb_animation_duration="500"
+        app:rb_animation_progress_color="@color/colorBlue"
+        app:rb_animation_progress_padding="8dp"
+        app:rb_animation_progress_style="circle"
+        app:rb_animation_progress_width="2dp"
+        app:rb_background_color="@android:color/transparent"
+        app:rb_success_resource="@drawable/white_tick"
+        app:rb_background_color_pressed="@color/colorWhite"
+        app:rb_corner_color="@color/colorPrimary"
+        app:rb_corner_color_pressed="@color/colorRed"
+        app:rb_corner_radius="2dp"
+        app:rb_corner_width="1dp"
+        app:rb_text_color="@color/colorPrimary"
+        app:rb_text_color_pressed="@android:color/white" />
+
+</android.support.constraint.ConstraintLayout>
+
 
 
 </LinearLayout>
