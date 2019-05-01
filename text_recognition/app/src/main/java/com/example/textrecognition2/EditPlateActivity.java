@@ -114,11 +114,8 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                         Intent intent = new Intent();
                         intent.putExtra("plate", stringBuilder.toString());
                         intent.putExtra("pos", String.valueOf(position));
-<<<<<<< HEAD
                         intent.putExtra("plates", todos_platos);
 
-=======
->>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
                         setResult(RESULT_OK, intent);
 
 
@@ -138,10 +135,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         Intent intent = new Intent();
         intent.putExtra("plate", initialInfo.toString());
         intent.putExtra("pos", String.valueOf(position));
-<<<<<<< HEAD
         intent.putExtra("plates", todos_platos);
-=======
->>>>>>> 98dde3b5258998e2b3b30ae7193c80c6c4e8e829
         setResult(RESULT_OK, intent);
 
 
