@@ -9,7 +9,26 @@
 import urllib.request
 import json
 import difflib
+from pathlib import Path
 from recipeconfig import edamam_endpoint, app_id, app_key, dandelion_endpoint, dandelion_key, measures_dict
+from spacy_module import get_ingredient_name
+
+
+'''
+    Diccionario que leerá las consultas que se han realizado previamente.
+    De esta forma, reducimos el tiempo de respuesta y evitamos realizar requests que 
+    se han realizado previamente a otras APIs.
+'''
+
+cache_file='cache'
+
+#Si no existe el fichero, lo crea
+my_file = Path(cache_file)        
+if not my_file.is_file():
+    with open(cache_file, "w+") as myfile:
+        myfile.write('')
+        
+
 
 '''
     IMPLEMENTACIÓN DE LA FUNCIONALIDAD DEL SERVICIO REST.
@@ -23,18 +42,75 @@ from recipeconfig import edamam_endpoint, app_id, app_key, dandelion_endpoint, d
         -El tercer elemento será el nombre del ingrediente.
     
     -Input: string que represente el plato del cual se busque la cadena.
-    -Output: lista de diccionarios con tres campos: "num", "units" y "name".
-'''
-#Dado un plato, devuelve su receta.
-def get_recipe(plate):
-    plate=parse_blank_spaces(plate)
-    contents = get_edamam_recipe(plate)
+            booleano (spacy) que indicará si se desea realizar el procesamiento del lenguaje natural mediante el módulo de 
+            spacy(spacy ==true) o mediante la API de dandelion (spacy==false)
+    -Output: lista de diccionarios con tres campos: "num", "units" y "name". Si sucede algún error, devuelve una lista vacia.
+'''     
+
+def get_recipe(plate, spacy):
+    if plate in system_cache:
+        print('Devolucion realizada por cache')
+        return system_cache[plate]
+    
+    parsed_plate=parse_blank_spaces(plate)
+    contents = get_edamam_recipe(parsed_plate)
     
     #contents es de tipo bytes. Es necesario pasarlo a json.
     contents = parse_bytes_to_JSON(contents)
-    best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar
-    return parse_recipe(best_hit)
+    
+    #En el caso de que encontremos alguna receta que encaje.
+    if contents['count'] !=0:
+        best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
+        
+        #En función del valor de spacy (booleano), se realizará el parseo utilizando el módulo de spacy (spacy==true) o dandelion (spacy==false)
+        result= parse_recipe(best_hit,spacy)
+        
+        #actualmente result es una lista.
+        #Devolvemos el JSON correspondiente.        
+        '''
+            Si se ha realizado correctamente, se almacena el resultado en en el diccionario y en el almacenamiento permanente.
+        '''
+        
+        result= {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
+        
+        #Almacenamos en el diccionario.
+        system_cache[plate]=result
+        
+        #Almacenamos en el almacenamiento permanente.
+        save_result(plate,result)
+        
+        return result
+    else:
+        #Si ninguna receta encaja.
+        return {"state":"Error"}
 
+def load_cache():
+
+    with open(cache_file, "r") as myfile:
+        lines = myfile.readlines()
+        
+    #Para cada línea, crea una entrada en la caché.
+    cache = {}
+    for x in lines:
+        parsed_line=x.split('&&&&')
+        cache[parsed_line[0]]= json.loads(parsed_line[1].replace("'",'"'))
+    
+    return cache
+
+system_cache={}
+        
+system_cache=load_cache()
+
+'''
+    Dada la consulta introducida por el usuario y un objeto json resultado de una consulta,
+    se graba el resultado en el almacenamiento permanente (un fichero).
+    
+    El fichero en el que se almacenará será el que indique el parámetro cache_file.
+'''
+def save_result(user_input,json_result):
+    with open(cache_file, "a") as myfile:
+        line=user_input+ "&&&&" + str(json_result)+ '\n'
+        myfile.write(line)
 
 
 
@@ -69,39 +145,50 @@ def get_best_hit(plate,contentJSON):
         Lista de ingredientes sin parsear. Un ejemplo de ingrediente podría ser:
         
             "3 medium-sized Yukon Gold potatoes (about 1 1/2 pounds), peeled and quartered lengthwise"
-    
+        valor booleano (spacy) que determinará si se utiliza el procesamiento de las sentencias en lenguaje natural 
+        utilizando spacy (spacy==true) o la API de dandelion (spacy==false)
     -Output:
         Lista de ingredientes parseados del siguiente modo:
             Para cada ingrediente se crea un diccionario con 3 elementos:
-                1- Número de unidades de ese ingrediente (puede no indicar las unidades, en ese caso vale None).
+                1- Número de unidades de ese ingrediente.
                 2- Unidades (mg, gr, etc) de ese ingrediente.
                 3- Nombre del ingrediente
 '''
-def parse_recipe(input):
+
+def parse_recipe(input, spacy):
     result=[]
+    #print(input)
     
     #Para cada ingrediente.
     for x in input:
-        print(x)
-        d={"num":None, "units":None, "name":None }
+        d={"num":"", "units":"", "name":"" }
+        words=x.split()
         
-        if((x.split()[0]).isdigit()):
-            d["num"]= int(x.split()[0])
+        
+        if(len(words)!=0 and (words[0]).isdigit()):
+            d["num"]= int(words[0])
 
-        if(is_measure_unity(x.split()[1])):
-            d["units"]= x.split()[1]
+        if(len(words)>1 and is_measure_unity(words[1])):
+            d["units"]= words[1]
 
     
-        #PONER EL VALOR QUE CORRESPONDE.
-        d["name"]=get_entities_dandelion(x)
+        try:
+            if spacy:
+                #Usamos el módulo de spacy
+                d['name']=get_ingredient_name(x)
+            else:
+                #Usamos la API de dandelion
+                d["name"]=get_entities_dandelion(x)
 
-        
-        if(d["name"]==None):
-            print("nada")
-        else:
-            result.append(d)
+            
+            if(d["name"]!=None):
+                result.append(d)
+
+        except Exception as e:
+            print(e)
             
     return result
+
 
 
 '''
@@ -204,7 +291,7 @@ def get_entities_dandelion(text):
     -Ouput: cadena de caracteres que contendrá la URL a utilizar para realizar la petición a la API.
 
 '''
-def genera_dandelion_URL(input):
+def genera_dandelion_URL(input):    
         textURL = "text="
         topEntitiesURL= "top_entities=10"
         includeURL = "include=types%2Ccategories"
