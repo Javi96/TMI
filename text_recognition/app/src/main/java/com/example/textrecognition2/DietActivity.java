@@ -18,6 +18,8 @@ import com.example.textrecognition2.domain.FoodRepository;
 
 import java.util.ArrayList;
 
+import es.dmoral.toasty.Toasty;
+
 public class DietActivity extends AppCompatActivity implements View.OnClickListener{
 
 
@@ -55,6 +57,8 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
         else
             Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
         //*/
+
+
     }
 
     @Override

@@ -54,8 +54,12 @@
         <ScrollView
             android:id="@+id/scoll"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
+            android:layout_height="362dp"
+            app:layout_constraintBottom_toTopOf="@+id/act_menu_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <LinearLayout
                 android:id="@+id/act_menu_sub_layout"
                 android:layout_width="match_parent"
@@ -68,22 +72,35 @@
 
             </LinearLayout>
         </ScrollView>
-        <android.support.design.widget.FloatingActionButton
+
+        <com.marozzi.roundbutton.RoundButton
             android:id="@+id/act_menu_confirm"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="@+id/scoll"
-            app:layout_constraintEnd_toEndOf="@+id/scoll"
-            app:layout_constraintHorizontal_bias="0.909"
-            app:layout_constraintStart_toStartOf="@+id/scoll"
-            app:layout_constraintTop_toTopOf="@+id/scoll"
-            app:layout_constraintVertical_bias="0.892"
-            app:srcCompat="@color/colorRed"
-            app:background="@drawable/white_tick"/>
-
-
+            android:gravity="center"
+            android:text="guardar cambios"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoll"
+            app:rb_animation_alpha="false"
+            app:rb_animation_corner_radius="20dp"
+            app:rb_animation_duration="500"
+            app:rb_animation_progress_color="@color/colorBlue"
+            app:rb_animation_progress_padding="8dp"
+            app:rb_animation_progress_style="circle"
+            app:rb_animation_progress_width="2dp"
+            app:rb_background_color="@android:color/transparent"
+            app:rb_background_color_pressed="@color/colorWhite"
+            app:rb_corner_color="@color/colorPrimary"
+            app:rb_corner_color_pressed="@color/colorRed"
+            app:rb_corner_radius="2dp"
+            app:rb_corner_width="1dp"
+            app:rb_success_resource="@drawable/white_tick"
+            app:rb_text_color="@color/colorPrimary"
+            app:rb_text_color_pressed="@android:color/white" />
     </android.support.constraint.ConstraintLayout>
 
 

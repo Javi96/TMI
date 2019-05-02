@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.util.Log;
@@ -24,6 +26,8 @@ import com.google.android.gms.vision.text.Line;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import es.dmoral.toasty.Toasty;
 
 public class DietScheduleActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,7 +46,7 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         SharedPreferences prefs =
                 getSharedPreferences("menus", Context.MODE_PRIVATE);
 
-        LinearLayout layout =  findViewById(R.id.act_diet_sched_layout);
+        LinearLayout main_layout =  findViewById(R.id.act_diet_sched_layout);
 
 
 
@@ -56,8 +60,18 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         FoodRepository fr = new FoodRepository(this.getApplication());
 
         for(String day: days){
+
             String data = prefs.getString(day, "");
             if(!data.equalsIgnoreCase("")) {
+                LinearLayout layout =  new LinearLayout(getApplicationContext());
+                layout.setOrientation(LinearLayout.VERTICAL);
+                layout.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        Toasty.error(getApplicationContext(), "Error pero está UWU!", Toast.LENGTH_SHORT * 10, true).show();
+                        return true;
+                    }
+                });
 
                 child = new TextView(getApplicationContext());
                 child.setText(day);
@@ -89,19 +103,20 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
                     List<IngrCant> ingredients = fr.getIngredientsForPlate(plates[i]);
                     child = new TextView(getApplicationContext());
                     child.setTextSize(22);
-                    child.setText(plates[i]);
+                    child.setText("\t\t" + plates[i]);
                     child.setTypeface(font1);
                     child.setTextColor(getResources().getColor(R.color.cpb_green));
                     layout.addView(child);
                     for( IngrCant ing :  ingredients ) {
                         child = new TextView(getApplicationContext());
                         child.setTextSize(18);
-                        child.setText(ing.toString());
+                        child.setText("\t\t" + ing.toString());
                         child.setTypeface(font2);
                         child.setTextColor(getResources().getColor(R.color.colorBlue));
                         layout.addView(child);
                     }
                 }
+                main_layout.addView(layout);
                      Log.e(day, data);
             }
         }

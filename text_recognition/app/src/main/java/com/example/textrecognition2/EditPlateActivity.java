@@ -17,11 +17,14 @@ import android.widget.Toast;
 
 import com.marozzi.roundbutton.RoundButton;
 
+import es.dmoral.toasty.Toasty;
+
 public class EditPlateActivity extends AppCompatActivity implements View.OnClickListener{
 
     LinearLayout layout;
 
     Button btn_edit_plate;
+    Button btn_add_ingr;
 
     private String message;
 
@@ -39,6 +42,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
 
         btn_edit_plate = findViewById(R.id.btn_edit_plate);
+        btn_add_ingr = findViewById(R.id.act_edit_plate_add_ingr);
 
         Intent intent = getIntent();
         message = intent.getStringExtra("plate");
@@ -55,14 +59,30 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         String[] items = message.split("_");
         int len = items.length;
         for(int i=0; i< len; i++){
-            EditText editText = new EditText(getApplicationContext());
+            final EditText editText = new EditText(getApplicationContext());
+
             editText.setText(items[i]);
             if(i==0){
+                editText.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        Toasty.warning(getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
+                        return true;
+                    }
+                });
+
                 editText.setTextSize(28);
                 Typeface font = Typeface.createFromAsset(getAssets(), "ultra.ttf");
                 editText.setTypeface(font);
                 editText.setTextColor(getResources().getColor(R.color.colorRed));
             }else{
+                editText.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        layout.removeView(v);
+                        return true;
+                    }
+                });
                 editText.setTextSize(20);
                 Typeface font = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
                 editText.setTypeface(font);
@@ -71,6 +91,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
             layout.addView(editText);
         }
         btn_edit_plate.setOnClickListener(this);
+        btn_add_ingr.setOnClickListener(this);
 
         initialInfo = new StringBuilder("");
         int count = layout.getChildCount();
@@ -86,6 +107,21 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.act_edit_plate_add_ingr:
+                final EditText editText = new EditText(getApplicationContext());
+                editText.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        layout.removeView(v);
+                        return true;
+                    }
+                });
+                editText.setTextSize(20);
+                Typeface font = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
+                editText.setTypeface(font);
+                editText.setTextColor(getResources().getColor(R.color.colorBlue));
+                layout.addView(editText);
+                break;
             case R.id.btn_edit_plate:
                 final StringBuilder stringBuilder = new StringBuilder("");
 
@@ -124,7 +160,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
                     }
                 }, 2000);
-
+            break;
         }
     }
 

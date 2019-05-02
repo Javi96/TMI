@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.domain.Plate;
+import com.marozzi.roundbutton.RoundButton;
 
 import org.w3c.dom.Text;
 
@@ -33,6 +34,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import es.dmoral.toasty.Toasty;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -116,7 +119,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.act_menu_confirm);
+        RoundButton floatingActionButton = findViewById(R.id.act_menu_confirm);
         floatingActionButton.setOnClickListener(this);
 
     }
@@ -152,9 +155,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 editor.apply();
 
 
+                editor.putString("return", "MenuActivity");
+                editor.apply();
 
-                String data = prefs.getString(this.day, "");
-                Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG*2).show();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
 
 
         }
