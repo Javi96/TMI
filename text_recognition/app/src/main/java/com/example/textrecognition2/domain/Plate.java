@@ -21,14 +21,15 @@ public class Plate {
     @ColumnInfo(name = "nombre")
     private String name;
 
-
+    @Ignore
+    private ArrayList<IngrCant> ingredients;
 
     public Plate( @NonNull String name) {
         this.name = name;
-        this.ingredients = new ArrayList<String>();
+        this.ingredients = new ArrayList<IngrCant>();
     }
 
-    public Plate( @NonNull String name, ArrayList<String> ingredients) {
+    public Plate( @NonNull String name, ArrayList<IngrCant> ingredients) {
         this.name = name;
         this.ingredients = ingredients;
     }
@@ -44,15 +45,12 @@ public class Plate {
     }
 
     @Ignore
-    private ArrayList<String> ingredients;
-
-    @Ignore
-    public void setIngredients(ArrayList<String> ingredients) {
+    public void setIngredients(ArrayList<IngrCant> ingredients) {
         this.ingredients = ingredients;
     }
 
     @Ignore
-    public ArrayList<String> getIngredients() {
+    public ArrayList<IngrCant> getIngredients() {
         return ingredients;
     }
 
@@ -60,11 +58,14 @@ public class Plate {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder(this.name);
+        StringBuilder sb = new StringBuilder(this.name);
         if(this.ingredients != null)
-            for (String ingredient: ingredients)
-                stringBuilder.append('_' + ingredient );
+            for (IngrCant ingredient: ingredients){
+                sb.append('_' + ingredient.getNombre() );
+                sb.append('_' + ingredient.getQuantity());
+                sb.append('_' + ingredient.getUnidades());
+            }
 
-        return stringBuilder.toString();
+        return sb.toString();
     }
 }

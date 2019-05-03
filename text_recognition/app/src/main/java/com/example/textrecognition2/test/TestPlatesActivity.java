@@ -25,6 +25,7 @@ import com.example.textrecognition2.MenuActivity;
 import com.example.textrecognition2.R;
 import com.example.textrecognition2.adapters.PlateArrayAdapter;
 import com.example.textrecognition2.domain.FoodRepository;
+import com.example.textrecognition2.domain.IngrCant;
 import com.example.textrecognition2.domain.Plate;
 
 import java.util.ArrayList;
@@ -205,19 +206,19 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
                 plates.clear();
                 arrayAdapter.notifyDataSetChanged();
-                String[] info = text.split("-");
+                String[] platos = text.split("-");
 
-                for(int i=0; i<info.length; i++){
+                for(int i=0; i<platos.length; i++){
                     String[] ingredients;
                     if(i == pos){
                         ingredients = plato.split("_");
                     }
                     else {
-                        ingredients = info[i].split("_");
+                        ingredients = platos[i].split("_");
                     }
-                    ArrayList<String> ingredientsPlate = new ArrayList<>();
-                    for(int j=1; j<ingredients.length; j++) {
-                        ingredientsPlate.add(ingredients[j]);
+                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j+=3) {
+                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
                     }
                     plates.add(new Plate(ingredients[0], ingredientsPlate));
                     arrayAdapter.notifyDataSetChanged();
@@ -243,14 +244,14 @@ public class TestPlatesActivity extends AppCompatActivity implements View.OnClic
                 Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
                 plates.clear();
                 arrayAdapter.notifyDataSetChanged();
-                String[] info = text.split("-");
+                String[] platos = text.split("-");
 
-                for(int i=0; i<info.length; i++){
+                for(int i=0; i<platos.length; i++){
                     String[] ingredients;
-                    ingredients = info[i].split("_");
-                    ArrayList<String> ingredientsPlate = new ArrayList<>();
-                    for(int j=1; j<ingredients.length; j++) {
-                        ingredientsPlate.add(ingredients[j]);
+                    ingredients = platos[i].split("_");
+                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j+=3) {
+                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
                     }
                     plates.add(new Plate(ingredients[0], ingredientsPlate));
                     arrayAdapter.notifyDataSetChanged();

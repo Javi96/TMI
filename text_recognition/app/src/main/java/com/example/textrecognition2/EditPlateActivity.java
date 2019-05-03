@@ -58,48 +58,49 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
         String[] items = message.split("_");
         int len = items.length;
-        for(int i=0; i< len; i++){
-            final EditText editText = new EditText(getApplicationContext());
-
-            editText.setText(items[i]);
-            if(i==0){
-                editText.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        Toasty.warning(getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
-                        return true;
-                    }
-                });
-
-                editText.setTextSize(28);
-                Typeface font = Typeface.createFromAsset(getAssets(), "ultra.ttf");
-                editText.setTypeface(font);
-                editText.setTextColor(getResources().getColor(R.color.colorRed));
-            }else{
-                editText.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        layout.removeView(v);
-                        return true;
-                    }
-                });
-                editText.setTextSize(20);
-                Typeface font = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
-                editText.setTypeface(font);
-                editText.setTextColor(getResources().getColor(R.color.colorBlue));
+        final EditText editText = new EditText(getApplicationContext());
+        editText.setText(items[0]);
+        editText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toasty.warning(getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
+                return true;
             }
-            layout.addView(editText);
+        });
+
+        editText.setTextSize(28);
+        Typeface font = Typeface.createFromAsset(getAssets(), "ultra.ttf");
+        editText.setTypeface(font);
+        editText.setTextColor(getResources().getColor(R.color.colorRed));
+        layout.addView(editText);
+
+        font = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
+        for(int i=1; i< len; i+=3){
+            final EditText texto = new EditText(getApplicationContext());
+            editText.setText(items[i] + " " + items[i+1] + ' ' + items[i+2]);
+            texto.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    layout.removeView(v);
+                    return true;
+                }
+            });
+            texto.setTextSize(20);
+            texto.setTypeface(font);
+            texto.setTextColor(getResources().getColor(R.color.colorBlue));
+
+            layout.addView(texto);
         }
         btn_edit_plate.setOnClickListener(this);
         btn_add_ingr.setOnClickListener(this);
 
-        initialInfo = new StringBuilder("");
+        initialInfo = new StringBuilder();
         int count = layout.getChildCount();
         EditText edt = null;
         for(int i=0; i<count; i++) {
             edt =  (EditText) layout.getChildAt(i);
 
-            initialInfo.append( edt.getText() + "_");
+            initialInfo.append( edt.getText().toString().replace(' ', '_') + "_");
         }
 
     }
@@ -123,14 +124,14 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                 layout.addView(editText);
                 break;
             case R.id.btn_edit_plate:
-                final StringBuilder stringBuilder = new StringBuilder("");
+                final StringBuilder stringBuilder = new StringBuilder();
 
                 int count = layout.getChildCount();
                 EditText edt = null;
                 for(int i=0; i<count; i++) {
                     edt =  (EditText) layout.getChildAt(i);
 
-                    stringBuilder.append( edt.getText() + "_");
+                    stringBuilder.append( edt.getText().toString().replace(' ', '_') + "_");
                 }
 
 

@@ -2,6 +2,7 @@ package com.example.textrecognition2.domain;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
+import android.util.Log;
 
 import java.net.InetAddress;
 
@@ -92,24 +93,39 @@ public class FoodRepository {
     }
 
     public void insertPlateWithIngredients (String plate, List<String> ingredients, int[] cantidades) {
-        int id = (int) plateDao.insert(new Plate(plate));
+        long id = plateDao.insert(new Plate(plate));
         for(int i = 0; i < ingredients.size(); i++)
             ingrPlatDao.insert(new IngredientesPlatos(
                     ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
+    }
+
+    public void insertPlateWithIngredients (Plate plate) {
+        long id =  plateDao.insert(plate);
+        for(IngrCant ing : plate.getIngredients() ){
+            long ingr;
+            if(ingredientDao.findByName(ing.getNombre())==null)
+                ingr = ingredientDao.insert(new Ingredient(ing.getNombre(), ing.getUnidades()));
+            else
+                ingr = ingredientDao.getIdByName(ing.getNombre());
+            ingrPlatDao.insert(new IngredientesPlatos( ingr, id, ing.getQuantity()));
+        }
+
     }
 
     public List<IngrCant> getIngredientsForPlate (String plate) {
         return ingrPlatDao.getRecipeForPlate(plateDao.getIdByName(plate));
     }
 
-    public List<IngrCant> getIngredientsForPlate (Plate plate) {
-        return ingrPlatDao.getRecipeForPlate(plate.getId());
+    public ArrayList<IngrCant> getIngredientsForPlate (Plate plate) {
+        return (ArrayList<IngrCant>)ingrPlatDao.getRecipeForPlate(plate.getId());
     }
 
     public Plate getPlate (String name) {
         Plate resul = getPlateFromDB(name);
         if (resul == null)
             resul = getPlateFromAPI(name);
+        else
+            resul.setIngredients(getIngredientsForPlate(resul));
         return resul;
     }
 
@@ -122,14 +138,15 @@ public class FoodRepository {
             JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest(new URL(APIURL + name.replace(' ', '+'))));
             if (jsonResponse.getString("state").compareToIgnoreCase("Success") != 0)
                 return null;
-
+            Log.d("respuesta server:",jsonResponse.toString());
             JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
-            ArrayList<String> ingredients =  new ArrayList<String>();
-            int[] cantidades = new int[ingredientes.length()];
+            ArrayList<IngrCant> ingredients =  new ArrayList<IngrCant>();
             for (int j = 0; j < ingredientes.length(); j++) {
                 JSONObject act = ingredientes.getJSONObject(j);
                 String nombre = act.getString("name");
-                ingredients.add(nombre);
+                String unidades = act.getString("units");
+                int cantidad = act.getInt("num");
+                ingredients.add(new IngrCant(nombre, unidades, cantidad));
 
             }
             return new Plate(name, ingredients);

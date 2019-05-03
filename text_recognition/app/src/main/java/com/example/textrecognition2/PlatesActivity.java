@@ -54,7 +54,7 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
 
         //Toast.makeText(getApplicationContext(), getIntent().getStringExtra("food"), Toast.LENGTH_LONG).show();
 
-        ArrayList<String> ingredients;
+        ArrayList<IngrCant> ingredients;
         //ingredients.add("ingrediente 1");
         //ingredients.add("ingrediente 2");
         //ingredients.add("ingrediente 3");
@@ -121,15 +121,14 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                 //fr.insertPlate(flan);
                 //fr.insertIngredientsPlate(flan, aux, new int[]{200,6});
 
+
                 for( String str: query.split("\n") ){
                     Plate plato = fr.getPlate(str);
                     Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
-                    ingredients =  new ArrayList<String>();
+                    ingredients =  new ArrayList<IngrCant>();
                     if ( plato != null  ){
                     //if ( plato != null  ){
-                        for ( IngrCant ing : fr.getIngredientsForPlate(plato) ) // db.ingrPlatDao().getRecipeForPlate(plato.getId()) ) //
-                            ingredients.add( ing.getNombre());
-                        plato.setIngredients(ingredients);
+                        plato.setIngredients(fr.getIngredientsForPlate(plato));
                         plates.add(plato);
                     }
                     else {
@@ -144,9 +143,9 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                             for (int j = 0; j < ingredientes.length(); j++) {
                                 JSONObject act = ingredientes.getJSONObject(j);
                                 String nombre = act.getString("name");
-                                ingredients.add(nombre);
-                                nuevos.add(nombre);
-                                fr.insertIngredient(new Ingredient(nombre, act.getString("units")));
+                                String unidades = act.getString("units");
+                                int cantidad = act.getInt("num");
+                                ingredients.add(new IngrCant(nombre, unidades, cantidad));
 
                             }
                             plates.add(new Plate(str, ingredients));

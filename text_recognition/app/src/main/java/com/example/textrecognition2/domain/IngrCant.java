@@ -1,5 +1,7 @@
 package com.example.textrecognition2.domain;
 
+import android.arch.persistence.room.Ignore;
+
 public class IngrCant {
     private long id;
     private String nombre;
@@ -8,6 +10,20 @@ public class IngrCant {
 
     public IngrCant(long id, String nombre, String unidades, int quantity) {
         this.id = id;
+        this.nombre = nombre;
+        this.unidades = unidades;
+        this.quantity = quantity;
+    }
+
+    @Ignore
+    public IngrCant(String nombre, String unidades, int quantity) {
+        this.nombre = nombre;
+        this.unidades = unidades;
+        this.quantity = quantity;
+    }
+
+    @Ignore
+    public IngrCant(String nombre, int quantity, String unidades) {
         this.nombre = nombre;
         this.unidades = unidades;
         this.quantity = quantity;
@@ -40,6 +56,8 @@ public class IngrCant {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 
     @Override
     public String toString() {
