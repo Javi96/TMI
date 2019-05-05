@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background1"
     android:screenOrientation="portrait"
-    tools:context=".PlatesActivity">
+    tools:context=".OldPlatesActivity">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/act_plates_float_btn"

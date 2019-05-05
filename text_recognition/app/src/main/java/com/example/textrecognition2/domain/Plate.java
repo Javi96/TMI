@@ -59,12 +59,14 @@ public class Plate {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder(this.name);
-        if(this.ingredients != null)
-            for (IngrCant ingredient: ingredients){
-                sb.append('_' + ingredient.getNombre() );
+        if( this.ingredients != null && this.ingredients.size() > 0 )
+            for (IngrCant ingredient : ingredients) {
+                sb.append('\n');
+                sb.append(ingredient.getNombre());
                 sb.append('_' + ingredient.getQuantity());
                 sb.append('_' + ingredient.getUnidades());
             }
+
 
         return sb.toString();
     }

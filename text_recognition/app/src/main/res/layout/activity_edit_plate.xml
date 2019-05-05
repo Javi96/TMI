@@ -8,7 +8,10 @@
     android:id="@+id/act_edit_plate_layout1"
     tools:context=".EditPlateActivity">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
     <LinearLayout
         android:id="@+id/act_edit_plate_sub_layout"
@@ -17,8 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-
     </LinearLayout>
+
+    </ScrollView>
+
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">

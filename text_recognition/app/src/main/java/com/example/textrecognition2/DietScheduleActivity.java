@@ -1,5 +1,6 @@
 package com.example.textrecognition2;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -31,6 +32,33 @@ import es.dmoral.toasty.Toasty;
 
 public class DietScheduleActivity extends AppCompatActivity implements View.OnClickListener {
 
+    static final String[] days = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
+
+    private TextView DayText(Context context){
+        TextView resul = new TextView(context);
+        resul.setTextSize(28);
+        resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
+        resul.setTextColor(getResources().getColor(R.color.colorWhite));
+        return resul;
+    }
+
+    private TextView PlateText(Context context){
+        TextView resul = new TextView(context);
+        resul.setTextSize(22);
+        resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
+        resul.setTextColor(getResources().getColor(R.color.cpb_green));
+        return resul;
+    }
+
+    private TextView IngrText(Context context){
+        TextView resul = new TextView(context);
+        resul.setTextSize(18);
+        resul.setTypeface(Typeface.createFromAsset(getAssets(), "lato_bold.ttf"));
+        resul.setTextColor(getResources().getColor(R.color.colorBlue));
+        return resul;
+    }
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +67,6 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
 
         TextView textView = findViewById(R.id.cmp_tile_title);
         textView.setText("Diet schedule");
-        String[] days = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
-
-
 
         SharedPreferences prefs =
                 getSharedPreferences("menus", Context.MODE_PRIVATE);
@@ -51,8 +76,6 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
 
 
         TextView child;
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "ultra.ttf");
-        Typeface font2 = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
 
         StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
@@ -60,65 +83,53 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         FoodRepository fr = new FoodRepository(this.getApplication());
 
         for(String day: days){
-
+            if(!prefs.contains(day))
+                continue;
             String data = prefs.getString(day, "");
-            if(!data.equalsIgnoreCase("")) {
-                LinearLayout layout =  new LinearLayout(getApplicationContext());
-                layout.setOrientation(LinearLayout.VERTICAL);
-                layout.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        Toasty.error(getApplicationContext(), "Error pero está UWU!", Toast.LENGTH_SHORT * 10, true).show();
-                        return true;
-                    }
-                });
+            if (data.isEmpty())
+                continue;
 
+            LinearLayout layout =  new LinearLayout(getApplicationContext());
+            layout.setOrientation(LinearLayout.VERTICAL);
+
+            child = DayText(getApplicationContext());
+            child.setText(day);
+
+            layout.addView(child);
+
+            String[] plates = data.split("_");
+
+            for(int i=0; i < plates.length; i++) {
+                /*
+                String[] ingredients = plates[i].split("_");
                 child = new TextView(getApplicationContext());
-                child.setText(day);
-                child.setTextSize(28);
+                child.setTextSize(22);
+                child.setText(ingredients[0]);
                 child.setTypeface(font1);
-                child.setTextColor(getResources().getColor(R.color.colorWhite));
+                child.setTextColor(getResources().getColor(R.color.cpb_green));
                 layout.addView(child);
-
-                String[] plates = data.split("_");
-
-                for(int i=0; i< plates.length; i++) {
-                    /*
-                    String[] ingredients = plates[i].split("_");
+                for(int j=1; j< ingredients.length; j++) {
                     child = new TextView(getApplicationContext());
-                    child.setTextSize(22);
-                    child.setText(ingredients[0]);
-                    child.setTypeface(font1);
-                    child.setTextColor(getResources().getColor(R.color.cpb_green));
+                    child.setTextSize(18);
+                    child.setText(ingredients[j]);
+                    child.setTypeface(font2);
+                    child.setTextColor(getResources().getColor(R.color.colorBlue));
                     layout.addView(child);
-                    for(int j=1; j< ingredients.length; j++) {
-                        child = new TextView(getApplicationContext());
-                        child.setTextSize(18);
-                        child.setText(ingredients[j]);
-                        child.setTypeface(font2);
-                        child.setTextColor(getResources().getColor(R.color.colorBlue));
-                        layout.addView(child);
-                    }
-                    */
-                    List<IngrCant> ingredients = fr.getIngredientsForPlate(plates[i]);
-                    child = new TextView(getApplicationContext());
-                    child.setTextSize(22);
-                    child.setText("\t\t" + plates[i]);
-                    child.setTypeface(font1);
-                    child.setTextColor(getResources().getColor(R.color.cpb_green));
-                    layout.addView(child);
-                    for( IngrCant ing :  ingredients ) {
-                        child = new TextView(getApplicationContext());
-                        child.setTextSize(18);
-                        child.setText("\t\t" + ing.toString());
-                        child.setTypeface(font2);
-                        child.setTextColor(getResources().getColor(R.color.colorBlue));
-                        layout.addView(child);
-                    }
                 }
-                main_layout.addView(layout);
-                     Log.e(day, data);
+                */
+
+                child = PlateText(getApplicationContext());
+                child.setText("\t" + plates[i]);
+                layout.addView(child);
+                for( IngrCant ing :  fr.getIngredientsForPlate(plates[i]) ) {
+                    child = IngrText(getApplicationContext());
+                    child.setText("\t\t" + ing.toString());
+                    layout.addView(child);
+                }
             }
+            main_layout.addView(layout);
+            Log.e(day, data);
+
         }
         StrictMode.setThreadPolicy(old);
     }

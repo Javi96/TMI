@@ -60,7 +60,7 @@ public abstract class FoodDatabase extends RoomDatabase {
                     plateDao.deleteAll();
                     ingrPlatDao.deleteAll();
                     long i1 = ingredientDao.insert(new Ingredient("leche", "ml"));
-                    long i2 = ingredientDao.insert(new Ingredient("huevo", "count"));
+                    long i2 = ingredientDao.insert(new Ingredient("huevo", "units"));
                     Log.e("Mensaje de prueba", "Esto es un mensaje de prueba");
                     Log.e("IDs inserciones", "El id de leche es " + i1 + " y el de huevo es " + i2);
                     long i3 = plateDao.insert(new Plate("flan"));

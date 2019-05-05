@@ -19,13 +19,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FoodRepository {
-    private IngredientDao ingredientDao;
-    private PlateDao plateDao;
-    private IngrPlatDao ingrPlatDao;
+    private static IngredientDao ingredientDao;
+    private static PlateDao plateDao;
+    private static IngrPlatDao ingrPlatDao;
 
-    private LiveData<List<Ingredient>> mAllIngredients;
-    private LiveData<List<Plate>> mAllPlates;
-    private LiveData<List<IngredientesPlatos>> mAllIngPla;
+    private static FoodDatabase db = null;
 
     /*
      * En la variable APIURL hay que poner la IP y el puerto hacia la que irán dirigidas las peticiones
@@ -36,63 +34,44 @@ public class FoodRepository {
     private static final String APIURLbad = "http://10.1.1.112:5555/recipe/";
 
     public FoodRepository(Application application) {
-        FoodDatabase db = FoodDatabase.getDatabase(application);
-        ingredientDao = db.ingredientDao();
-        //mAllIngredients = ingredientDao.getAll();
-        plateDao = db.plateDao();
-        //mAllPlates = plateDao.getAll();
-        ingrPlatDao = db.ingrPlatDao();
-        //mAllIngPla = ingrPlatDao.getAll();
+        if( db == null) {
+            FoodDatabase db = FoodDatabase.getDatabase(application);
+            ingredientDao = db.ingredientDao();
+            plateDao = db.plateDao();
+            ingrPlatDao = db.ingrPlatDao();
+        }
     }
-
-    public LiveData<List<Ingredient>> getAllIngredients() {
-        return mAllIngredients;
-    }
-
-    public LiveData<List<Plate>> getAllPlates() {
-        return mAllPlates;
-    }
-
-    public LiveData<List<IngredientesPlatos>> getmAllIngPla() {
-        return mAllIngPla;
-    }
-
-
 
     public void insertIngredient (final Ingredient ingredient) {
         ingredientDao.insert(ingredient);
     }
 
-    public void insertIngredients (final List<Ingredient> ingredients) {
-         for (Ingredient ing : ingredients)
-             ingredientDao.insert(ing);
+    public void insertIngredients (final ArrayList<Ingredient> ingredients) {
+        ingredientDao.insertAll(( Ingredient[]) ingredients.toArray() );
     }
 
     public void insertPlate (Plate plate) {
-        plateDao.insert(plate);
+        long id = plateDao.insert(plate);
+        if(plate.getIngredients() != null)
+            for (IngrCant ing : plate.getIngredients()){
+                long ingId = ingredientDao.insert(new Ingredient(ing.getNombre(),ing.getUnidades()));
+                ingrPlatDao.insert(new IngredientesPlatos(ingId, id, ing.getQuantity()) );
+            }
     }
 
-    public void insertPlates ( List<Plate> plates) {
+    public void insertPlates ( ArrayList<Plate> plates) {
         for (Plate pla : plates)
-            plateDao.insert(pla);
-        //plateDao.insertAll(plates);
+            insertPlate(pla);
     }
 
-    public void insertIngredientsPlate (Plate plate, List<Ingredient> ingredients, int[] cantidades) {
-        long id = plate.getId();
-        for(int i = 0; i < ingredients.size(); i++)
-            ingrPlatDao.insert(new IngredientesPlatos(ingredients.get(i).getId(), id, cantidades[i]));
-
-    }
-
-    public void insertIngredientsPlate (String plate, List<String> ingredients, int[] cantidades) {
+    public void insertIngredientsPlate (String plate, ArrayList<String> ingredients, int[] cantidades) {
         long id = ingredientDao.findByName(plate).getId();
         for(int i = 0; i < ingredients.size(); i++)
             ingrPlatDao.insert(new IngredientesPlatos(
                     ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
     }
 
-    public void insertPlateWithIngredients (String plate, List<String> ingredients, int[] cantidades) {
+    public void insertPlateWithIngredients (String plate, ArrayList<String> ingredients, int[] cantidades) {
         long id = plateDao.insert(new Plate(plate));
         for(int i = 0; i < ingredients.size(); i++)
             ingrPlatDao.insert(new IngredientesPlatos(
@@ -144,6 +123,8 @@ public class FoodRepository {
             for (int j = 0; j < ingredientes.length(); j++) {
                 JSONObject act = ingredientes.getJSONObject(j);
                 String nombre = act.getString("name");
+                if (nombre.isEmpty())
+                    continue;
                 String unidades = act.getString("units");
                 int cantidad = act.getInt("num");
                 ingredients.add(new IngrCant(nombre, unidades, cantidad));

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +20,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.textrecognition2.domain.FoodRepository;
+import com.example.textrecognition2.domain.IngrCant;
 import com.example.textrecognition2.domain.Plate;
+import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 import com.marozzi.roundbutton.RoundButton;
 
 import org.w3c.dom.Text;
@@ -45,27 +49,39 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private LinearLayout layout;
 
-    private String plates;
-
+    private ArrayList<Plate> plates;
 
     private String day;
 
+    private TextView PlateText(Context context){
+        TextView resul = new TextView(context);
+        resul.setTextSize(24);
+        resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
+        resul.setTextColor(getResources().getColor(R.color.colorBlack));
+        return resul;
+    }
+
+    private TextView IngrText(Context context){
+        TextView resul = new TextView(context);
+        resul.setTextSize(20);
+        resul.setTypeface(Typeface.createFromAsset(getAssets(), "lato_bold.ttf"));
+        resul.setTextColor(getResources().getColor(R.color.colorBlue));
+        return resul;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Intent intent = getIntent();
-        plates = intent.getStringExtra("plates");
-        String[] data = plates.split("-");
+        plates = EncodeDecodeUtil.decodePlates(getIntent().getStringExtra("plates"));
 
-        TextView button2 = findViewById(R.id.cmp_sub_title1);
+        TextView textView = findViewById(R.id.cmp_sub_title1);
         button3 = findViewById(R.id.cmp_sub_title2);
-        button2.setText("Selecciona \nel día:");
+        textView.setText("Selecciona el día:");
         button3.setText("Platos:");
 
-        Spinner spinner = (Spinner) findViewById(R.id.act_menu_spinner);
+        Spinner spinner = findViewById(R.id.act_menu_spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.act_menu_days, android.R.layout.simple_spinner_item);
@@ -78,6 +94,18 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         //layout.setPadding(16,16,16,16);
 
         //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
+        for(Plate plate : plates){
+            TextView editText = PlateText(getApplicationContext());
+            editText.setText(plate.getName());
+            layout.addView(editText);
+            for(IngrCant ing : plate.getIngredients()){
+                TextView ingr = IngrText(getApplicationContext());
+                ingr.setText("\t\t"+ing.getNombre());
+                layout.addView(ingr);
+            }
+        }
+
+        /*
         for(String plate: data) {
             String[] items = plate.split("_");
             int len = items.length;
@@ -98,7 +126,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 layout.addView(editText);
             }
         }
-
+        */
 
 
 
@@ -128,10 +156,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
 
         Intent intent = new Intent();
-        intent.putExtra("plates", plates);
+        intent.putExtra("plates", getIntent().getStringExtra("plates"));
         setResult(RESULT_OK, intent);
-
-
 
         finish();
         super.onBackPressed();
@@ -145,17 +171,29 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                         getSharedPreferences("menus", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
 
+                StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
+                StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
+
+                new FoodRepository(this.getApplication()).insertPlates(plates);
+
+                StrictMode.setThreadPolicy(old);
+
                 StringBuilder sb = new StringBuilder();
+                for( Plate plate : plates)
+                    sb.append(plate.getName() + '_');
+
+                sb.deleteCharAt(sb.length()-1);
+
+                /*
                 for( String str : this.plates.split("-")){
                     String[] ingr = str.split("_");
                     sb.append(ingr[0]+ '_');
                 }
-
+                */
                 editor.putString(this.day, sb.toString());
-                editor.apply();
-
 
                 editor.putString("return", "MenuActivity");
+
                 editor.apply();
 
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));

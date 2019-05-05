@@ -24,7 +24,7 @@
             android:label="@string/title_activity_edit_plate"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".test.TestPlatesActivity"
+            android:name=".PlatesActivity"
             android:label="@string/title_activity_test_plates"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -70,7 +70,7 @@
             android:label="@string/title_activity_dandelion"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PlatesActivity"
+            android:name=".OldPlatesActivity"
             android:label="@string/title_activity_diet"
             android:theme="@style/AppTheme" />
         <activity

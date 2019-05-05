@@ -2,24 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
     android:background="@drawable/background2"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MenuActivity">
 
-    <include
-        layout="@layout/component_box1"/>
+    <include layout="@layout/component_box1" />
 
     <include
         layout="@layout/component_sub_title1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner"/>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
 
 
     <android.support.v7.widget.AppCompatSpinner
@@ -44,17 +42,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner"/>
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="16dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="2dp">
 
         <ScrollView
             android:id="@+id/scoll"
             android:layout_width="fill_parent"
-            android:layout_height="362dp"
+            android:layout_height="483dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="0dp"
             app:layout_constraintBottom_toTopOf="@+id/act_menu_confirm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,8 +80,8 @@
             android:id="@+id/act_menu_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
             android:gravity="center"
             android:text="guardar cambios"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +105,6 @@
             app:rb_text_color="@color/colorPrimary"
             app:rb_text_color_pressed="@android:color/white" />
     </android.support.constraint.ConstraintLayout>
-
 
 
 </LinearLayout>
