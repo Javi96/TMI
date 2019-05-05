@@ -167,9 +167,15 @@ def parse_recipe(input, spacy):
         
         if(len(words)!=0 and (words[0]).isdigit()):
             d["num"]= int(words[0])
+        else:
+            d["num"]= 0
 
         if(len(words)>1 and is_measure_unity(words[1])):
             d["units"]= words[1]
+        elif( d["num"] > 0 ):
+            d["units"] = "units"
+        else:
+            d["units"]= "uncount"
 
     
         try:
