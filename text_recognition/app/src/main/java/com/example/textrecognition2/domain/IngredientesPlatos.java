@@ -15,7 +15,6 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
         primaryKeys = {"ingrId", "platId"})
 public class IngredientesPlatos {
 
-
     @NonNull
     @ColumnInfo(name = "ingrId")
     private long ingrId;

@@ -2,29 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="@drawable/background2"
     android:orientation="vertical"
-    android:background="@drawable/background1"
+    android:padding="16dp"
     tools:context=".MenuActivity">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Titulo de la vista"
+    <include layout="@layout/component_box1" />
+
+    <include
+        layout="@layout/component_sub_title1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
 
+
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/act_menu_spinner"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -36,55 +37,74 @@
 
     </android.support.v7.widget.AppCompatSpinner>
 
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+    <include
+        layout="@layout/component_sub_title2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/act_menu_subtitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Selecciona un plato para modificarlo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_spinner" />
-
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_text"
-        app:layout_constraintVertical_bias="0.207">
+        android:padding="2dp">
 
-        <ListView
+        <ScrollView
+            android:id="@+id/scoll"
+            android:layout_width="fill_parent"
+            android:layout_height="483dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/act_menu_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/act_menu_sub_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.marozzi.roundbutton.RoundButton
+            android:id="@+id/act_menu_confirm"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:clickable="true"
-        app:srcCompat="@color/colorPrimary" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="guardar cambios"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoll"
+            app:rb_animation_alpha="false"
+            app:rb_animation_corner_radius="20dp"
+            app:rb_animation_duration="500"
+            app:rb_animation_progress_color="@color/colorBlue"
+            app:rb_animation_progress_padding="8dp"
+            app:rb_animation_progress_style="circle"
+            app:rb_animation_progress_width="2dp"
+            app:rb_background_color="@android:color/transparent"
+            app:rb_background_color_pressed="@color/colorWhite"
+            app:rb_corner_color="@color/colorPrimary"
+            app:rb_corner_color_pressed="@color/colorRed"
+            app:rb_corner_radius="2dp"
+            app:rb_corner_width="1dp"
+            app:rb_success_resource="@drawable/white_tick"
+            app:rb_text_color="@color/colorPrimary"
+            app:rb_text_color_pressed="@android:color/white" />
+    </android.support.constraint.ConstraintLayout>
 
 
 </LinearLayout>

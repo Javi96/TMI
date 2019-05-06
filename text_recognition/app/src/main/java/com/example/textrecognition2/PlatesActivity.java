@@ -1,45 +1,50 @@
 package com.example.textrecognition2;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.textrecognition2.DietActivity;
+import com.example.textrecognition2.EditPlateActivity;
+import com.example.textrecognition2.MenuActivity;
+import com.example.textrecognition2.R;
 import com.example.textrecognition2.adapters.PlateArrayAdapter;
-import com.example.textrecognition2.domain.FoodDatabase;
 import com.example.textrecognition2.domain.FoodRepository;
 import com.example.textrecognition2.domain.IngrCant;
-import com.example.textrecognition2.domain.Ingredient;
-import com.example.textrecognition2.domain.IngredientesPlatos;
 import com.example.textrecognition2.domain.Plate;
+import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PlatesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ListView listView;
+    private FloatingActionButton floatingActionButton;
 
-    //private ArrayAdapter<Plate> arrayAdapter;
+    private ArrayAdapter<Plate> arrayAdapter;
 
-    //private ArrayList<String> arrayList;
+    private ArrayList<String> arrayList;
 
-    Button nextButton;
+    private ArrayList<Plate> plates = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,129 +52,53 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_plate);
 
         listView = findViewById(R.id.diet_list_food);
+        floatingActionButton = findViewById(R.id.act_plates_float_btn);
 
-        String query;
-        //query = DandelionActivity.generaURL(getIntent().getStringExtra("food")).replace('\n',' ');
-        query = getIntent().getStringExtra("food");
+        plates = new ArrayList<>();
 
-        //Toast.makeText(getApplicationContext(), getIntent().getStringExtra("food"), Toast.LENGTH_LONG).show();
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("food");
 
-        ArrayList<String> ingredients;
-        //ingredients.add("ingrediente 1");
-        //ingredients.add("ingrediente 2");
-        //ingredients.add("ingrediente 3");
+        String[] parts = message.split("\n");
 
-        final ArrayList<Plate> plates = new ArrayList<>();
+        SharedPreferences sp = getSharedPreferences("menus", Context.MODE_PRIVATE);
 
-        int SDK_INT = android.os.Build.VERSION.SDK_INT;
-        if (SDK_INT >= 8) {
-            /*StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-                   .permitAll().build();
-                   StrictMode.setThreadPolicy(policy);*/
+        /*
+        ****************************************************************
+        Map<String , String > mapa = (Map<String , String >) sp.getAll();
+        for( Map.Entry<String, String> act : mapa.entrySet() ) {
+            act.getKey();
+            act.getValue();
+        ****************************************************************
+        }
+         */
+
+        if( sp.getBoolean("TestPlatesFirstCall", false) ) {
             StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
-            //ArrayList<String> respuesta = QueryUtils.fetchEarthquakeData(query);
-            String respuesta;
-            try {
-                String cons = "http://10.1.1.112:5555/recipe/";
-                /*
-                respuesta = QueryUtils.makeHttpRequest( new URL(query));
-                JSONObject json = new JSONObject(respuesta);
+            FoodRepository fr = new FoodRepository(this.getApplication());
 
-                JSONArray array = json.getJSONArray("annotations");
-                //Toast.makeText(getApplicationContext(), "Tiene  : " + array.length() + " platos", Toast.LENGTH_LONG).show();
-
-                //Toast.makeText(getApplicationContext(), "La respuesta ha sido  : " + respuesta, Toast.LENGTH_LONG).show();
-
-                for ( int i = 0; i<array.length(); i++  ) {
-                    respuesta = QueryUtils.makeHttpRequest( new URL(cons+array.getJSONObject(i).getString("title") ));
-                    JSONObject jsonResponse = new JSONObject(respuesta);
-                    if ( jsonResponse.getString("state").compareToIgnoreCase("Success") != 0 )
-                        continue;
-                    JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
-                    ingredients =  new ArrayList<String>();
-                    for ( int j = 0; j<ingredientes.length(); j++  ) {
-                        ingredients.add(ingredientes.getJSONObject(j).getString("name"));
-
-                    }
-                    plates.add(new Plate( array.getJSONObject(i).getString("title") , ingredients));
-                    //Toast.makeText(getApplicationContext(), "Plato : " + array.getJSONObject(i).getString("title"), Toast.LENGTH_LONG).show();
-                }
-                */
-
-
-
-                //FoodDatabase db = FoodDatabase.getDatabase(getApplicationContext());
-                /*
-                db.beginTransaction();
-                db.ingredientDao().insert(new Ingredient("leche", "ml"));
-                db.ingredientDao().insert(new Ingredient("huevo", "count"));
-                db.plateDao().insert(new Plate("flan"));
-                db.ingrPlatDao().insert(new IngredientesPlatos( db.ingredientDao().getIdByName("leche").getValue(), db.plateDao().getIdByName("flan").getValue(), 500 ));
-                db.ingrPlatDao().insert(new IngredientesPlatos( db.ingredientDao().getIdByName("huevo").getValue(), db.plateDao().getIdByName("flan").getValue(), 6 ));
-                //*/
-
-                FoodRepository fr = new FoodRepository(this.getApplication());
-                //ArrayList<Ingredient> aux =  new ArrayList<Ingredient>();
-                //aux.add(new Ingredient("leche", "ml"));
-                //aux.add(new Ingredient("huevo", "count"));
-                //fr.insertIngredient(aux.get(0));
-                //fr.insertIngredient(aux.get(1));
-                //Plate flan = new Plate("flan");
-
-                //fr.insertPlate(flan);
-                //fr.insertIngredientsPlate(flan, aux, new int[]{200,6});
-
-                for( String str: query.split("\n") ){
-                    Plate plato = fr.getPlate(str);
-                    Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
-                    ingredients =  new ArrayList<String>();
-                    if ( plato != null  ){
-                    //if ( plato != null  ){
-                        for ( IngrCant ing : fr.getIngredientsForPlate(plato) ) // db.ingrPlatDao().getRecipeForPlate(plato.getId()) ) //
-                            ingredients.add( ing.getNombre());
-                        plato.setIngredients(ingredients);
-                        plates.add(plato);
-                    }
-                    else {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest(new URL(cons + str.replace(' ', '+'))));
-                            if (jsonResponse.getString("state").compareToIgnoreCase("Success") != 0)
-                                continue;
-                            //fr.insertPlate(new Plate(str));
-                            JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
-                            ArrayList<String> nuevos = new ArrayList<String>();
-                            int[] cantidades = new int[ingredientes.length()];
-                            for (int j = 0; j < ingredientes.length(); j++) {
-                                JSONObject act = ingredientes.getJSONObject(j);
-                                String nombre = act.getString("name");
-                                ingredients.add(nombre);
-                                nuevos.add(nombre);
-                                fr.insertIngredient(new Ingredient(nombre, act.getString("units")));
-
-                            }
-                            plates.add(new Plate(str, ingredients));
-                        } catch (JSONException e) { e.printStackTrace(); continue; } //this.onBackPressed(); }
-                    }
-                }
+            for (String part : parts) {
+                //plates.add(new Plate("Plate " + i, ingredients));
+                Plate aux = fr.getPlate(part);
+                if (aux != null)
+                    plates.add(aux);
             }
-            catch (IOException e) { e.printStackTrace(); this.onBackPressed(); }
-
-            //Toast.makeText(getApplicationContext(), "La longitud de respuesta es : " + respuesta.size(), Toast.LENGTH_LONG).show();
-
-
 
             StrictMode.setThreadPolicy(old);
+
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putBoolean("TestPlatesFirstCall", false);
+            editor.apply();
+
+            Log.v("info", message);
         }
 
 
-
-
-        //Log.v("info", message);
-
-        final PlateArrayAdapter arrayAdapter = new PlateArrayAdapter
+        arrayAdapter = new PlateArrayAdapter
                 (this, android.R.layout.simple_list_item_1, plates);
+        arrayAdapter.setNotifyOnChange(true);
 
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
@@ -184,42 +113,184 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                 return false;
             }
         });
-        listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
-                Plate plate = plates.get(position);
-                /*
-                plates.remove(position);
-                arrayAdapter.notifyDataSetChanged();
-                */
-                Toast.makeText(getApplicationContext(), "You selected : " + plate.toString(), Toast.LENGTH_LONG).show();
-            }
-        });
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Plate plate = plates.get(position);
                 plates.remove(position);
                 arrayAdapter.notifyDataSetChanged();
-                Toast.makeText(getApplicationContext(), "You erased : " + plate.toString(), Toast.LENGTH_LONG).show();
-                return false;
+                Toast.makeText(getApplicationContext(), "REMOVED: long : " + plate.toString(), Toast.LENGTH_LONG).show();
+                return true;
             }
         });
+        listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                Plate actual = plates.get(position);
+                //plates.remove(position);
+                //arrayAdapter.notifyDataSetChanged();
+                //Toast.makeText(getApplicationContext(), "sort : " + plate.toString(), Toast.LENGTH_LONG).show();
+
+                /*
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
+                Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
+                intent.putExtra("plate", plate.toString());
+                intent.putExtra("pos", String.valueOf(position));
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                */
+                Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
+
+                /*StringBuilder stringBuilder = new StringBuilder();
+
+                for(Plate plate: plates){
+                    stringBuilder.append(plate.toString() + "-");
+                }
+                */
+                //intent.putExtra("plates", stringBuilder.toString());
+                intent.putExtra("plates", EncodeDecodeUtil.encodePlates(plates));
+
+                //intent.putExtra("plate", actual.toString());
+                ArrayList<Plate> aux = new ArrayList<Plate>();
+                aux.add(actual);
+                intent.putExtra("plate", EncodeDecodeUtil.encodePlates(aux));
+
+                intent.putExtra("pos", String.valueOf(position));
+                startActivityForResult(intent, 1);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+            }
+        });
+
+        floatingActionButton.setOnClickListener(this);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.act_plates_float_btn:
-                Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
-            break;
+                //Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+
+                /*StringBuilder stringBuilder = new StringBuilder();
+
+                for(Plate plate: plates){
+                    stringBuilder.append(plate.toString() + "-");
+                }
+                */
+                //intent.putExtra("plates", stringBuilder.toString());
+                intent.putExtra("plates", EncodeDecodeUtil.encodePlates(plates));
+                startActivityForResult(intent, 2);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+        }
+    }
+
+
+
+
+    @Override
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+
+        if( requestCode == 1){
+
+            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
+            if(resultCode == RESULT_OK) {
+
+                ArrayList<Plate> platos = EncodeDecodeUtil.decodePlates(data.getStringExtra("plates"));
+                Plate platoMod = EncodeDecodeUtil.decodePlates(data.getStringExtra("plate")).get(0);
+                int pos = Integer.parseInt(data.getStringExtra("pos"));
+
+                platos.set(pos, platoMod);
+
+                plates.addAll(platos);
+                arrayAdapter.notifyDataSetChanged();
+
+                /*
+                String text = data.getStringExtra("plates");
+                String plato = data.getStringExtra("plate");
+                int pos = Integer.parseInt(data.getStringExtra("pos"));
+                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
+
+                plates.clear();
+                arrayAdapter.notifyDataSetChanged();
+                String[] platos = text.split("-");
+
+                for(int i=0; i<platos.length; i++){
+                    String[] ingredients;
+                    if(i == pos){
+                        ingredients = plato.split("_");
+                    }
+                    else {
+                        ingredients = platos[i].split("_");
+                    }
+                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j+=3) {
+                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
+                    }
+                    plates.add(new Plate(ingredients[0], ingredientsPlate));
+                    arrayAdapter.notifyDataSetChanged();
+
+                }
+                */
+
+                /*for(int i=0; i<9; i++){
+                    ArrayList<String> d = new ArrayList<String>();
+                    d.add("hola");
+                    d.add("como");
+                    plates.add(new Plate("Plate " + i, d));
+                    arrayAdapter.notifyDataSetChanged();
+                }*/
+
+
+            }
+        }else if(requestCode==2){
+
+            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
+            if(resultCode == RESULT_OK) {
+
+                plates.addAll(EncodeDecodeUtil.decodePlates(data.getStringExtra("plates")));
+                arrayAdapter.notifyDataSetChanged();
+
+                /*
+                String text = data.getStringExtra("plates");
+                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
+                plates.clear();
+                arrayAdapter.notifyDataSetChanged();
+                String[] platos = text.split("-");
+
+                for(int i=0; i<platos.length; i++){
+                    String[] ingredients;
+                    ingredients = platos[i].split("_");
+                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
+                    for(int j=1; j<ingredients.length; j+=3) {
+                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
+                    }
+                    plates.add(new Plate(ingredients[0], ingredientsPlate));
+                    arrayAdapter.notifyDataSetChanged();
+
+                }
+                */
+
+                /*for(int i=0; i<9; i++){
+                    ArrayList<String> d = new ArrayList<String>();
+                    d.add("hola");
+                    d.add("como");
+                    plates.add(new Plate("Plate " + i, d));
+                    arrayAdapter.notifyDataSetChanged();
+                }*/
+
+
+            }
         }
     }
 }

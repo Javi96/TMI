@@ -3,7 +3,9 @@ package com.example.textrecognition2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,6 +29,8 @@ import com.example.textrecognition2.domain.Ingredient;
 import com.example.textrecognition2.domain.Plate;
 
 import java.util.ArrayList;
+
+import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -52,6 +56,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //dandelion = findViewById(R.id.dandelion);
         //text_razor = findViewById(R.id.text_razor);
 
+
+        SharedPreferences prefs =
+                getSharedPreferences("menus", Context.MODE_PRIVATE);
+
+        if(prefs.contains("return")) {
+            String ret = prefs.getString("return", "");
+            if (ret.equalsIgnoreCase("MenuActivity")) {
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.remove("return");
+                editor.apply();
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT * 10, true).show();
+            }
+        }
         FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
         db.inTransaction();
 
@@ -188,5 +205,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
 
+    }
 }

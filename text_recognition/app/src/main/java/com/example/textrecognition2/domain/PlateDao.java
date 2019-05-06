@@ -6,6 +6,7 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
@@ -18,21 +19,27 @@ public interface PlateDao {
     long[] insertAll(Plate... plates);
 
     @Delete
-    void delete(Plate plate);
+    int delete(Plate plate);
 
     @Query("DELETE FROM plates_table")
-    void deleteAll();
+    int deleteAll();
 
-    @Query("SELECT id FROM plates_table WHERE nombre LIKE :name LIMIT 1")
+    @Query("SELECT id FROM plates_table WHERE nombre LIKE :name ")
     long getIdByName(String name);
 
-    @Query("SELECT * FROM plates_table")
+    @Transaction @Query("SELECT * FROM plates_table")
     List<Plate> getAll();
 
-    @Query("SELECT * FROM plates_table WHERE id IN (:platIds)")
+    @Transaction @Query("SELECT * FROM plates_table WHERE id IN (:platIds)")
     List<Plate> loadAllByIds(long[] platIds);
 
-    @Query("SELECT * FROM plates_table WHERE nombre LIKE :name LIMIT 1")
+    @Query("SELECT * FROM plates_table WHERE nombre LIKE :name ")
     Plate findByName(String name);
+
+    @Transaction @Query("SELECT * FROM plates_table WHERE nombre IN (:names) ")
+    List<Plate> findByName(List<String> names);
+
+    @Transaction @Query("SELECT id FROM plates_table WHERE nombre IN (:names) ")
+    long[] findIdsByName(List<String> names);
 
 }

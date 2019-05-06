@@ -4,14 +4,7 @@
     PARÁMETROS DE CONFIGURACIÓN DEL MÓDULO DE OBTENCIÓN DE RECETAS 
 '''
 
-#EDAMAM
-edamam_endpoint= ''
-app_id=''
-app_key= ''
 
-#DANDELION
-dandelion_endpoint=''
-dandelion_key= ''
 
 '''
     DICCIONARIO DE MÉTRICAS

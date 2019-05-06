@@ -6,6 +6,7 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
@@ -18,13 +19,13 @@ public interface IngredientDao {
     long[] insertAll(Ingredient... ingredients);
 
     @Delete
-    void delete(Ingredient ingredient);
+    int delete(Ingredient ingredient);
 
     @Query("DELETE FROM ingredients_table")
-    void deleteAll();
+    int deleteAll();
 
     @Query("SELECT id FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
-    Integer getIdByName(String name);
+    long getIdByName(String name);
 
     @Query("SELECT * FROM ingredients_table WHERE id = :id LIMIT 1")
     Ingredient findById(long id);
@@ -32,10 +33,10 @@ public interface IngredientDao {
     @Query("SELECT * FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
     Ingredient findByName(String name);
 
-    @Query("SELECT * FROM ingredients_table")
+    @Transaction @Query("SELECT * FROM ingredients_table")
     List<Ingredient> getAll();
 
-    @Query("SELECT * FROM ingredients_table WHERE id IN (:ingrIds)")
+    @Transaction @Query("SELECT * FROM ingredients_table WHERE id IN (:ingrIds)")
     List<Ingredient> loadAllByIds(long[] ingrIds);
 
 }
