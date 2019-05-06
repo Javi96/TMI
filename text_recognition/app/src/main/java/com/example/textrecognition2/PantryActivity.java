@@ -1,6 +1,8 @@
 package com.example.textrecognition2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -36,7 +38,13 @@ public class PantryActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.component_fridge_scan_card_view:
-
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getApplicationContext(), ImageRecognitionActivity.class));
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                    }
+                }, 150);
                 break;
             case R.id.component_see_pantry_card_view:
 
