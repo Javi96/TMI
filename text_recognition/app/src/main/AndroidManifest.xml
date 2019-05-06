@@ -21,10 +21,6 @@
             android:label="@string/title_activity_image_recognition"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".LogoActivity"
-            android:label="@string/title_activity_logo"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".EditPlateActivity"
             android:label="@string/title_activity_edit_plate"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -57,10 +53,6 @@
             android:label="@string/title_activity_shop_cart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TextRazorActivity"
-            android:label="@string/title_activity_text_razor"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
@@ -70,10 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DandelionActivity"
-            android:label="@string/title_activity_dandelion"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OldPlatesActivity"
             android:label="@string/title_activity_diet"
