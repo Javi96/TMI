@@ -27,7 +27,7 @@ import random
 
 #Diccionario de medidas. Almacenará términos que implicarán medidas que deben ignorarse.
 #'spoon words' se mira de forma especial.
-measures={ 'cup':None,  'x':None,  'inch':None,'tbsp':None,'oz':None,'ounce':None,'slices':None }
+measures={ 'cup':None,  'x':None,  'inch':None,'tbsp':None,'oz':None,'ounce':None,'slices':None,'pich':None, 'tpsp':None,'lb':None,'tsp':None,'lbs':None }
 
 #Modelo spacy que usa el sistema para analizar las sentencias en lenguaje natural.
 nlp = spacy.load("en_core_web_sm")
@@ -77,7 +77,7 @@ def delete_measures(inputString):
     
     for x in string:
        
-        if (len(x)>5 and x[-5:]=='spoon'):
+        if (len(x)>5 and x[-5:]=='spoon' or len(x)>6 and x[-6:]=='spoons'):
             inputString=inputString.replace(x,'')[1:] #Eliminamos la medida.
         else:
             for key in measures.keys():

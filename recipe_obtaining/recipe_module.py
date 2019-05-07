@@ -11,7 +11,7 @@ import json
 import difflib
 from pathlib import Path
 from recipeconfig import edamam_endpoint, app_id, app_key, dandelion_endpoint, dandelion_key, measures_dict
-from spacy_module import get_ingredient_name
+from spacy_module import get_ingredient_name,measures
 
 
 '''
@@ -29,6 +29,11 @@ if not my_file.is_file():
         myfile.write('')
         
 
+
+'''
+'''
+
+garbage={'':None, 'cup':None,'cups':None,'ground':None,'pinch':None,'juice':None,'juices':None,'sauce':None,'crosswise':None,'temperature':None}
 
 '''
     IMPLEMENTACIÓN DE LA FUNCIONALIDAD DEL SERVICIO REST.
@@ -60,7 +65,10 @@ def get_recipe(plate, spacy):
     
     #En el caso de que encontremos alguna receta que encaje.
     if contents['count'] !=0:
-        best_hit=get_best_hit(plate,contents)["recipe"]["ingredientLines"] #Devuelve una lista con los ingredientes sin procesar    
+        best_hit=get_best_hit(plate,contents)
+        
+        plate=best_hit["recipe"]["label"]
+        best_hit=best_hit["recipe"]["ingredientLines"]
         
         #En función del valor de spacy (booleano), se realizará el parseo utilizando el módulo de spacy (spacy==true) o dandelion (spacy==false)
         result= parse_recipe(best_hit,spacy)
@@ -71,7 +79,7 @@ def get_recipe(plate, spacy):
             Si se ha realizado correctamente, se almacena el resultado en en el diccionario y en el almacenamiento permanente.
         '''
         
-        result= {"state":"Success", "recipe":result}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
+        result= {"state":"Success", "recipe":result, "plate":plate}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
         
         #Almacenamos en el diccionario.
         system_cache[plate]=result
@@ -167,9 +175,15 @@ def parse_recipe(input, spacy):
         
         if(len(words)!=0 and (words[0]).isdigit()):
             d["num"]= int(words[0])
+        else:
+            d["num"]= 0
 
         if(len(words)>1 and is_measure_unity(words[1])):
             d["units"]= words[1]
+        elif( d["num"] > 0 ):
+            d["units"] = "units"
+        else:
+            d["units"]= "uncount"
 
     
         try:
@@ -181,7 +195,7 @@ def parse_recipe(input, spacy):
                 d["name"]=get_entities_dandelion(x)
 
             
-            if(d["name"]!=None):
+            if(d["name"]!=None and (not d['name'] in garbage) and (not d['name'] in measures)):
                 result.append(d)
 
         except Exception as e:
