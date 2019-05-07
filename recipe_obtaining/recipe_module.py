@@ -67,7 +67,7 @@ def get_recipe(plate, spacy):
     if contents['count'] !=0:
         best_hit=get_best_hit(plate,contents)
         
-        plate=best_hit["recipe"]["label"]
+        plate_name=best_hit["recipe"]["label"]
         best_hit=best_hit["recipe"]["ingredientLines"]
         
         #En función del valor de spacy (booleano), se realizará el parseo utilizando el módulo de spacy (spacy==true) o dandelion (spacy==false)
@@ -79,7 +79,7 @@ def get_recipe(plate, spacy):
             Si se ha realizado correctamente, se almacena el resultado en en el diccionario y en el almacenamiento permanente.
         '''
         
-        result= {"state":"Success", "recipe":result, "plate":plate}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
+        result= {"state":"Success", "recipe":result, "plate":plate_name}     #El parámetro del diccionario devuelto "state" indicará si la operación tuvo éxito o no.
         
         #Almacenamos en el diccionario.
         system_cache[plate]=result
