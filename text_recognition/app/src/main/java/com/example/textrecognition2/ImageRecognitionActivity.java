@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,7 +19,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,15 +71,38 @@ public class ImageRecognitionActivity extends AppCompatActivity {
 
     private TextView mImageDetails;
     private ImageView mMainImage;
+    private TextView title;
+    private TextView quantity;
+    private int q = 1;
     public static JSONObject json;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_recognition);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setVisibility(View.INVISIBLE);
-        setSupportActionBar(toolbar);
+
+        title = findViewById(R.id.cmp_tile_title);
+        title.setText("Food\nscanner");
+        quantity = findViewById(R.id.quantity);
+
+        Button minus = findViewById(R.id.minus);
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (q > 1)
+                    q--;
+                quantity.setText(Integer.toString(q));
+            }
+        });
+
+        Button plus = findViewById(R.id.plus);
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q++;
+                quantity.setText(Integer.toString(q));
+            }
+        });
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +220,8 @@ public class ImageRecognitionActivity extends AppCompatActivity {
                 callCloudVision(bitmap);
                 if(mMainImage != null) {
                     mMainImage.setImageBitmap(bitmap);
+                    mMainImage.setPadding(24, 24, 24, 24);
+                    mMainImage.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
             } catch (IOException e) {
                 Log.d(TAG, "Image picking failed because " + e.getMessage());
@@ -269,6 +297,13 @@ public class ImageRecognitionActivity extends AppCompatActivity {
         annotateRequest.setDisableGZipContent(true);
         Log.d(TAG, "created Cloud Vision request object, sending request");
 
+        q = 1;
+        quantity.setText(Integer.toString(q));
+        LinearLayout counter = findViewById(R.id.counter);
+        counter.setVisibility(View.INVISIBLE);
+        LinearLayout añadir = findViewById(R.id.add_ingr);
+        añadir.setVisibility(View.INVISIBLE);
+
         return annotateRequest;
     }
 
@@ -324,6 +359,12 @@ public class ImageRecognitionActivity extends AppCompatActivity {
             if (activity != null && !activity.isFinishing()) {
                 TextView imageDetail = activity.findViewById(R.id.image_details);
                 imageDetail.setText(result);
+                if (result != "I can't recognize that photo") {
+                    LinearLayout counter = activity.findViewById(R.id.counter);
+                    counter.setVisibility(View.VISIBLE);
+                    LinearLayout añadir = activity.findViewById(R.id.add_ingr);
+                    añadir.setVisibility(View.VISIBLE);
+                }
             }
         }
     }
@@ -362,22 +403,6 @@ public class ImageRecognitionActivity extends AppCompatActivity {
             resizedWidth = maxDimension;
         }
         return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
-    }
-
-    private static String convertResponseToString(BatchAnnotateImagesResponse response) {
-        StringBuilder message = new StringBuilder("I found these things:\n\n");
-
-        List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
-        if (labels != null) {
-            for (EntityAnnotation label : labels) {
-                message.append(String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription()));
-                message.append("\n");
-            }
-        } else {
-            message.append("nothing");
-        }
-
-        return message.toString();
     }
 }
 
