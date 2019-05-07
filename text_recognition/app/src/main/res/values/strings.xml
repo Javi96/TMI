@@ -42,5 +42,6 @@
     <item name="act_edit_plate_sub_layout" type="id" />
     <string name="title_activity_logo">LogoActivity</string>
     <string name="title_activity_image_recognition">ImageRecognitionActivity</string>
+    <string name="title_activity_inventory">InventoryActivity</string>
 </resources>
 

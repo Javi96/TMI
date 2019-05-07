@@ -45,6 +45,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
     private class HorLay extends LinearLayout{
 
         private final LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+
         public HorLay(Context context) {
             super(context);
             super.setLayoutParams(params);

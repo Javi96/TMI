@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(getApplicationContext(), IngredientsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ShopCartActivity.class));
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     }
                 }, 150);

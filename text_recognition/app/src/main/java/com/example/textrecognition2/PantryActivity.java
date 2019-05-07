@@ -47,7 +47,13 @@ public class PantryActivity extends AppCompatActivity implements View.OnClickLis
                 }, 150);
                 break;
             case R.id.component_see_pantry_card_view:
-
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getApplicationContext(), InventoryActivity.class));
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                    }
+                }, 150);
                 break;
         }
     }
