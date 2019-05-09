@@ -37,6 +37,15 @@
         <item>Sábado</item>
         <item>Domingo</item>
     </string-array>
+
+    <string-array name="medidas">
+        <item>Units</item>
+        <item>ml</item>
+        <item>L</item>
+        <item>gr</item>
+        <item>Kg</item>
+    </string-array>
+
     <string name="title_activity_edit_plate">EditPlateActivity</string>
 
     <item name="act_edit_plate_sub_layout" type="id" />
