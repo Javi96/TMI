@@ -72,8 +72,6 @@ public class ImageRecognitionActivity extends AppCompatActivity {
     private TextView mImageDetails;
     private ImageView mMainImage;
     private TextView title;
-    private TextView quantity;
-    private int q = 1;
     public static JSONObject json;
 
     @Override
@@ -83,26 +81,6 @@ public class ImageRecognitionActivity extends AppCompatActivity {
 
         title = findViewById(R.id.cmp_tile_title);
         title.setText("Food\nscanner");
-        quantity = findViewById(R.id.quantity);
-
-        Button minus = findViewById(R.id.minus);
-        minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (q > 1)
-                    q--;
-                quantity.setText(Integer.toString(q));
-            }
-        });
-
-        Button plus = findViewById(R.id.plus);
-        plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                q++;
-                quantity.setText(Integer.toString(q));
-            }
-        });
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -297,10 +275,10 @@ public class ImageRecognitionActivity extends AppCompatActivity {
         annotateRequest.setDisableGZipContent(true);
         Log.d(TAG, "created Cloud Vision request object, sending request");
 
-        q = 1;
-        quantity.setText(Integer.toString(q));
-        LinearLayout counter = findViewById(R.id.counter);
+        LinearLayout counter = findViewById(R.id.quantity);
         counter.setVisibility(View.INVISIBLE);
+        LinearLayout medida = findViewById(R.id.measurement);
+        medida.setVisibility(View.INVISIBLE);
         LinearLayout añadir = findViewById(R.id.add_ingr);
         añadir.setVisibility(View.INVISIBLE);
 
@@ -360,8 +338,10 @@ public class ImageRecognitionActivity extends AppCompatActivity {
                 TextView imageDetail = activity.findViewById(R.id.image_details);
                 imageDetail.setText(result);
                 if (result != "I can't recognize that photo") {
-                    LinearLayout counter = activity.findViewById(R.id.counter);
+                    LinearLayout counter = activity.findViewById(R.id.quantity);
                     counter.setVisibility(View.VISIBLE);
+                    LinearLayout medida = activity.findViewById(R.id.measurement);
+                    medida.setVisibility(View.VISIBLE);
                     LinearLayout añadir = activity.findViewById(R.id.add_ingr);
                     añadir.setVisibility(View.VISIBLE);
                 }
