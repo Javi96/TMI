@@ -43,7 +43,7 @@
                     android:fontFamily="@font/ultra"
                     android:textColor="@color/colorBlue"
                     android:textSize="24sp"
-                    android:text="Inventario" />
+                    android:text="Inventory" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato_bold"
-                    android:text="pantry products"
+                    android:text="Your products"
                     android:textColor="@color/colorGray" />
 
             </LinearLayout>

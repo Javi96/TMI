@@ -60,7 +60,7 @@
                     android:fontFamily="@font/ultra"
                     android:textColor="@color/colorBlue"
                     android:textSize="24sp"
-                    android:text="scan dieta" />
+                    android:text="Scan diet" />
             </LinearLayout>
 
             <LinearLayout

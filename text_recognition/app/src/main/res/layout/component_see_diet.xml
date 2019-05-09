@@ -61,7 +61,7 @@
                     android:fontFamily="@font/ultra"
                     android:textColor="@color/colorBlue"
                     android:textSize="24sp"
-                    android:text="Ver dieta" />
+                    android:text="Check diet" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato_bold"
-                    android:text="Scan your fridge"
+                    android:text="Check your diet"
                     android:textColor="@color/colorGray" />
 
             </LinearLayout>
