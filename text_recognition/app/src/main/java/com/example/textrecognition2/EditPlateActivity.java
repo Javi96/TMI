@@ -156,7 +156,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                 String nombrePlato = ((EditText)layout.getChildAt(0)).getText().toString();
                 if(nombrePlato == ""){
                     Toasty.error(getApplicationContext(), "Introduce un nombre válido", Toast.LENGTH_SHORT * 10, true).show();
-                    break;
+                    return;
                 }
                 ArrayList<IngrCant> ingredientes = new ArrayList<IngrCant>();
                 for( int i = 1; i < layout.getChildCount(); i++){
@@ -164,7 +164,7 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                     String ingr = ((EditText)lay.getChildAt(0)).getText().toString();
                     if(ingr == ""){
                         Toasty.error(getApplicationContext(), "Introduce un ingrediente válido", Toast.LENGTH_SHORT * 10, true).show();
-                        break;
+                        return;
                     }
                     int cant = 0;
                     String unit = "uncount";
@@ -173,12 +173,12 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                             cant = Integer.parseInt(((EditText) lay.getChildAt(1)).getText().toString());
                         } catch (NumberFormatException e) {
                             Toasty.error(getApplicationContext(), "Introduce una cantidad válida", Toast.LENGTH_SHORT * 10, true).show();
-                            break;
+                            return;
                         }
                         unit = ((EditText)lay.getChildAt(2)).getText().toString();
-                        if(ingr == ""){
-                            ingr = "uncount";
-                            break;
+                        if(unit == ""){
+                            unit = "uncount";
+                            //break;
                         }
                     }
                     ingredientes.add(new IngrCant(ingr, cant, unit));

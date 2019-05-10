@@ -59,14 +59,14 @@ public abstract class FoodDatabase extends RoomDatabase {
                     ingredientDao.deleteAll();
                     plateDao.deleteAll();
                     ingrPlatDao.deleteAll();
-                    long i1 = ingredientDao.insert(new Ingredient("leche", "ml"));
-                    long i2 = ingredientDao.insert(new Ingredient("huevo", "units"));
+                    long i1 = ingredientDao.insert(new Ingredient("milk", "ml"));
+                    long i2 = ingredientDao.insert(new Ingredient("egg", "units"));
                     Log.e("Mensaje de prueba", "Esto es un mensaje de prueba");
                     Log.e("IDs inserciones", "El id de leche es " + i1 + " y el de huevo es " + i2);
                     long i3 = plateDao.insert(new Plate("flan"));
                     Log.e("ID plato", "El id de flan es " + i3);
-                    ingrPlatDao.insert(new IngredientesPlatos( i1, i3, 6));
-                    ingrPlatDao.insert(new IngredientesPlatos(i2, i3, 500));
+                    ingrPlatDao.insert(new IngredientesPlatos( i1, i3, 500));
+                    ingrPlatDao.insert(new IngredientesPlatos(i2, i3, 6));
                     List<IngrCant> resul = ingrPlatDao.getRecipeForPlate(i3);
                     Log.e("Ingredientes", "El flan lleva: " + resul.get(0).getNombre() + " + " + resul.get(1).getNombre());
                 //}

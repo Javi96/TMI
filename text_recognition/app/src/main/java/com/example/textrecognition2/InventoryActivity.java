@@ -2,9 +2,11 @@ package com.example.textrecognition2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -15,12 +17,15 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.textrecognition2.domain.FoodRepository;
 import com.example.textrecognition2.domain.IngrCant;
+import com.example.textrecognition2.domain.Ingredient;
 import com.example.textrecognition2.domain.Plate;
 import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 import com.marozzi.roundbutton.RoundButton;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
 
@@ -37,30 +42,26 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
 
     private String position;*/
 
-    private ArrayList<Plate> test5;
-
     private class HorLay extends LinearLayout{
-
-        private final LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         public HorLay(Context context) {
             super(context);
-            super.setLayoutParams(params);
+            super.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
             super.setOrientation(HORIZONTAL);
         }
     }
 
-    private EditText PlateText(Context context){
-        EditText resul = new EditText(context);
+    private static EditText PlateText(Context context){
+        final EditText resul = new EditText(context);
         resul.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toasty.warning(getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
+                Toasty.warning(resul.getContext().getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
                 return true;
             }
         });
         resul.setTextSize(28);
-        resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
-        resul.setTextColor(getResources().getColor(R.color.colorRed));
+        resul.setTypeface(Typeface.createFromAsset(context.getAssets(), "ultra.ttf"));
+        resul.setTextColor(context.getResources().getColor(R.color.colorRed));
         return resul;
     }
 
@@ -90,24 +91,6 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         todos_platos = intent.getStringExtra("plates");
         position = intent.getStringExtra("pos");*/
 
-        // DATOS DE PRUEBA
-        ArrayList<IngrCant> test3 = new ArrayList<>();
-        test3.add(new IngrCant(1, "nombre1", "unidad1", 1));
-        test3.add(new IngrCant(2, "nombre2", "unidad2", 2));
-        test3.add(new IngrCant(3, "nombre3", "unidad3", 3));
-
-        ArrayList<IngrCant> test4 = new ArrayList<>();
-        test4.add(new IngrCant(4, "nombre4", "unidad4", 4));
-        test4.add(new IngrCant(5, "nombre5", "unidad5", 5));
-        test4.add(new IngrCant(6, "nombre6", "unidad6", 6));
-
-        test5 = new ArrayList<>();
-        test5.add(new Plate("plato1", test3));
-        test5.add(new Plate("plato2", test4));
-
-
-
-
         LinearLayout myRoot = (LinearLayout) findViewById(R.id.act_inventory_layout1);
         myRoot.setPadding(64,16,64,16);
         layout =  findViewById(R.id.act_edit_plate_sub_layout);
@@ -115,17 +98,43 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         //layout.setPadding(16,16,16,16);
 
         //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
+        /*
         String info = "plato1___nombre1***unidad1***1___nombre2***unidad2***2___nombre3***unidad3***3---plato2___nombre4***unidad4***4___nombre5***unidad5***5___nombre6***unidad6***6";
         Plate plato = EncodeDecodeUtil.decodePlates(info).get(0);
         Toast.makeText(getApplicationContext(), "Has seleccionado: " + plato.toString(), Toast.LENGTH_LONG).show();
+        */
+
+        SharedPreferences inventory = getSharedPreferences("inventory", Context.MODE_PRIVATE);
+
+        ArrayList<IngrCant> ingredientes = new ArrayList<IngrCant>();
+
+        StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
+
+        FoodRepository fr = new FoodRepository(this.getApplication());
+
+        for( String key  : inventory.getAll().keySet()){
+            Ingredient ing = fr.getIngredient(key);
+            if(ing == null) //No debería ocurrir nunca, por si acaso
+                continue;
+            try {
+                ingredientes.add(new IngrCant(key, ing.getUnits(), inventory.getInt(key, 0)));
+            } catch ( ClassCastException e){continue;} // Esto es por el getInt, también por si acaso
+
+        }
+
+        StrictMode.setThreadPolicy(old);
 
         //final LinearLayout nombrLay = findViewById(R.id.act_edit_plate_sub_horz);
+        /*
         final EditText editText = PlateText(getApplicationContext());
         editText.setText(plato.getName());
 
         layout.addView(editText);
+        */
 
-        for(IngrCant ing : plato.getIngredients()){
+        //for(IngrCant ing : plato.getIngredients()){
+        for(IngrCant ing : ingredientes){
             final LinearLayout auxLay = new InventoryActivity.HorLay(this);
             final EditText nombre = IngrText(getApplicationContext(), auxLay);
             nombre.setText(ing.getNombre());

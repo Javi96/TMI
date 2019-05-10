@@ -1,8 +1,10 @@
 package com.example.textrecognition2;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -10,6 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -19,12 +22,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.textrecognition2.domain.FoodRepository;
+import com.example.textrecognition2.domain.Ingredient;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpTransport;
@@ -55,7 +63,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class ImageRecognitionActivity extends AppCompatActivity {
+import es.dmoral.toasty.Toasty;
+
+public class ImageRecognitionActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String CLOUD_VISION_API_KEY = BuildConfig.API_KEY;
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
@@ -73,6 +83,8 @@ public class ImageRecognitionActivity extends AppCompatActivity {
     private ImageView mMainImage;
     private TextView title;
     public static JSONObject json;
+
+    private String selectedMeasurement = "units";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -277,12 +289,72 @@ public class ImageRecognitionActivity extends AppCompatActivity {
 
         LinearLayout counter = findViewById(R.id.quantity);
         counter.setVisibility(View.INVISIBLE);
+
         LinearLayout medida = findViewById(R.id.measurement);
         medida.setVisibility(View.INVISIBLE);
+
+        ((Spinner)findViewById(R.id.measurement_input)).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedMeasurement = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+            });
+
         LinearLayout añadir = findViewById(R.id.add_ingr);
         añadir.setVisibility(View.INVISIBLE);
 
+        findViewById(R.id.add_ingr_button).setOnClickListener(this);
         return annotateRequest;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.add_ingr_button:
+                SharedPreferences prefs =
+                        getSharedPreferences("inventory", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+
+                /*
+                PENDIENTE DE TERMINAR LA VISTA
+                FALTA UNIDAD DE MEDIDA Y PODER CAMBIAR NOMBRE
+                */
+
+                String nombre = ( (TextView) findViewById(R.id.image_details)).getText().toString().substring(9);
+                if(nombre.isEmpty()){
+                    Toasty.error(getApplicationContext(), "Introduce un nombre válido", Toast.LENGTH_SHORT * 10, true).show();
+                }
+                String unidades = selectedMeasurement;
+                int cantidad = 0;
+                try {
+                    cantidad = Integer.parseInt( ((EditText)findViewById(R.id.quantity_input)).getText().toString() );
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                    Toasty.error(getApplicationContext(), "Introduce una cantidad válida: " + findViewById(R.id.quantity_input).toString(), Toast.LENGTH_SHORT * 10, true).show();
+                    return;
+                }
+
+                StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
+                StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
+
+                new FoodRepository(this.getApplication()).insertIngredient(new Ingredient(nombre, unidades));
+
+                StrictMode.setThreadPolicy(old);
+                if ( unidades.equalsIgnoreCase("uncount"))
+                    editor.putInt(nombre, 0);
+                else
+                    editor.putInt(nombre, cantidad);
+
+                editor.apply();
+                //*/
+                super.onBackPressed();
+                break;
+        }
     }
 
     private static class LableDetectionTask extends AsyncTask<Object, Void, String> {
@@ -385,4 +457,3 @@ public class ImageRecognitionActivity extends AppCompatActivity {
         return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
     }
 }
-

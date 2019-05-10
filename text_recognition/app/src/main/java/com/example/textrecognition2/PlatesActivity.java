@@ -73,7 +73,7 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
         }
          */
 
-        if( sp.getBoolean("TestPlatesFirstCall", false) ) {
+        if( sp.getBoolean("PlatesFirstCall", false) ) {
             StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
@@ -89,7 +89,7 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
             StrictMode.setThreadPolicy(old);
 
             SharedPreferences.Editor editor = sp.edit();
-            editor.putBoolean("TestPlatesFirstCall", false);
+            editor.putBoolean("PlatesFirstCall", false);
             editor.apply();
 
             Log.v("info", message);

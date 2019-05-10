@@ -2,10 +2,13 @@ package com.example.textrecognition2.domain;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import java.net.InetAddress;
 
+import com.example.textrecognition2.DietScheduleActivity;
 import com.example.textrecognition2.QueryUtils;
 
 import org.json.JSONArray;
@@ -16,7 +19,10 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class FoodRepository {
     private static IngredientDao ingredientDao;
@@ -42,21 +48,22 @@ public class FoodRepository {
         }
     }
 
-    public void insertIngredient (final Ingredient ingredient) {
-        ingredientDao.insert(ingredient);
+    public long insertIngredient (final Ingredient ingredient) {
+        return ingredientDao.insert(ingredient);
     }
 
-    public void insertIngredients (final ArrayList<Ingredient> ingredients) {
-        ingredientDao.insertAll(( Ingredient[]) ingredients.toArray() );
+    public long[] insertIngredients (final ArrayList<Ingredient> ingredients) {
+        return ingredientDao.insertAll(( Ingredient[]) ingredients.toArray() );
     }
 
-    public void insertPlate (Plate plate) {
+    public long insertPlate (Plate plate) {
         long id = plateDao.insert(plate);
         if(plate.getIngredients() != null)
-            for (IngrCant ing : plate.getIngredients()){
-                long ingId = ingredientDao.insert(new Ingredient(ing.getNombre(),ing.getUnidades()));
-                ingrPlatDao.insert(new IngredientesPlatos(ingId, id, ing.getQuantity()) );
+            for (IngrCant ing : plate.getIngredients()) {
+                long ingId = ingredientDao.insert(new Ingredient(ing.getNombre(), ing.getUnidades()));
+                ingrPlatDao.insert(new IngredientesPlatos(ingId, id, ing.getQuantity()));
             }
+        return id;
     }
 
     public void insertPlates ( ArrayList<Plate> plates) {
@@ -91,8 +98,8 @@ public class FoodRepository {
 
     }
 
-    public List<IngrCant> getIngredientsForPlate (String plate) {
-        return ingrPlatDao.getRecipeForPlate(plateDao.getIdByName(plate));
+    public ArrayList<IngrCant> getIngredientsForPlate (String plate) {
+        return (ArrayList<IngrCant>)ingrPlatDao.getRecipeForPlate(plateDao.getIdByName(plate));
     }
 
     public ArrayList<IngrCant> getIngredientsForPlate (Plate plate) {
@@ -147,8 +154,60 @@ public class FoodRepository {
         return ingredientDao.findByName(name);
     }
 
-    public List<IngrCant> getNecessaryIngredients ( List<String> platos) {
-        return ingrPlatDao.getIngredientsByIds( plateDao.findIdsByName(platos) );
+    public ArrayList<IngrCant> getNecessaryIngredients ( String plato) {
+        return (ArrayList<IngrCant>)ingrPlatDao.getIngredientsByIds( plateDao.getIdByName(plato) );
     }
 
+    public ArrayList<IngrCant> getShoppingList(Application application){
+        ArrayList<IngrCant> resul = new ArrayList<IngrCant>();
+
+        HashMap<String, IngrCant> lista = new HashMap<String, IngrCant>();
+
+        SharedPreferences inventory = application.getSharedPreferences("inventory", Context.MODE_PRIVATE);
+        SharedPreferences menus = application.getSharedPreferences("menus", Context.MODE_PRIVATE);
+
+        // Recorremos cada dia
+        for ( String dia  : DietScheduleActivity.days ){
+            // Para cada dia vemos los platos de la dieta
+            Log.d("Buscando el dia: ", dia);
+            for ( String plato : menus.getString(dia,"").split("_") ) {
+                // Para cada plato sacamos los ingredientes necesarios
+                for(IngrCant ing : getNecessaryIngredients(plato)){
+                    IngrCant act = lista.get(ing.getNombre());
+                    // Si ya tenemos ese ingrediente en la lista lo incrementamos
+                    if(act!=null)
+                        act.setQuantity(act.getQuantity() + ing.getQuantity());
+                    // Si no lo tenemos lo añadimos
+                    else
+                        lista.put(ing.getNombre(), ing);
+                }
+            }
+        }
+
+        // Recorremos los ingredientes que estan en la lista
+        for(Map.Entry<String,IngrCant> ent : lista.entrySet()){
+            try {
+                Log.d("Probando ingrediente: " , ent.getValue().toString());
+                // Si ya tenemos en el inventario, esa cantidad no hace falta comprarla
+                if( inventory.contains(ent.getKey()) ) {
+                    Log.d("Habia: " , ent.getValue().toString());
+                    ent.getValue().setQuantity(ent.getValue().getQuantity() - inventory.getInt(ent.getKey(), 0));
+                    Log.d("Y ahora: " , ent.getValue().toString());
+                }
+                // Si ese ingrediente es incontable
+                // o
+                // si descontando el inventario sigue faltando,
+                // se añade a la lista de la compra
+                if( ent.getValue().getUnidades().equalsIgnoreCase("uncount") || ent.getValue().getQuantity() > 0 ){
+                    resul.add(ent.getValue());
+                    Log.d("Añadiendo ingrediente ", ent.getValue().toString());
+                }
+
+            } catch ( ClassCastException e){continue;} // Esto es por el getInt por si acaso
+
+        }
+
+
+        return resul;
+    }
 }

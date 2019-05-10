@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT * 10, true).show();
             }
         }
+
         FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
         db.inTransaction();
 
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CardView cv_pantry_cart = findViewById(R.id.component_pantry_card_view);
 
         Button btn_pantry_flip = findViewById(R.id.pantry_flip_button);
-        Button  btn_diet_flip = findViewById(R.id.scan_diet_flip_button);
+        Button btn_diet_flip = findViewById(R.id.scan_diet_flip_button);
         Button btn_shop_cart_flip = findViewById(R.id.shop_cart_flip_button);
 
         btn_pantry_flip.setOnClickListener(this);

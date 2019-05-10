@@ -53,19 +53,19 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private String day;
 
-    private TextView PlateText(Context context){
+    private static TextView PlateText(Context context){
         TextView resul = new TextView(context);
         resul.setTextSize(24);
-        resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
-        resul.setTextColor(getResources().getColor(R.color.colorBlack));
+        resul.setTypeface(Typeface.createFromAsset(context.getAssets(), "ultra.ttf"));
+        resul.setTextColor(context.getResources().getColor(R.color.colorBlack));
         return resul;
     }
 
-    private TextView IngrText(Context context){
+    private static TextView IngrText(Context context){
         TextView resul = new TextView(context);
         resul.setTextSize(20);
-        resul.setTypeface(Typeface.createFromAsset(getAssets(), "lato_bold.ttf"));
-        resul.setTextColor(getResources().getColor(R.color.colorBlue));
+        resul.setTypeface(Typeface.createFromAsset(context.getAssets(), "lato_bold.ttf"));
+        resul.setTextColor(context.getResources().getColor(R.color.colorBlue));
         return resul;
     }
 
@@ -74,7 +74,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        plates = EncodeDecodeUtil.decodePlates(getIntent().getStringExtra("plates"));
+        plates = EncodeDecodeUtil.decodePlates(getIntent().getStringExtra("plates").toLowerCase());
 
         TextView textView = findViewById(R.id.cmp_sub_title1);
         button3 = findViewById(R.id.cmp_sub_title2);

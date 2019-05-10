@@ -39,11 +39,12 @@
     </string-array>
 
     <string-array name="medidas">
-        <item>Units</item>
-        <item>ml</item>
-        <item>L</item>
-        <item>gr</item>
-        <item>Kg</item>
+        <item>units</item>
+        <item>mililitres</item>
+        <item>litres</item>
+        <item>grams</item>
+        <item>kilograms</item>
+        <item>uncount</item>
     </string-array>
 
     <string name="title_activity_edit_plate">EditPlateActivity</string>

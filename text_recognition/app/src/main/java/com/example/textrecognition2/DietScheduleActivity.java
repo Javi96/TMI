@@ -32,7 +32,7 @@ import es.dmoral.toasty.Toasty;
 
 public class DietScheduleActivity extends AppCompatActivity implements View.OnClickListener {
 
-    static final String[] days = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
+    public static final String[] days = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
 
     private TextView DayText(Context context){
         TextView resul = new TextView(context);
