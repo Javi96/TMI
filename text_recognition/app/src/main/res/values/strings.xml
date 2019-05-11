@@ -53,5 +53,6 @@
     <string name="title_activity_logo">LogoActivity</string>
     <string name="title_activity_image_recognition">ImageRecognitionActivity</string>
     <string name="title_activity_inventory">InventoryActivity</string>
+    <string name="shop_cart">Shop cart</string>
 </resources>
 

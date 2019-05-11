@@ -19,11 +19,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+
         android:fillViewport="true">
         <LinearLayout
             android:id="@+id/act_diet_sched_layout"
             android:layout_width="match_parent"
+            android:padding="16dp"
+            android:background="@drawable/back_card"
+
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content">

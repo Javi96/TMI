@@ -23,9 +23,9 @@ import com.example.textrecognition2.domain.IngrCant;
 
 import java.util.ArrayList;
 
-public class ShopCartActivity extends AppCompatActivity {
+import es.dmoral.toasty.Toasty;
 
-    private TextView title;
+public class ShopCartActivity extends AppCompatActivity {
 
     private LinearLayout layout;
 
@@ -36,6 +36,7 @@ public class ShopCartActivity extends AppCompatActivity {
             @Override
             public boolean onLongClick(View v) {
                 layout.removeView(auxLay);
+                Toasty.success(getApplicationContext(), "Sucessfully removed" , Toasty.LENGTH_SHORT).show();
                 return true;
             }
             });
@@ -51,8 +52,8 @@ public class ShopCartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_cart);
 
-        title = findViewById(R.id.cmp_tile_title);
-        title.setText("Shopping\ncart");
+        TextView title = findViewById(R.id.cmp_tile_title);
+        title.setText(getString(R.string.shop_cart));
 
         layout = findViewById(R.id.act_shop_cart_layout);
 
@@ -67,25 +68,42 @@ public class ShopCartActivity extends AppCompatActivity {
 
             for(IngrCant ing : lista){
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                params.setMargins(128,0,32,0);
+                params.setMargins(0,0,0,0);
+
                 LinearLayout sub_layout = new LinearLayout(getApplicationContext());
                 sub_layout.setLayoutParams(params);
                 sub_layout.setOrientation(LinearLayout.VERTICAL);
+
+                LinearLayout.LayoutParams aux_params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                aux_params.setMargins(0,0,32,0);
+                LinearLayout aux = new LinearLayout(getApplicationContext());
+                aux.setLayoutParams(aux_params);
+                aux.setOrientation(LinearLayout.VERTICAL);
+                aux.setPadding(100,85,64,0);
+                aux.setWeightSum(2);
 
                 TextView text1 = IngrText(getApplicationContext(), sub_layout);
                 text1.setText(ing.getNombre());
 
                 TextView text2 = IngrText(getApplicationContext(), sub_layout);
                 text2.setGravity(Gravity.END);
-                text2.setText( Integer.toString(ing.getQuantity()));
+                text2.setText( "Quantity: " +  Integer.toString( ing.getQuantity()) + " " + ing.getUnidades());
 
-                sub_layout.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.card));
-                sub_layout.addView(text1);
-                sub_layout.addView(text2);
+                aux.addView(text1);
+                aux.addView(text2);
+
+                aux.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.shop_cart_item));
+                sub_layout.addView(aux);
 
                 layout.addView(sub_layout);
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
     }
 
 }

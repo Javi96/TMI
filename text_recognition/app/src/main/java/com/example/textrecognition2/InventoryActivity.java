@@ -248,18 +248,7 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
-
-        /*Intent intent = new Intent();
-        intent.putExtra("plate", message);
-        intent.putExtra("pos", String.valueOf(position));
-        intent.putExtra("plates", todos_platos);
-        setResult(RESULT_OK, intent);*/
-
-
-
-        finish();
         super.onBackPressed();
-
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
     }
 }

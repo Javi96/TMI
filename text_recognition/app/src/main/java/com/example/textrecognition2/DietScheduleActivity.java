@@ -38,7 +38,7 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         TextView resul = new TextView(context);
         resul.setTextSize(28);
         resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
-        resul.setTextColor(getResources().getColor(R.color.colorWhite));
+        resul.setTextColor(getResources().getColor(R.color.colorRed));
         return resul;
     }
 
@@ -46,7 +46,7 @@ public class DietScheduleActivity extends AppCompatActivity implements View.OnCl
         TextView resul = new TextView(context);
         resul.setTextSize(22);
         resul.setTypeface(Typeface.createFromAsset(getAssets(), "ultra.ttf"));
-        resul.setTextColor(getResources().getColor(R.color.cpb_green));
+        resul.setTextColor(getResources().getColor(R.color.colorBlue));
         return resul;
     }
 

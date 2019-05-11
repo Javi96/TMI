@@ -61,7 +61,7 @@
                     android:fontFamily="@font/ultra"
                     android:textColor="@color/colorBlue"
                     android:textSize="24sp"
-                    android:text="Shopping cart" />
+                    android:text="Shop cart" />
             </LinearLayout>
 
             <LinearLayout

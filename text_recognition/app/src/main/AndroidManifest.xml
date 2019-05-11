@@ -19,7 +19,7 @@
         <activity
             android:name=".InventoryActivity"
             android:label="@string/title_activity_inventory"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ImageRecognitionActivity"
             android:label="@string/title_activity_image_recognition"
