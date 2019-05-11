@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -53,6 +54,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private String day;
 
+    private RoundButton floatingActionButton;
+
     private static TextView PlateText(Context context){
         TextView resul = new TextView(context);
         resul.setTextSize(24);
@@ -78,8 +81,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView textView = findViewById(R.id.cmp_sub_title1);
         button3 = findViewById(R.id.cmp_sub_title2);
-        textView.setText("Selecciona el día:");
-        button3.setText("Platos:");
+        textView.setText("Day:");
+        button3.setText("Plates:");
 
         Spinner spinner = findViewById(R.id.act_menu_spinner);
 
@@ -147,7 +150,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        RoundButton floatingActionButton = findViewById(R.id.act_menu_confirm);
+        floatingActionButton = findViewById(R.id.act_menu_confirm);
+
         floatingActionButton.setOnClickListener(this);
 
     }
@@ -190,13 +194,35 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                     sb.append(ingr[0]+ '_');
                 }
                 */
+
+
+
+
                 editor.putString(this.day, sb.toString());
 
                 editor.putString("return", "MenuActivity");
 
                 editor.apply();
 
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+
+                floatingActionButton.startAnimation();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        floatingActionButton.setResultState(RoundButton.ResultState.SUCCESS);
+                    }
+                }, 1614);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                    }
+                }, 2000);
+
+
 
 
 

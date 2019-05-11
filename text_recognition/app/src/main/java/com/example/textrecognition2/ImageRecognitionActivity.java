@@ -370,6 +370,13 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        SharedPreferences prefs =
+                                getSharedPreferences("menus", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putString("return", "MenuActivity");
+
+                        editor.apply();
+
                         overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();

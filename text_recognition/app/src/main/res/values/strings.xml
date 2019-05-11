@@ -29,13 +29,13 @@
     <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
 
     <string-array name="act_menu_days">
-        <item>Lunes</item>
-        <item>Martes</item>
-        <item>Miercoles</item>
-        <item>Jueves</item>
-        <item>Viernes</item>
-        <item>Sábado</item>
-        <item>Domingo</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
     </string-array>
 
     <string-array name="medidas">

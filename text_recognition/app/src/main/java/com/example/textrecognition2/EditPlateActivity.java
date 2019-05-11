@@ -105,7 +105,6 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
 
         Plate plato = EncodeDecodeUtil.decodePlates(message).get(0);
-        Toast.makeText(getApplicationContext(), "Has seleccionado: " + plato.toString(), Toast.LENGTH_LONG).show();
 
         //final LinearLayout nombrLay = findViewById(R.id.act_edit_plate_sub_horz);
         final EditText editText = PlateText(getApplicationContext());
