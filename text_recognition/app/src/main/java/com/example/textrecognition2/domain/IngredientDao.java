@@ -7,6 +7,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Transaction;
+import android.arch.persistence.room.Update;
 
 import java.util.List;
 
@@ -23,6 +24,9 @@ public interface IngredientDao {
 
     @Query("DELETE FROM ingredients_table")
     int deleteAll();
+
+    @Transaction @Query("UPDATE ingredients_table SET unidades = :units WHERE id = :id")
+    long update(long id, String units);
 
     @Query("SELECT id FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
     long getIdByName(String name);

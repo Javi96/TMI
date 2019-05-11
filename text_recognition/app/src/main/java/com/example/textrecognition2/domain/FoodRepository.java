@@ -52,9 +52,21 @@ public class FoodRepository {
         return ingredientDao.insert(ingredient);
     }
 
+    public void insertIngredients (final Ingredient[] ingredients) {
+        for ( Ingredient ing: ingredients ) {
+            Ingredient aux = ingredientDao.findByName(ing.getName());
+            if( aux != null)
+                ingredientDao.update(aux.getId(), ing.getUnits());
+            else
+                ingredientDao.insert(ing);
+        }
+    }
+
+    /*
     public long[] insertIngredients (final ArrayList<Ingredient> ingredients) {
         return ingredientDao.insertAll(( Ingredient[]) ingredients.toArray() );
     }
+    */
 
     public long insertPlate (Plate plate) {
         long id = plateDao.insert(plate);

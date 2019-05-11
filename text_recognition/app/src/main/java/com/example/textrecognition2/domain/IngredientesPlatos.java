@@ -4,14 +4,15 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Index;
+import android.arch.persistence.room.Update;
 import android.support.annotation.NonNull;
 
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 @Entity(tableName = "ingr_plat_table",
         indices = {@Index( value = {"platId", "ingrId"}, unique = true)},
-        foreignKeys = {@ForeignKey(entity = Ingredient.class, parentColumns = "id", childColumns = "ingrId", onDelete = CASCADE),
-                        @ForeignKey(entity = Plate.class, parentColumns = "id", childColumns = "platId", onDelete = CASCADE)},
+        foreignKeys = {@ForeignKey(entity = Ingredient.class, parentColumns = "id", childColumns = "ingrId", onDelete = CASCADE, onUpdate = CASCADE),
+                        @ForeignKey(entity = Plate.class, parentColumns = "id", childColumns = "platId", onDelete = CASCADE, onUpdate = CASCADE)},
         primaryKeys = {"ingrId", "platId"})
 public class IngredientesPlatos {
 

@@ -24,7 +24,10 @@ import com.example.textrecognition2.domain.Plate;
 import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 import com.marozzi.roundbutton.RoundButton;
 
+import org.apache.commons.lang3.ObjectUtils;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
@@ -42,6 +45,8 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
 
     private String position;*/
 
+    //HashSet<String> erasedIngr = new HashSet<String>();
+
     private class HorLay extends LinearLayout{
         public HorLay(Context context) {
             super(context);
@@ -50,26 +55,12 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
-    private static EditText PlateText(Context context){
-        final EditText resul = new EditText(context);
-        resul.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Toasty.warning(resul.getContext().getApplicationContext(), "No se puede eliminar el título", Toast.LENGTH_SHORT * 10, true).show();
-                return true;
-            }
-        });
-        resul.setTextSize(28);
-        resul.setTypeface(Typeface.createFromAsset(context.getAssets(), "ultra.ttf"));
-        resul.setTextColor(context.getResources().getColor(R.color.colorRed));
-        return resul;
-    }
-
     private EditText IngrText(Context context, final LinearLayout auxLay){
         EditText resul = new EditText(context);
         resul.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                //erasedIngr.add( ((EditText)auxLay.getChildAt(0)).getText().toString() );
                 layout.removeView(auxLay);
                 return true;
             }
@@ -86,10 +77,12 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         btn_edit_plate = findViewById(R.id.btn_edit_plate);
         btn_add_ingr = findViewById(R.id.act_edit_plate_add_ingr);
 
-        /*Intent intent = getIntent();
+        /*
+        Intent intent = getIntent();
         message = intent.getStringExtra("plate");
         todos_platos = intent.getStringExtra("plates");
-        position = intent.getStringExtra("pos");*/
+        position = intent.getStringExtra("pos");
+        */
 
         LinearLayout myRoot = (LinearLayout) findViewById(R.id.act_inventory_layout1);
         myRoot.setPadding(64,16,64,16);
@@ -98,6 +91,7 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         //layout.setPadding(16,16,16,16);
 
         //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
+
         /*
         String info = "plato1___nombre1***unidad1***1___nombre2***unidad2***2___nombre3***unidad3***3---plato2___nombre4***unidad4***4___nombre5***unidad5***5___nombre6***unidad6***6";
         Plate plato = EncodeDecodeUtil.decodePlates(info).get(0);
@@ -174,18 +168,15 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
                 break;
 
             case R.id.btn_edit_plate:
-                String nombrePlato = ((EditText)layout.getChildAt(0)).getText().toString();
-                if(nombrePlato == ""){
-                    Toasty.error(getApplicationContext(), "Introduce un nombre válido", Toast.LENGTH_SHORT * 10, true).show();
-                    break;
-                }
-                ArrayList<IngrCant> ingredientes = new ArrayList<IngrCant>();
-                for( int i = 1; i < layout.getChildCount(); i++){
+                final Ingredient[] resultIngr = new Ingredient[layout.getChildCount()];
+                SharedPreferences.Editor edit = getSharedPreferences("inventory", MODE_PRIVATE).edit();
+                edit.clear();
+                for( int i = 0; i < layout.getChildCount(); i++){
                     LinearLayout lay = (LinearLayout) layout.getChildAt(i);
                     String ingr = ((EditText)lay.getChildAt(0)).getText().toString();
                     if(ingr == ""){
                         Toasty.error(getApplicationContext(), "Introduce un ingrediente válido", Toast.LENGTH_SHORT * 10, true).show();
-                        break;
+                        return;
                     }
                     int cant = 0;
                     String unit = "uncount";
@@ -194,18 +185,19 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
                             cant = Integer.parseInt(((EditText) lay.getChildAt(1)).getText().toString());
                         } catch (NumberFormatException e) {
                             Toasty.error(getApplicationContext(), "Introduce una cantidad válida", Toast.LENGTH_SHORT * 10, true).show();
-                            break;
+                            return;
                         }
                         unit = ((EditText)lay.getChildAt(2)).getText().toString();
-                        if(ingr == ""){
-                            ingr = "uncount";
-                            break;
+                        if(unit == ""){
+                            unit = "uncount";
+                            //break;
                         }
                     }
-                    ingredientes.add(new IngrCant(ingr, cant, unit));
+                    resultIngr[i] = new Ingredient(ingr, unit);
+                    edit.putInt(ingr, cant);
                 }
-                final ArrayList<Plate> resul = new ArrayList<Plate>();
-                resul.add( new Plate(nombrePlato, ingredientes) );
+
+                edit.apply();
 
                 /*
                 final StringBuilder stringBuilder = new StringBuilder();
@@ -225,6 +217,12 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
+                        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
+
+                        new FoodRepository(getApplication()).insertIngredients(resultIngr);
+
+                        StrictMode.setThreadPolicy(old);
                         btn.setResultState(RoundButton.ResultState.SUCCESS);
                     }
                 }, 1614);
