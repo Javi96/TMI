@@ -48,13 +48,13 @@ public class FoodRepository {
         }
     }
 
-    public void insertIngredient (final Ingredient ingredient) {
+    public long insertIngredient (final Ingredient ingredient) {
         Ingredient aux = ingredientDao.findByName(ingredient.getName());
         if( aux != null)
             ingredientDao.update(aux.getId(), ingredient.getUnits());
         else
-            ingredientDao.insert(ingredient);
-
+            return ingredientDao.insert(ingredient);
+        return aux.getId();
     }
 
     public void insertIngredients (final Ingredient[] ingredients) {
@@ -74,10 +74,15 @@ public class FoodRepository {
     */
 
     public long insertPlate (Plate plate) {
-        long id = plateDao.insert(plate);
+        Plate insertado = plateDao.findByName(plate.getName());
+        long id;
+        if( insertado == null)
+            id = plateDao.insert(plate);
+        else
+            id = insertado.getId();
         if(plate.getIngredients() != null)
             for (IngrCant ing : plate.getIngredients()) {
-                long ingId = ingredientDao.insert(new Ingredient(ing.getNombre(), ing.getUnidades()));
+                long ingId = insertIngredient(new Ingredient(ing.getNombre(), ing.getUnidades()));
                 ingrPlatDao.insert(new IngredientesPlatos(ingId, id, ing.getQuantity()));
             }
         return id;
@@ -105,11 +110,7 @@ public class FoodRepository {
     public void insertPlateWithIngredients (Plate plate) {
         long id =  plateDao.insert(plate);
         for(IngrCant ing : plate.getIngredients() ){
-            long ingr;
-            if(ingredientDao.findByName(ing.getNombre())==null)
-                ingr = ingredientDao.insert(new Ingredient(ing.getNombre(), ing.getUnidades()));
-            else
-                ingr = ingredientDao.getIdByName(ing.getNombre());
+            long ingr = insertIngredient(new Ingredient(ing.getNombre(), ing.getUnidades()));
             ingrPlatDao.insert(new IngredientesPlatos( ingr, id, ing.getQuantity()));
         }
 
@@ -125,10 +126,14 @@ public class FoodRepository {
 
     public Plate getPlate (String name) {
         Plate resul = getPlateFromDB(name);
-        if (resul == null)
+        if (resul == null){
             resul = getPlateFromAPI(name);
-        else
+            Log.e("Llamando API para ", name);
+        }
+        else {
             resul.setIngredients(getIngredientsForPlate(resul));
+            Log.e("Llamando DB para ", name);
+        }
         return resul;
     }
 

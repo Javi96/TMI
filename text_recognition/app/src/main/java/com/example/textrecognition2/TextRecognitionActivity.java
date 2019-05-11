@@ -77,10 +77,10 @@ public class TextRecognitionActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PlatesActivity.class);
 
-                intent.putExtra("food", textView.getText().toString());
+                intent.putExtra("food", textView.getText().toString().toLowerCase());
 
                 SharedPreferences.Editor editor = getSharedPreferences("menus", Context.MODE_PRIVATE).edit();
-                editor.putBoolean("TestPlatesFirstCall", true);
+                editor.putBoolean("PlatesFirstCall", true);
                 editor.apply();
 
                 //intent.putExtra("food", "flan");

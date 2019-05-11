@@ -24,6 +24,9 @@ public interface PlateDao {
     @Query("DELETE FROM plates_table")
     int deleteAll();
 
+    @Transaction @Query("UPDATE plates_table SET nombre = :name WHERE id = :id")
+    long update(long id, String name);
+
     @Query("SELECT id FROM plates_table WHERE nombre LIKE :name ")
     long getIdByName(String name);
 
