@@ -61,14 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CardView cv_shop_cart = findViewById(R.id.component_shop_cart_card_view);
         CardView cv_pantry_cart = findViewById(R.id.component_pantry_card_view);
 
-        Button btn_pantry_flip = findViewById(R.id.pantry_flip_button);
-        Button btn_diet_flip = findViewById(R.id.scan_diet_flip_button);
-        Button btn_shop_cart_flip = findViewById(R.id.shop_cart_flip_button);
-
-        btn_pantry_flip.setOnClickListener(this);
-        btn_diet_flip.setOnClickListener(this);
-        btn_shop_cart_flip.setOnClickListener(this);
-
         cv_scan_diet_cart.setOnClickListener(this);
         cv_shop_cart.setOnClickListener(this);
         cv_pantry_cart.setOnClickListener(this);
@@ -91,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.scan_diet_flip_button:
             case R.id.component_scan_diet_card_view:
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -101,7 +92,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }, 150);
                 break;
-            case R.id.pantry_flip_button:
             case R.id.component_pantry_card_view:
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -111,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }, 150);
                 break;
-            case R.id.shop_cart_flip_button:
             case R.id.component_shop_cart_card_view:
                 new Handler().postDelayed(new Runnable() {
                     @Override

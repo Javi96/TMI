@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -33,6 +34,7 @@ import android.widget.Toast;
 
 import com.example.textrecognition2.domain.FoodRepository;
 import com.example.textrecognition2.domain.Ingredient;
+import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpTransport;
@@ -48,6 +50,7 @@ import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
 import com.google.api.services.vision.v1.model.EntityAnnotation;
 import com.google.api.services.vision.v1.model.Feature;
 import com.google.api.services.vision.v1.model.Image;
+import com.marozzi.roundbutton.RoundButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -83,6 +86,8 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
     private ImageView mMainImage;
     private TextView title;
     public static JSONObject json;
+
+    private RoundButton btn;
 
     private String selectedMeasurement = "units";
 
@@ -308,6 +313,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         LinearLayout añadir = findViewById(R.id.add_ingr);
         añadir.setVisibility(View.INVISIBLE);
 
+        btn = findViewById(R.id.add_ingr_button);
         findViewById(R.id.add_ingr_button).setOnClickListener(this);
         return annotateRequest;
     }
@@ -335,7 +341,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
                     cantidad = Integer.parseInt( ((EditText)findViewById(R.id.quantity_input)).getText().toString() );
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
-                    Toasty.error(getApplicationContext(), "Introduce una cantidad válida: " + findViewById(R.id.quantity_input).toString(), Toast.LENGTH_SHORT * 10, true).show();
+                    Toasty.error(getApplicationContext(), "Introduce una cantidad válida", Toast.LENGTH_SHORT * 10, true).show();
                     return;
                 }
 
@@ -351,8 +357,26 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
                     editor.putInt(nombre, cantidad);
 
                 editor.apply();
+
+                btn.startAnimation();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        btn.setResultState(RoundButton.ResultState.SUCCESS);
+
+                    }
+                }, 1614);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        finish();
+                    }
+                }, 2000);
                 //*/
-                super.onBackPressed();
+
                 break;
         }
     }

@@ -34,7 +34,7 @@
             android:fontFamily="@font/ultra"
             android:textColor="@color/colorRed"
             android:layout_weight="1"
-            android:text="U-FIT" />
+            android:text="SLEZ" />
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout

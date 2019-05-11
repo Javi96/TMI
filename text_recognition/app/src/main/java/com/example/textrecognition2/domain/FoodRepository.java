@@ -48,8 +48,13 @@ public class FoodRepository {
         }
     }
 
-    public long insertIngredient (final Ingredient ingredient) {
-        return ingredientDao.insert(ingredient);
+    public void insertIngredient (final Ingredient ingredient) {
+        Ingredient aux = ingredientDao.findByName(ingredient.getName());
+        if( aux != null)
+            ingredientDao.update(aux.getId(), ingredient.getUnits());
+        else
+            ingredientDao.insert(ingredient);
+
     }
 
     public void insertIngredients (final Ingredient[] ingredients) {
