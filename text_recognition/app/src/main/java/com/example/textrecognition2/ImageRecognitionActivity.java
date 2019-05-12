@@ -82,10 +82,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
     public static final int CAMERA_PERMISSIONS_REQUEST = 2;
     public static final int CAMERA_IMAGE_REQUEST = 3;
 
-    private TextView mImageDetails;
-    private ImageView mMainImage;
-    private TextView title;
-    public static JSONObject json;
+    private TextView mImageDetails;         // Mensaje informativo
+    private ImageView mMainImage;           // Foto tomada por el usuario
+    private TextView title;                 // Nombre de la actividad
+    public static JSONObject json;          // Diccionario de ingredientes
 
     private RoundButton btn;
 
@@ -99,6 +99,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         title = findViewById(R.id.cmp_tile_title);
         title.setText("Food\nscanner");
 
+        // Permite al usuario seleccionar una foto de la galería o tomarla con la cámara
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,7 +126,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         mImageDetails = findViewById(R.id.image_details);
         mMainImage = findViewById(R.id.main_image);
 
-        String jsonS = null;
+        String jsonS = null;    // Cargamos el diccionario con los ingredientes
         try {
             InputStream is = getAssets().open("ingredients.json");
             int size = is.available();
@@ -144,6 +145,9 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         System.out.println(jsonS);
     }
 
+    /**
+     *  Abre la galería para que el usuario seleccione una imagen
+     */
     public void startGalleryChooser() {
         if (PermissionUtils.requestPermission(this, GALLERY_PERMISSIONS_REQUEST, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             Intent intent = new Intent();
@@ -154,6 +158,9 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     *  Arranca la cámara a pantalla completa
+     */
     public void startCamera() {
         if (PermissionUtils.requestPermission(
                 this,
@@ -168,6 +175,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Devuelve la foto recién tomada con la cámara
+     * @return foto de la cámara
+     */
     public File getCameraFile() {
         File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         return new File(dir, FILE_NAME);
@@ -203,6 +214,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Muestra la imagen en la Activity
+     * @param uri foto seleccionada por el usuario
+     */
     public void uploadImage(Uri uri) {
         if (uri != null) {
             try {
@@ -228,6 +243,12 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Prepara la consulta a la API con la imagen
+     * @param bitmap foto seleccionada por el usuario
+     * @return petición a la API
+     * @throws IOException
+     */
     private Vision.Images.Annotate prepareAnnotationRequest(final Bitmap bitmap) throws IOException {
         HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
         JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
@@ -292,10 +313,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         annotateRequest.setDisableGZipContent(true);
         Log.d(TAG, "created Cloud Vision request object, sending request");
 
-        LinearLayout counter = findViewById(R.id.quantity);
+        LinearLayout counter = findViewById(R.id.quantity); // Oculta los ajustes del ingrediente
         counter.setVisibility(View.INVISIBLE);
 
-        LinearLayout medida = findViewById(R.id.measurement);
+        LinearLayout medida = findViewById(R.id.measurement); // Oculta los ajustes del ingrediente
         medida.setVisibility(View.INVISIBLE);
 
         ((Spinner)findViewById(R.id.measurement_input)).setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -310,7 +331,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
             }
             });
 
-        LinearLayout añadir = findViewById(R.id.add_ingr);
+        LinearLayout añadir = findViewById(R.id.add_ingr); // Oculta los ajustes del ingrediente
         añadir.setVisibility(View.INVISIBLE);
 
         btn = findViewById(R.id.add_ingr_button);
@@ -388,6 +409,9 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Clase para ejecutar la consulta de detección de etiquetas
+     */
     private static class LableDetectionTask extends AsyncTask<Object, Void, String> {
         private final WeakReference<ImageRecognitionActivity> mActivityWeakReference;
         private Vision.Images.Annotate mRequest;
@@ -409,6 +433,7 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
                 float solScore = 0;
                 String sol = "";
 
+                // Extraemos la etiqueta con mayor puntuación cuyo descriptor figure en el diccionario de ingredientes
                 for (int i=0; i < listaLabels.size(); i++) {
                     EntityAnnotation infoLabel = listaLabels.get(i);
                     String label = infoLabel.getDescription().toLowerCase();
@@ -435,6 +460,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
             return "Cloud Vision API request failed. Check logs for details.";
         }
 
+        /**
+         * Muestra el ingrediente detectado y activa los ajustes
+         * @param result etiqueta asignada
+         */
         protected void onPostExecute(String result) {
             ImageRecognitionActivity activity = mActivityWeakReference.get();
             if (activity != null && !activity.isFinishing()) {
@@ -452,6 +481,10 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Ejecuta la llamada a la API de detección de etiquetas
+     * @param bitmap imagen tomada por el usuario
+     */
     private void callCloudVision(final Bitmap bitmap) {
         Log.e(TAG, "call CLoud vision ");
 
@@ -468,6 +501,12 @@ public class ImageRecognitionActivity extends AppCompatActivity implements View.
         }
     }
 
+    /**
+     * Escala la imagen para mostrarla en la activity
+     * @param bitmap imagen seleccionada por el usuario
+     * @param maxDimension dimensión máxima
+     * @return imagen redimensionada
+     */
     private Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
 
         int originalWidth = bitmap.getWidth();
