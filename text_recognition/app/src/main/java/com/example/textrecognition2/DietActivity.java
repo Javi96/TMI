@@ -29,8 +29,8 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * Atributos privados
      */
-    CardView see_diet;
-    CardView scan_diet;
+    private CardView see_diet;
+    private CardView scan_diet;
 
     private TextView title;
 

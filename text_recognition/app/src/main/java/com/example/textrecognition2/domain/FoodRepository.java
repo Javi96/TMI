@@ -1,12 +1,8 @@
 package com.example.textrecognition2.domain;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
-
-import java.net.InetAddress;
 
 import com.example.textrecognition2.DietScheduleActivity;
 import com.example.textrecognition2.QueryUtils;
@@ -20,10 +16,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
+/**
+ * <h1>Definición de un modelo unificado de acceso a datos. Proporciona conexión a la API y la Base de Datos</h1>
+ */
 public class FoodRepository {
     private static IngredientDao ingredientDao;
     private static PlateDao plateDao;
@@ -31,14 +28,17 @@ public class FoodRepository {
 
     private static FoodDatabase db = null;
 
-    /*
+    /**
      * En la variable APIURL hay que poner la IP y el puerto hacia la que irán dirigidas las peticiones
-     * es decir, la máquina que está corriendo la API de spyder
+     * es decir, la máquina que está corriendo la API de obtención de ingredientes de un plato.
      */
 
     private static final String APIURL = "http://10.1.1.112:5555/recipeSpacy/";
     private static final String APIURLbad = "http://10.1.1.112:5555/recipe/";
 
+    /**
+     * De nuevo se garantiza mediante el patrón Singleton la instanciación única de una Base de Datos y un Repositorio en toda la app
+     */
     public FoodRepository(Application application) {
         if( db == null) {
             FoodDatabase db = FoodDatabase.getDatabase(application);
@@ -67,12 +67,6 @@ public class FoodRepository {
         }
     }
 
-    /*
-    public long[] insertIngredients (final ArrayList<Ingredient> ingredients) {
-        return ingredientDao.insertAll(( Ingredient[]) ingredients.toArray() );
-    }
-    */
-
     public long insertPlate (Plate plate) {
         Plate insertado = plateDao.findByName(plate.getName());
         long id;
@@ -93,29 +87,6 @@ public class FoodRepository {
             insertPlate(pla);
     }
 
-    public void insertIngredientsPlate (String plate, ArrayList<String> ingredients, int[] cantidades) {
-        long id = ingredientDao.findByName(plate).getId();
-        for(int i = 0; i < ingredients.size(); i++)
-            ingrPlatDao.insert(new IngredientesPlatos(
-                    ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
-    }
-
-    public void insertPlateWithIngredients (String plate, ArrayList<String> ingredients, int[] cantidades) {
-        long id = plateDao.insert(new Plate(plate));
-        for(int i = 0; i < ingredients.size(); i++)
-            ingrPlatDao.insert(new IngredientesPlatos(
-                    ingredientDao.findByName(ingredients.get(i)).getId(), id, cantidades[i]));
-    }
-
-    public void insertPlateWithIngredients (Plate plate) {
-        long id =  plateDao.insert(plate);
-        for(IngrCant ing : plate.getIngredients() ){
-            long ingr = insertIngredient(new Ingredient(ing.getNombre(), ing.getUnidades()));
-            ingrPlatDao.insert(new IngredientesPlatos( ingr, id, ing.getQuantity()));
-        }
-
-    }
-
     public ArrayList<IngrCant> getIngredientsForPlate (String plate) {
         return (ArrayList<IngrCant>)ingrPlatDao.getRecipeForPlate(plateDao.getIdByName(plate));
     }
@@ -126,14 +97,12 @@ public class FoodRepository {
 
     public Plate getPlate (String name) {
         Plate resul = getPlateFromDB(name);
-        if (resul == null){
+        if (resul == null)
             resul = getPlateFromAPI(name);
-            Log.e("Llamando API para ", name);
-        }
-        else {
+
+        else
             resul.setIngredients(getIngredientsForPlate(resul));
-            Log.e("Llamando DB para ", name);
-        }
+
         return resul;
     }
 
@@ -146,7 +115,6 @@ public class FoodRepository {
             JSONObject jsonResponse = new JSONObject(QueryUtils.makeHttpRequest(new URL(APIURL + name.replace(' ', '+'))));
             if (jsonResponse.getString("state").compareToIgnoreCase("Success") != 0)
                 return null;
-            Log.d("respuesta server:",jsonResponse.toString());
             JSONArray ingredientes = jsonResponse.getJSONArray("recipe");
             ArrayList<IngrCant> ingredients =  new ArrayList<IngrCant>();
             for (int j = 0; j < ingredientes.length(); j++) {
@@ -191,7 +159,6 @@ public class FoodRepository {
         // Recorremos cada dia
         for ( String dia  : DietScheduleActivity.days ){
             // Para cada dia vemos los platos de la dieta
-            Log.d("Buscando el dia: ", dia);
             for ( String plato : menus.getString(dia,"").split("_") ) {
                 // Para cada plato sacamos los ingredientes necesarios
                 for(IngrCant ing : getNecessaryIngredients(plato)){
@@ -209,27 +176,19 @@ public class FoodRepository {
         // Recorremos los ingredientes que estan en la lista
         for(Map.Entry<String,IngrCant> ent : lista.entrySet()){
             try {
-                Log.d("Probando ingrediente: " , ent.getValue().toString());
                 // Si ya tenemos en el inventario, esa cantidad no hace falta comprarla
-                if( inventory.contains(ent.getKey()) ) {
-                    Log.d("Habia: " , ent.getValue().toString());
+                if( inventory.contains(ent.getKey()) )
                     ent.getValue().setQuantity(ent.getValue().getQuantity() - inventory.getInt(ent.getKey(), 0));
-                    Log.d("Y ahora: " , ent.getValue().toString());
-                }
+
                 // Si ese ingrediente es incontable
                 // o
                 // si descontando el inventario sigue faltando,
                 // se añade a la lista de la compra
-                if( ent.getValue().getUnidades().equalsIgnoreCase("uncount") || ent.getValue().getQuantity() > 0 ){
+                if( ent.getValue().getUnidades().equalsIgnoreCase("uncount") || ent.getValue().getQuantity() > 0 )
                     resul.add(ent.getValue());
-                    Log.d("Añadiendo ingrediente ", ent.getValue().toString());
-                }
 
-            } catch ( ClassCastException e){continue;} // Esto es por el getInt por si acaso
-
+            } catch ( ClassCastException e){e.printStackTrace(); continue;} // Esto es por el getInt, sólo por si acaso
         }
-
-
         return resul;
     }
 }

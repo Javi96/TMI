@@ -5,20 +5,12 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.constraint.solver.widgets.ConstraintHorizontalLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import android.widget.LinearLayout.LayoutParams;
 
 import com.example.textrecognition2.domain.IngrCant;
 import com.example.textrecognition2.domain.Plate;
@@ -37,10 +29,10 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
     /**
      * Atributos de clase
      */
-    LinearLayout layout;
+    private LinearLayout layout;
 
-    Button btn_edit_plate;
-    Button btn_add_ingr;
+    private Button btn_edit_plate;
+    private Button btn_add_ingr;
 
     private String message;
 
@@ -238,8 +230,6 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         intent.putExtra("pos", String.valueOf(position));
         intent.putExtra("plates", todos_platos);
         setResult(RESULT_OK, intent);
-
-
 
         finish();
         super.onBackPressed();

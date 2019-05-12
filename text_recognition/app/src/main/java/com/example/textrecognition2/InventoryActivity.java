@@ -1,16 +1,12 @@
 package com.example.textrecognition2;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,16 +16,9 @@ import android.widget.Toast;
 import com.example.textrecognition2.domain.FoodRepository;
 import com.example.textrecognition2.domain.IngrCant;
 import com.example.textrecognition2.domain.Ingredient;
-import com.example.textrecognition2.domain.Plate;
-import com.example.textrecognition2.utilities.EncodeDecodeUtil;
 import com.marozzi.roundbutton.RoundButton;
 
-import org.apache.commons.lang3.ObjectUtils;
-
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Map;
-
 import es.dmoral.toasty.Toasty;
 
 /**
@@ -42,13 +31,13 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
     /**
      * Atributos privados
      */
-    LinearLayout layout;
-    Button btn_edit_plate;
-    Button btn_add_ingr;
+    private LinearLayout layout;
+    private Button btn_edit_plate;
+    private Button btn_add_ingr;
 
 
     /**
-     * Genrea un LinearLayout configurado
+     * Genera un LinearLayout configurado
      */
     private class HorLay extends LinearLayout{
         /**

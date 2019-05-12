@@ -1,35 +1,21 @@
 package com.example.textrecognition2;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.textrecognition2.domain.FoodDatabase;
-import com.example.textrecognition2.domain.FoodRepository;
-import com.example.textrecognition2.domain.Ingredient;
-import com.example.textrecognition2.domain.Plate;
-
-import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 

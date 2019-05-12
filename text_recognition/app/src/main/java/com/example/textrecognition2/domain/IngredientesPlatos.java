@@ -4,11 +4,13 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Index;
-import android.arch.persistence.room.Update;
 import android.support.annotation.NonNull;
 
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
+/**
+ * <h1>Definición del objeto con el que se creará la tabla en la Base de Datos que relacione los Ingredientes y los Platos</h1>
+ */
 @Entity(tableName = "ingr_plat_table",
         indices = {@Index( value = {"platId", "ingrId"}, unique = true)},
         foreignKeys = {@ForeignKey(entity = Ingredient.class, parentColumns = "id", childColumns = "ingrId", onDelete = CASCADE, onUpdate = CASCADE),

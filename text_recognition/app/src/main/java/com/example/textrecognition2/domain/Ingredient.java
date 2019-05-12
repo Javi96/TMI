@@ -6,6 +6,9 @@ import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+/**
+ * <h1>Definición del objeto con el que se creará la tabla en la Base de Datos que almacene la información de los Ingredientes</h1>
+ */
 @Entity(tableName = "ingredients_table",
         indices = {@Index(value = "nombre", unique = true)})
 public class Ingredient {

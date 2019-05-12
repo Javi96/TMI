@@ -2,6 +2,9 @@ package com.example.textrecognition2.domain;
 
 import android.arch.persistence.room.Ignore;
 
+/**
+ * <h1>Definición del objeto con el que se proporcionará la información de las cantidades y medidas de un ingrediente</h1>
+ */
 public class IngrCant {
     private long id;
     private String nombre;

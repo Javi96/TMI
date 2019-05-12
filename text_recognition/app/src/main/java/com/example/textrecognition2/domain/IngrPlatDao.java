@@ -9,6 +9,9 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
+/**
+ * <h1>Interfaz que vinculará la Base de Datos de Room con la relación entre Platos e Ingredientes</h1>
+ */
 @Dao
 public interface IngrPlatDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -1,6 +1,5 @@
 package com.example.textrecognition2.domain;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -10,6 +9,9 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
+/**
+ * <h1>Interfaz que vinculará la Base de Datos de Room con el objeto Plate correspondiente</h1>
+ */
 @Dao
 public interface PlateDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
