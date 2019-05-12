@@ -9,6 +9,10 @@ import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 
+/**
+ * <h1>Definición del objeto con el que se creará la tabla en la Base de Datos que almacene la información de los Platos</h1>
+ * En este caso el objeto tendrá también un ArrayList que permitirá aislar a las vistas del acceso a las 2 tablas correspondientes
+ */
 @Entity(tableName = "plates_table",
         indices = {@Index(value = "nombre", unique = true)})
 public class Plate {

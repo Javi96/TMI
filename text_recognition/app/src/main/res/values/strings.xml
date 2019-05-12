@@ -29,18 +29,30 @@
     <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
 
     <string-array name="act_menu_days">
-        <item>Lunes</item>
-        <item>Martes</item>
-        <item>Miercoles</item>
-        <item>Jueves</item>
-        <item>Viernes</item>
-        <item>Sábado</item>
-        <item>Domingo</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
     </string-array>
+
+    <string-array name="medidas">
+        <item>units</item>
+        <item>mililitres</item>
+        <item>litres</item>
+        <item>grams</item>
+        <item>kilograms</item>
+        <item>uncount</item>
+    </string-array>
+
     <string name="title_activity_edit_plate">EditPlateActivity</string>
 
     <item name="act_edit_plate_sub_layout" type="id" />
     <string name="title_activity_logo">LogoActivity</string>
     <string name="title_activity_image_recognition">ImageRecognitionActivity</string>
+    <string name="title_activity_inventory">InventoryActivity</string>
+    <string name="shop_cart">Shop cart</string>
 </resources>
 

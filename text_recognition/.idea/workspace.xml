@@ -10,25 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cfa01d2-04cf-4386-a195-5635de988df6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PantryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PantryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-    </list>
+    <list default="true" id="9cfa01d2-04cf-4386-a195-5635de988df6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,25 +69,26 @@
     <session id="1861927077">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="5" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="5" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="10" />
           <entry key="project.open.time.8" value="6" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="16" />
-          <entry key="java" value="166" />
+          <entry key="java" value="255" />
           <entry key="png" value="3" />
           <entry key="properties" value="1" />
           <entry key="ttf" value="1" />
-          <entry key="xml" value="273" />
+          <entry key="xml" value="328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -113,92 +96,107 @@
           <entry key="Font" value="1" />
           <entry key="Groovy" value="16" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="166" />
+          <entry key="JAVA" value="255" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="273" />
+          <entry key="XML" value="328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="41" />
           <entry key="gradle" value="69" />
-          <entry key="java" value="9776" />
+          <entry key="java" value="18626" />
           <entry key="txt" value="55" />
-          <entry key="xml" value="4651" />
+          <entry key="xml" value="4899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="69" />
-          <entry key="JAVA" value="9776" />
+          <entry key="JAVA" value="18626" />
           <entry key="PLAIN_TEXT" value="96" />
-          <entry key="XML" value="4651" />
+          <entry key="XML" value="4899" />
         </counts>
       </usages-collector>
     </session>
     <session id="1703998496">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="5" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.6" value="9" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="8" />
-          <entry key="java" value="155" />
+          <entry key="gradle" value="12" />
+          <entry key="java" value="198" />
           <entry key="png" value="6" />
           <entry key="pro" value="1" />
           <entry key="properties" value="3" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="89" />
+          <entry key="xml" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="8" />
+          <entry key="Groovy" value="12" />
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="155" />
+          <entry key="JAVA" value="198" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="ProGuard File" value="1" />
           <entry key="Properties" value="3" />
-          <entry key="XML" value="89" />
+          <entry key="XML" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="gradle" value="14" />
-          <entry key="java" value="12570" />
-          <entry key="xml" value="143" />
+          <entry key="gradle" value="15" />
+          <entry key="java" value="16509" />
+          <entry key="xml" value="232" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Android Room SQL" value="1" />
-          <entry key="Groovy" value="14" />
-          <entry key="JAVA" value="12569" />
+          <entry key="Groovy" value="15" />
+          <entry key="JAVA" value="16508" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="XML" value="143" />
+          <entry key="XML" value="232" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="valueResourceFile" />
         <option value="Interface" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="valueResourceFile" />
         <option value="resourceFile" />
       </list>
     </option>
@@ -218,12 +216,21 @@
       <find>component_card_text2</find>
       <find>rb_success_resource</find>
       <find>include</find>
-      <find>Toasty</find>
       <find>Main</find>
       <find>mMainImage</find>
       <find>uploadImage</find>
       <find>mMain</find>
       <find>mImageDetails</find>
+      <find>Entry</find>
+      <find>plato1</find>
+      <find>añadir</find>
+      <find>add_ingr</find>
+      <find>image_</find>
+      <find>Spinner</find>
+      <find>sTART</find>
+      <find>fab</find>
+      <find>Toasty</find>
+      <find>Toast.</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -238,63 +245,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/PlatoIngredientes.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_sub_title1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_sub_title2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_diet_schedule.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_diet.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ingredients.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pantry.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_cart.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ShopCartActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_text_recognition.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/Ingredient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientesPlatos.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_box1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/QueryUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/adapters/PlateArrayAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngrPlatDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/PlateDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngrCant.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/test/TestPlatesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_test_plates.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_test_plates.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/TextRecognitionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/OldPlatesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/EncodeDecodeUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodDatabase.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/EditPlateActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/Plate.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PlatesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodRepository.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietScheduleActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_plate.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MenuActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" />
-        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/textrecognition2/BuildConfig.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PackageManagerUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PermissionUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/provider_paths.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PantryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_image_recognition.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_image_recognition.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/ComponentUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_shop_cart.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngrPlatDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/text_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_diet.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_image_recognition.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodDatabase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_diet_schedule.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/main_header_selector.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/main_header_selector.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_diet_schedule.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientesPlatos.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_plate.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_see_diet.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_scan_fridge.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_scan_diet.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_pantry_card.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_pantry.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/component_shopping_cart.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/PlateDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodRepository.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ImageRecognitionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/TextRecognitionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ShopCartActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/QueryUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PlatesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PermissionUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PantryActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PackageManagerUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/InventoryActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/IngredientsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/Entity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/EditPlateActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietScheduleActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/EncodeDecodeUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/SlideAnimationUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/adapters/PlateArrayAdapter.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="width" value="1296" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -325,24 +332,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="text_recognition" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="text_recognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="text_recognition" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="text_recognition" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="text_recognition" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
             <path>
               <item name="text_recognition" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -351,9 +355,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,7 +367,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="ce07182720ad843601" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cloud_vision" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TMI-commit-3/text_recognition" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -483,31 +485,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4989733" visible="true" weight="0.26580226" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4989733" visible="true" weight="0.08031809" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.5010267" side_tool="true" weight="0.1304175" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49682036" weight="0.23986857" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32917318" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32917318" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49582505" weight="0.23946957" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49622267" weight="0.32683307" />
+      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49940357" weight="0.32839313" />
       <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32917318" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50317967" side_tool="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49940357" weight="0.32839313" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.24214712" side_tool="true" visible="true" weight="0.19110765" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49562797" weight="0.1916758" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32839313" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" weight="0.3299532" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.7578529" visible="true" weight="0.19110765" />
+      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.4985646" weight="0.3274918" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" weight="0.3299532" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.73906" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.40437376" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" auto_hide="true" id="Assistant" order="6" weight="0.3298217" />
     </layout>
@@ -516,367 +518,335 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="67" column="95" selection-start-line="67" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/LogoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="50" column="51" lean-forward="true" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_card_ingredient.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_box1.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_card.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngrPlatDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/PlateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/adapters/PlateArrayAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/QueryUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_test_plates.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_diet.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="477">
+          <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_plates.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_diet_schedule.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="85">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/TextRecognitionActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_image_recognition.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1254">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="475">
+          <caret line="96" column="48" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/OldPlatesActivity.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/content/res/Resources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_shop_cart_item.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="80" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/TextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="5862" selection-start-line="5862" selection-end-line="5862" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_see_diet.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="5037" selection-start-line="5037" selection-end-line="5037" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_scan_fridge.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/LinearLayout.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_scan_diet.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_pantry_card.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_shopping_cart.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_pantry.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_sub_title1.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_sub_title2.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/component_title.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/Ingredient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="2009" column="15" selection-start-line="2009" selection-start-column="15" selection-end-line="2009" selection-end-column="15" />
+        <state relative-caret-position="132">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/Plate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="61" column="69" selection-start-line="61" selection-start-column="69" selection-end-line="61" selection-end-column="69" />
+        <state relative-caret-position="132">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngrCant.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="323">
+          <caret line="28" column="39" selection-start-line="27" selection-start-column="3" selection-end-line="28" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/EditPlateActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/PlateDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        <state relative-caret-position="357">
+          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/EncodeDecodeUtil.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ImageRecognitionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/com/example/textrecognition2/domain/IngrPlatDao_Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="412">
+          <caret line="378" selection-start-line="378" selection-end-line="378" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_diet_schedule.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="442">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_plate.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietScheduleActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/IngredientesPlatos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PlatesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
+        <state relative-caret-position="195">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="1700">
+          <caret line="100" column="51" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PackageManagerUtils.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/Analisys.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DandelionActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/OldPlatesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/TextRecognitionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="-786">
+          <caret line="92" column="54" lean-forward="true" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ShopCartActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="46" selection-start-line="10" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="1411">
+          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PlatesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PermissionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/textrecognition2/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/provider_paths.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dandelion.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_image_recognition.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_image_recognition.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="e#1239#1272#0" expanded="true" />
-            <element signature="e#1301#1336#0" expanded="true" />
-            <element signature="e#1366#1401#0" expanded="true" />
-            <element signature="e#1429#1462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/ImageRecognitionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3695#3998#0" expanded="true" />
-            <element signature="e#3997#3998#0" expanded="true" />
-            <element signature="e#4074#4369#0" expanded="true" />
-            <element signature="e#4368#4369#0" expanded="true" />
-            <element signature="e#14338#14362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="138" column="79" selection-start-line="138" selection-start-column="79" selection-end-line="138" selection-end-column="79" />
+        <state relative-caret-position="221">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PantryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="153">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/PackageManagerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="204" column="25" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="120" column="39" lean-forward="true" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+          <folding>
+            <element signature="e#3538#3858#0" expanded="true" />
+            <element signature="e#3857#3858#0" expanded="true" />
+            <element signature="e#3981#4303#0" expanded="true" />
+            <element signature="e#4302#4303#0" expanded="true" />
+            <element signature="e#4429#4753#0" expanded="true" />
+            <element signature="e#4752#4753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/InventoryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="209" column="29" lean-forward="true" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/IngredientsActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/QueryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/EditPlateActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="181" column="35" lean-forward="true" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietScheduleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/DietActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/EncodeDecodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/utilities/SlideAnimationUtil.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/adapters/IngredientArrayAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/adapters/PlateArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/textrecognition2/domain/FoodDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1342">
+          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

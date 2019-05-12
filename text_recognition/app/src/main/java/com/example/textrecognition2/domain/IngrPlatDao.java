@@ -9,6 +9,9 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
+/**
+ * <h1>Interfaz que vinculará la Base de Datos de Room con la relación entre Platos e Ingredientes</h1>
+ */
 @Dao
 public interface IngrPlatDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -35,8 +38,8 @@ public interface IngrPlatDao {
     @Transaction @Query("SELECT id, nombre, unidades, SUM(quantity) AS quantity FROM ingr_plat_table INNER JOIN ingredients_table ON ingrId = ingredients_table.id WHERE platId IN (:plates) GROUP BY ingrId " ) //", nombre ")
     List<IngrCant> getNecessaryIngredients(List<Long> plates);
 
-    @Transaction @Query("SELECT id, nombre, unidades, SUM(quantity) AS quantity FROM ingr_plat_table INNER JOIN ingredients_table ON ingrId = ingredients_table.id WHERE platId IN (:plates) GROUP BY ingrId " ) //", nombre ")
-    List<IngrCant> getIngredientsByIds(long[] plates);
+    @Transaction @Query("SELECT id, nombre, unidades, SUM(quantity) AS quantity FROM ingr_plat_table INNER JOIN ingredients_table ON ingrId = ingredients_table.id WHERE platId = :plate GROUP BY ingrId " ) //", nombre ")
+    List<IngrCant> getIngredientsByIds(long plate);
 
     @Transaction @Query("SELECT id, nombre FROM ingr_plat_table INNER JOIN plates_table ON platId = plates_table.id  WHERE ingrId = :ingrId")
     List<Plate> loadPlatesWithIngredient(long ingrId);

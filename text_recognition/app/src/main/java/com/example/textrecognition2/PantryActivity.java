@@ -9,8 +9,15 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * <hi>Esta actividad hace de intermediario entre el menu principal y el inventario junto con el
+ * reconocimiento de imagenes</hi>
+ */
 public class PantryActivity extends AppCompatActivity implements View.OnClickListener{
 
+    /**
+     * Atributos privados
+     */
     private CardView scan_fridge;
     private CardView see_pantry;
     private ConstraintLayout layout_fridge;
@@ -23,6 +30,9 @@ public class PantryActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantry);
 
+        /*
+        Se configuran los atributos privados y se añaden al observador
+         */
         title = findViewById(R.id.cmp_tile_title);
         scan_fridge = findViewById(R.id.component_fridge_scan_card_view);
         see_pantry = findViewById(R.id.component_see_pantry_card_view);
@@ -41,13 +51,21 @@ public class PantryActivity extends AppCompatActivity implements View.OnClickLis
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        // Se lana el reconocimiento de imagenes
                         startActivity(new Intent(getApplicationContext(), ImageRecognitionActivity.class));
                         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                     }
                 }, 150);
                 break;
             case R.id.component_see_pantry_card_view:
-
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Se lanza la actividad con el inventario
+                        startActivity(new Intent(getApplicationContext(), InventoryActivity.class));
+                        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                    }
+                }, 150);
                 break;
         }
     }

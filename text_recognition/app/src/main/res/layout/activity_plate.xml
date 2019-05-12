@@ -19,13 +19,13 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
         android:clickable="true"
+        android:src="@drawable/ic_check_white_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981"
-        app:srcCompat="@color/colorPrimary" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <ListView
         android:id="@+id/diet_list_food"

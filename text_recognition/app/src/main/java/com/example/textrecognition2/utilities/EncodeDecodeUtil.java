@@ -7,8 +7,14 @@ import com.example.textrecognition2.domain.Plate;
 
 import java.util.ArrayList;
 
+/**
+ * <h1>Clase auxiliar para la codificacion/decodificacion de ingredientes y platos</h1>
+ */
 public final class EncodeDecodeUtil {
 
+    /**
+     * Atributos privados
+     */
     private static final String DEC_SPLIT_ING_ITEM = "\\*{3}";
     private static final String DEC_SPLIT_ING = "\\_{3}";
     private static final String DEC_SPLIT_PLT = "\\-{3}";
@@ -17,6 +23,11 @@ public final class EncodeDecodeUtil {
     private static final String SPLIT_ING = "___";
     private static final String SPLIT_PLT = "---";
 
+    /**
+     * Convierte una lista de ingredientes en un String
+     * @param ingredients Lista de ingredientes
+     * @return String con la informacion de los ingredientes
+     */
     public static StringBuilder encodeIngredients(final ArrayList<IngrCant> ingredients){
         StringBuilder stringBuilder = new StringBuilder();
         for(IngrCant ingredient : ingredients){
@@ -25,6 +36,11 @@ public final class EncodeDecodeUtil {
         return stringBuilder.delete(stringBuilder.length() - SPLIT_ING.length(), stringBuilder.length());
     }
 
+    /**
+     * Convierte un StringBuilder en la lista de ingredientes
+     * @param stringBuilder Informacion de los ingredientes
+     * @return Lista de ingredientes
+     */
     public static ArrayList<IngrCant> decodeIngredients(final StringBuilder stringBuilder){
         ArrayList<IngrCant> arrayList = new ArrayList<>();
         String[] ingredients = stringBuilder.toString().split(DEC_SPLIT_ING);
@@ -41,6 +57,11 @@ public final class EncodeDecodeUtil {
         return arrayList;
     }
 
+    /**
+     * Convierte una lista de platos en un String
+     * @param plates Lista de platos
+     * @return String con la informacion de los platos
+     */
     public static String encodePlates(final ArrayList<Plate> plates){
         StringBuilder stringBuilder = new StringBuilder();
         for(Plate plate : plates){
@@ -50,6 +71,11 @@ public final class EncodeDecodeUtil {
         return stringBuilder.toString();
     }
 
+    /**
+     * Convierte un String en la lista de platos
+     * @param string Informacion de los platos
+     * @return Lista de platos
+     */
     public static ArrayList<Plate> decodePlates(final String string){
         ArrayList<Plate> arrayList = new ArrayList<>();
         String[] plates = string.split(DEC_SPLIT_PLT);

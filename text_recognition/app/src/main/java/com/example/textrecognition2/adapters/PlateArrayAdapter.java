@@ -21,12 +21,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * <h1>Clase que configura una lista de platos en una vista</h1>
+ */
 public class PlateArrayAdapter extends ArrayAdapter<Plate> {
 
+    /**
+     * Atributos privados
+     */
     private Context context;
     private List<Plate> plates;
 
-    //constructor, call on creation
+    /**
+     * Constructor de clase
+     * @param context Contexto de la aplicacion
+     * @param resource Identificador unico
+     * @param objects Lista de platos
+     */
     public PlateArrayAdapter(Context context, int resource, ArrayList<Plate> objects) {
         super(context, resource, objects);
 
@@ -34,7 +45,13 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
         this.plates = objects;
     }
 
-    //called when rendering the list
+    /**
+     * Devuelve una vista del adapter (un plato)
+     * @param position Posicion del elemento a devolver
+     * @param convertView Vista seleccionada
+     * @param parent Vista superior
+     * @return Vista seleccionada
+     */
     public View getView(int position, View convertView, ViewGroup parent) {
         //get the property we are displaying
         Plate plate = plates.get(position);

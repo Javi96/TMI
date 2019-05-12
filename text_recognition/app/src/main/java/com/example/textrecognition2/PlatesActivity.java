@@ -1,16 +1,12 @@
 package com.example.textrecognition2;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
@@ -18,28 +14,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.example.textrecognition2.DietActivity;
-import com.example.textrecognition2.EditPlateActivity;
-import com.example.textrecognition2.MenuActivity;
-import com.example.textrecognition2.R;
 import com.example.textrecognition2.adapters.PlateArrayAdapter;
 import com.example.textrecognition2.domain.FoodRepository;
-import com.example.textrecognition2.domain.IngrCant;
 import com.example.textrecognition2.domain.Plate;
 import com.example.textrecognition2.utilities.EncodeDecodeUtil;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
+/**
+ * <h1>Esta actividad muestra la informacion de los platos reconocidos por el reconocedor de textp</h1>
+ */
 public class PlatesActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ListView listView;
-    private FloatingActionButton floatingActionButton;
-
+    /**
+     * Atributos privados
+     */
     private ArrayAdapter<Plate> arrayAdapter;
 
     private ArrayList<String> arrayList;
@@ -51,36 +39,29 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plate);
 
-        listView = findViewById(R.id.diet_list_food);
-        floatingActionButton = findViewById(R.id.act_plates_float_btn);
+        ListView listView = findViewById(R.id.diet_list_food);
+        FloatingActionButton floatingActionButton = findViewById(R.id.act_plates_float_btn);
 
         plates = new ArrayList<>();
 
+        // tomamos los datos enviados de la anterior vista (los platos)
         Intent intent = getIntent();
         String message = intent.getStringExtra("food");
-
         String[] parts = message.split("\n");
 
+        /*
+        Accedemos al almacenamiento interno y comprobamos si ya tenemos esos platos escaneados
+        en la base de datos. De ser asi no es necesario usar las APIs externas
+         */
         SharedPreferences sp = getSharedPreferences("menus", Context.MODE_PRIVATE);
 
-        /*
-        ****************************************************************
-        Map<String , String > mapa = (Map<String , String >) sp.getAll();
-        for( Map.Entry<String, String> act : mapa.entrySet() ) {
-            act.getKey();
-            act.getValue();
-        ****************************************************************
-        }
-         */
-
-        if( sp.getBoolean("TestPlatesFirstCall", false) ) {
+        if( sp.getBoolean("PlatesFirstCall", false) ) {
             StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
             FoodRepository fr = new FoodRepository(this.getApplication());
 
             for (String part : parts) {
-                //plates.add(new Plate("Plate " + i, ingredients));
                 Plate aux = fr.getPlate(part);
                 if (aux != null)
                     plates.add(aux);
@@ -89,22 +70,20 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
             StrictMode.setThreadPolicy(old);
 
             SharedPreferences.Editor editor = sp.edit();
-            editor.putBoolean("TestPlatesFirstCall", false);
+            editor.putBoolean("PlatesFirstCall", false);
             editor.apply();
 
             Log.v("info", message);
         }
 
-
+        /*
+        Configuramos el ArrayAdapter y añadimos los comportamientos oportunos a cada elemento
+        contenido en el
+         */
         arrayAdapter = new PlateArrayAdapter
                 (this, android.R.layout.simple_list_item_1, plates);
         arrayAdapter.setNotifyOnChange(true);
 
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
-                Toast.makeText(getApplicationContext(), (String) listView.getItemAtPosition(pos) , Toast.LENGTH_LONG).show();
-            }
-        });*/
 
         listView.setAdapter(arrayAdapter);
         listView.setOnDragListener(new View.OnDragListener() {
@@ -129,30 +108,10 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                 Plate actual = plates.get(position);
-                //plates.remove(position);
-                //arrayAdapter.notifyDataSetChanged();
-                //Toast.makeText(getApplicationContext(), "sort : " + plate.toString(), Toast.LENGTH_LONG).show();
-
-                /*
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-
-                Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
-                intent.putExtra("plate", plate.toString());
-                intent.putExtra("pos", String.valueOf(position));
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-                */
                 Intent intent = new Intent(getApplicationContext(), EditPlateActivity.class);
 
-                /*StringBuilder stringBuilder = new StringBuilder();
-
-                for(Plate plate: plates){
-                    stringBuilder.append(plate.toString() + "-");
-                }
-                */
-                //intent.putExtra("plates", stringBuilder.toString());
                 intent.putExtra("plates", EncodeDecodeUtil.encodePlates(plates));
 
-                //intent.putExtra("plate", actual.toString());
                 ArrayList<Plate> aux = new ArrayList<Plate>();
                 aux.add(actual);
                 intent.putExtra("plate", EncodeDecodeUtil.encodePlates(aux));
@@ -175,17 +134,9 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.act_plates_float_btn:
-                //Toast.makeText(getApplicationContext(), "Guardar platos para el menu", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
 
-                /*StringBuilder stringBuilder = new StringBuilder();
-
-                for(Plate plate: plates){
-                    stringBuilder.append(plate.toString() + "-");
-                }
-                */
-                //intent.putExtra("plates", stringBuilder.toString());
                 intent.putExtra("plates", EncodeDecodeUtil.encodePlates(plates));
                 startActivityForResult(intent, 2);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
@@ -203,7 +154,6 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
 
         if( requestCode == 1){
 
-            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
             if(resultCode == RESULT_OK) {
 
                 ArrayList<Plate> platos = EncodeDecodeUtil.decodePlates(data.getStringExtra("plates"));
@@ -215,79 +165,13 @@ public class PlatesActivity extends AppCompatActivity implements View.OnClickLis
                 plates.addAll(platos);
                 arrayAdapter.notifyDataSetChanged();
 
-                /*
-                String text = data.getStringExtra("plates");
-                String plato = data.getStringExtra("plate");
-                int pos = Integer.parseInt(data.getStringExtra("pos"));
-                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
-
-                plates.clear();
-                arrayAdapter.notifyDataSetChanged();
-                String[] platos = text.split("-");
-
-                for(int i=0; i<platos.length; i++){
-                    String[] ingredients;
-                    if(i == pos){
-                        ingredients = plato.split("_");
-                    }
-                    else {
-                        ingredients = platos[i].split("_");
-                    }
-                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
-                    for(int j=1; j<ingredients.length; j+=3) {
-                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
-                    }
-                    plates.add(new Plate(ingredients[0], ingredientsPlate));
-                    arrayAdapter.notifyDataSetChanged();
-
-                }
-                */
-
-                /*for(int i=0; i<9; i++){
-                    ArrayList<String> d = new ArrayList<String>();
-                    d.add("hola");
-                    d.add("como");
-                    plates.add(new Plate("Plate " + i, d));
-                    arrayAdapter.notifyDataSetChanged();
-                }*/
-
-
             }
         }else if(requestCode==2){
 
-            //Toast.makeText(getApplicationContext(), resultCode , Toast.LENGTH_LONG).show();
             if(resultCode == RESULT_OK) {
 
                 plates.addAll(EncodeDecodeUtil.decodePlates(data.getStringExtra("plates")));
                 arrayAdapter.notifyDataSetChanged();
-
-                /*
-                String text = data.getStringExtra("plates");
-                Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
-                plates.clear();
-                arrayAdapter.notifyDataSetChanged();
-                String[] platos = text.split("-");
-
-                for(int i=0; i<platos.length; i++){
-                    String[] ingredients;
-                    ingredients = platos[i].split("_");
-                    ArrayList<IngrCant> ingredientsPlate = new ArrayList<>();
-                    for(int j=1; j<ingredients.length; j+=3) {
-                        ingredientsPlate.add(new IngrCant(ingredients[j],Integer.parseInt(ingredients[j+1]),ingredients[j+2]));
-                    }
-                    plates.add(new Plate(ingredients[0], ingredientsPlate));
-                    arrayAdapter.notifyDataSetChanged();
-
-                }
-                */
-
-                /*for(int i=0; i<9; i++){
-                    ArrayList<String> d = new ArrayList<String>();
-                    d.add("hola");
-                    d.add("como");
-                    plates.add(new Plate("Plate " + i, d));
-                    arrayAdapter.notifyDataSetChanged();
-                }*/
 
 
             }

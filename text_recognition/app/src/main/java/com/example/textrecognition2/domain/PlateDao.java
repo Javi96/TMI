@@ -1,6 +1,5 @@
 package com.example.textrecognition2.domain;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -10,6 +9,9 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
+/**
+ * <h1>Interfaz que vinculará la Base de Datos de Room con el objeto Plate correspondiente</h1>
+ */
 @Dao
 public interface PlateDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -23,6 +25,9 @@ public interface PlateDao {
 
     @Query("DELETE FROM plates_table")
     int deleteAll();
+
+    @Transaction @Query("UPDATE plates_table SET nombre = :name WHERE id = :id")
+    long update(long id, String name);
 
     @Query("SELECT id FROM plates_table WHERE nombre LIKE :name ")
     long getIdByName(String name);

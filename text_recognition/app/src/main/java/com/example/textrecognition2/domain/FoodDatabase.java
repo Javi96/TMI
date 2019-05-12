@@ -7,11 +7,12 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <h1>Definición de la Base de Datos mediante Room</h1>
+ */
 @Database(entities = {Ingredient.class, Plate.class, IngredientesPlatos.class}, version = 1 , exportSchema = false)
 public abstract class FoodDatabase extends RoomDatabase {
 
@@ -23,6 +24,9 @@ public abstract class FoodDatabase extends RoomDatabase {
 
     private static FoodDatabase DATABASE;
 
+    /**
+     * Mediante variables estáticas se garantiza un el modelo Singleton de definición única de Base de Datos
+     */
     public static FoodDatabase getDatabase(final Context context) {
         if (DATABASE == null)
             synchronized (FoodDatabase.class) {
@@ -59,16 +63,16 @@ public abstract class FoodDatabase extends RoomDatabase {
                     ingredientDao.deleteAll();
                     plateDao.deleteAll();
                     ingrPlatDao.deleteAll();
-                    long i1 = ingredientDao.insert(new Ingredient("leche", "ml"));
-                    long i2 = ingredientDao.insert(new Ingredient("huevo", "units"));
-                    Log.e("Mensaje de prueba", "Esto es un mensaje de prueba");
-                    Log.e("IDs inserciones", "El id de leche es " + i1 + " y el de huevo es " + i2);
+                    long i1 = ingredientDao.insert(new Ingredient("milk", "ml"));
+                    long i2 = ingredientDao.insert(new Ingredient("egg", "units"));
+                    //Log.e("Mensaje de prueba", "Esto es un mensaje de prueba");
+                    //Log.e("IDs inserciones", "El id de leche es " + i1 + " y el de huevo es " + i2);
                     long i3 = plateDao.insert(new Plate("flan"));
-                    Log.e("ID plato", "El id de flan es " + i3);
-                    ingrPlatDao.insert(new IngredientesPlatos( i1, i3, 6));
-                    ingrPlatDao.insert(new IngredientesPlatos(i2, i3, 500));
+                    //Log.e("ID plato", "El id de flan es " + i3);
+                    ingrPlatDao.insert(new IngredientesPlatos( i1, i3, 500));
+                    ingrPlatDao.insert(new IngredientesPlatos(i2, i3, 6));
                     List<IngrCant> resul = ingrPlatDao.getRecipeForPlate(i3);
-                    Log.e("Ingredientes", "El flan lleva: " + resul.get(0).getNombre() + " + " + resul.get(1).getNombre());
+                    //Log.e("Ingredientes", "El flan lleva: " + resul.get(0).getNombre() + " + " + resul.get(1).getNombre());
                 //}
             //});
             return null;

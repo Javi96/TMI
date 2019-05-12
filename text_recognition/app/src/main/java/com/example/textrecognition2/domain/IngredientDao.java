@@ -1,6 +1,5 @@
 package com.example.textrecognition2.domain;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -10,6 +9,9 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
+/**
+ * <h1>Interfaz que vinculará la Base de Datos de Room con el objeto Ingredient asociado</h1>
+ */
 @Dao
 public interface IngredientDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -23,6 +25,9 @@ public interface IngredientDao {
 
     @Query("DELETE FROM ingredients_table")
     int deleteAll();
+
+    @Transaction @Query("UPDATE ingredients_table SET unidades = :units WHERE id = :id")
+    long update(long id, String units);
 
     @Query("SELECT id FROM ingredients_table WHERE nombre LIKE :name LIMIT 1")
     long getIdByName(String name);

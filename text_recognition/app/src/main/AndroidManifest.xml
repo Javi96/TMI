@@ -4,8 +4,8 @@
     package="com.example.textrecognition2">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -17,12 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ImageRecognitionActivity"
-            android:label="@string/title_activity_image_recognition"
+            android:name=".InventoryActivity"
+            android:label="@string/title_activity_inventory"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".LogoActivity"
-            android:label="@string/title_activity_logo"
+            android:name=".ImageRecognitionActivity"
+            android:label="@string/title_activity_image_recognition"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EditPlateActivity"
@@ -35,10 +35,6 @@
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".IngredientsActivity"
-            android:label="@string/title_activity_ingredients"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DietScheduleActivity"
@@ -57,10 +53,6 @@
             android:label="@string/title_activity_shop_cart"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TextRazorActivity"
-            android:label="@string/title_activity_text_razor"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
@@ -70,10 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DandelionActivity"
-            android:label="@string/title_activity_dandelion"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OldPlatesActivity"
             android:label="@string/title_activity_diet"
@@ -90,7 +78,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
     </application>
 

@@ -1,42 +1,29 @@
 package com.example.textrecognition2;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.textrecognition2.adapters.IngredientArrayAdapter;
-import com.example.textrecognition2.adapters.PlateArrayAdapter;
 import com.example.textrecognition2.domain.Ingredient;
-import com.example.textrecognition2.domain.Plate;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class IngredientsActivity extends AppCompatActivity {
 
     private ListView listView;
-
-    private ArrayAdapter<Ingredient> arrayAdapter;
-
-    private ArrayList<String> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients);
 
-        final TextView textView1 = (TextView) findViewById(R.id.cmp_tile_title);
+        TextView textView1 = findViewById(R.id.cmp_tile_title);
         textView1.setText("Shopping\ncart");
 
         listView = findViewById(R.id.ingredient_list);
