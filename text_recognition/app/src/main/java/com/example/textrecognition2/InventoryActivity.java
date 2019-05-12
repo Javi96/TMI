@@ -32,22 +32,29 @@ import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
 
+/**
+ * <h1>Actividad que muestra el inventario del usuario</h1>
+ * Muestra los ingredientes en el inventario y ademas permite modificar
+ * tanto su cantidad como sus unidades
+ */
 public class InventoryActivity extends AppCompatActivity implements View.OnClickListener{
 
+    /**
+     * Atributos privados
+     */
     LinearLayout layout;
-
     Button btn_edit_plate;
     Button btn_add_ingr;
 
-    /*private String message;
 
-    private String todos_platos;
-
-    private String position;*/
-
-    //HashSet<String> erasedIngr = new HashSet<String>();
-
+    /**
+     * Genrea un LinearLayout configurado
+     */
     private class HorLay extends LinearLayout{
+        /**
+         * Constructor de clase
+         * @param context Contexto de la app
+         */
         public HorLay(Context context) {
             super(context);
             super.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
@@ -55,12 +62,17 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
+    /**
+     * Genera un EditText configurado para un ingrediente
+     * @param context Contexto de la app
+     * @param auxLay Layout padre del componente generado
+     * @return EditText configurado
+     */
     private EditText IngrText(Context context, final LinearLayout auxLay){
         EditText resul = new EditText(context);
         resul.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //erasedIngr.add( ((EditText)auxLay.getChildAt(0)).getText().toString() );
                 layout.removeView(auxLay);
                 return true;
             }
@@ -78,30 +90,16 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
         btn_add_ingr = findViewById(R.id.act_edit_plate_add_ingr);
 
         /*
-        Intent intent = getIntent();
-        message = intent.getStringExtra("plate");
-        todos_platos = intent.getStringExtra("plates");
-        position = intent.getStringExtra("pos");
-        */
-
+        * Instancia los componentes de la vista*/
         LinearLayout myRoot = (LinearLayout) findViewById(R.id.act_inventory_layout1);
         myRoot.setPadding(64,16,64,16);
         layout =  findViewById(R.id.act_edit_plate_sub_layout);
 
-        //layout.setPadding(16,16,16,16);
-
-        //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
 
         /*
-        String info = "plato1___nombre1***unidad1***1___nombre2***unidad2***2___nombre3***unidad3***3---plato2___nombre4***unidad4***4___nombre5***unidad5***5___nombre6***unidad6***6";
-        Plate plato = EncodeDecodeUtil.decodePlates(info).get(0);
-        Toast.makeText(getApplicationContext(), "Has seleccionado: " + plato.toString(), Toast.LENGTH_LONG).show();
-        */
-
+        * Cargamos datos del almacenamiento interno y conusultamos a la BD*/
         SharedPreferences inventory = getSharedPreferences("inventory", Context.MODE_PRIVATE);
-
         ArrayList<IngrCant> ingredientes = new ArrayList<IngrCant>();
-
         StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
 
@@ -119,15 +117,9 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
 
         StrictMode.setThreadPolicy(old);
 
-        //final LinearLayout nombrLay = findViewById(R.id.act_edit_plate_sub_horz);
         /*
-        final EditText editText = PlateText(getApplicationContext());
-        editText.setText(plato.getName());
-
-        layout.addView(editText);
-        */
-
-        //for(IngrCant ing : plato.getIngredients()){
+        * Añade a la vista la informacion de los platos
+        * */
         for(IngrCant ing : ingredientes){
             final LinearLayout auxLay = new InventoryActivity.HorLay(this);
             final EditText nombre = IngrText(getApplicationContext(), auxLay);
@@ -199,18 +191,6 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
 
                 edit.apply();
 
-                /*
-                final StringBuilder stringBuilder = new StringBuilder();
-
-                int count = layout.getChildCount();
-                EditText edt = null;
-                for(int i=0; i<count; i++) {
-                    edt =  (EditText) layout.getChildAt(i);
-
-                    stringBuilder.append( edt.getText().toString().replace(' ', '_') + "_");
-                }
-                */
-
                 final RoundButton btn = findViewById(R.id.btn_edit_plate);
 
                 btn.startAnimation();
@@ -229,12 +209,6 @@ public class InventoryActivity extends AppCompatActivity implements View.OnClick
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-
-                        /*Intent intent = new Intent();
-                        intent.putExtra("plate", EncodeDecodeUtil.encodePlates(resul));
-                        intent.putExtra("pos", String.valueOf(position));
-                        intent.putExtra("plates", todos_platos);
-                        setResult(RESULT_OK, intent);*/
 
                         finish();
 

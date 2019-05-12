@@ -25,15 +25,22 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
 
+/**
+ * <h1>Se encarga del reconocimiento de texto</h1>
+ * Son necesarios permisos para la camara. Devuelve una
+ * lista con el texto reconocido separado por salto de
+ * linea
+ */
 public class TextRecognitionActivity extends AppCompatActivity{
 
+    /**
+     * Parametros privados
+     */
     SurfaceView cameraView;
     TextView textView;
-
-
     CameraSource cameraSource;
     final int RequestCameraPermissionID = 1001;
-    private final static int REQUEST_CODE_1 = 1;
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -60,13 +67,6 @@ public class TextRecognitionActivity extends AppCompatActivity{
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //set content view AFTER ABOVE sequence (to avoid crash)
-        try
-        {
-            //this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){e.printStackTrace();}
-
         setContentView(R.layout.activity_text_recognition);
 
         cameraView = (SurfaceView) findViewById(R.id.camera_input);
@@ -90,7 +90,7 @@ public class TextRecognitionActivity extends AppCompatActivity{
             }
         });
 
-
+        // Tokeniza el texto y lo muestra por pantalla
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
         if (!textRecognizer.isOperational()) {
             Log.w("MainActivity", "Detector dependencies are not yet available");

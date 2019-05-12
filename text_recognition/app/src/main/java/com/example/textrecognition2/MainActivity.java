@@ -33,6 +33,10 @@ import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
+/**
+ * <h1>Actividad principal de la aplicacion</h1>
+ * Muestra un menu con todas las funcionalidades de la app
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -40,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        * Cargamos el almacenamiento interno para ver si es necesario mostrar
+        * algun mensaje al usuario
+        * */
         SharedPreferences prefs =
                 getSharedPreferences("menus", Context.MODE_PRIVATE);
 
@@ -54,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
+        /*
+        * Configuramos la base de datos asi como las vistas de la aplicacion
+        * */
         FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
         db.inTransaction();
 
@@ -66,6 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cv_pantry_cart.setOnClickListener(this);
 
 
+        /*
+        * Configuramos dos animaicones
+        * */
         Animation fadeIn = new AlphaAnimation(0, 1);
         fadeIn.setInterpolator(new DecelerateInterpolator()); //add this
         fadeIn.setDuration(1000);

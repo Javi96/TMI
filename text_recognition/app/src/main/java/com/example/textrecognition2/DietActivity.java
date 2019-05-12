@@ -20,9 +20,15 @@ import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
+/**
+ * <h1>Actividad intermediaria entre la dieta y el reconocimiento de texto</h1>
+ */
 public class DietActivity extends AppCompatActivity implements View.OnClickListener{
 
 
+    /**
+     * Atributos privados
+     */
     CardView see_diet;
     CardView scan_diet;
 
@@ -41,23 +47,6 @@ public class DietActivity extends AppCompatActivity implements View.OnClickListe
         title.setText("Diet");
         see_diet.setOnClickListener(this);
         scan_diet.setOnClickListener(this);
-
-        /*
-        FoodRepository fr = new FoodRepository(this.getApplication());
-        if ( fr.getPlate("flan") != null)
-            Toast.makeText(getApplicationContext(), "Plato : " + fr.getPlate("flan").toString(), Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
-        //*/
-
-        /*
-        FoodDatabase db = FoodDatabase.getDatabase(this.getApplicationContext());
-        if ( db.plateDao().findByName("flan") != null)
-            Toast.makeText(getApplicationContext(), "Plato : " + db.plateDao().findByName("flan").toString(), Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(getApplicationContext(), "Fuck no estaba el flan" , Toast.LENGTH_LONG).show();
-        //*/
-
 
     }
 

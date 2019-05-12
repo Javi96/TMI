@@ -13,15 +13,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+/**
+ * <h1>Esta clase se encarga de procesar las querys usadas en el reconocimiento de texto</h1>
+ * Proporciona varios metodos para convertir un String a una URL y para desglosar
+ * la respuesta HTTP a un formato comodo
+ */
 public final class QueryUtils {
 
     public static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
-    /**
-     * Create a private constructor because no one should ever create a {@link QueryUtils} object.
-     * This class is only meant to hold static variables and methods, which can be accessed
-     * directly from the class name QueryUtils (and an object instance of QueryUtils is not needed).
-     */
     private QueryUtils() {
     }
 
@@ -46,7 +46,7 @@ public final class QueryUtils {
     }
 
     /**
-     * Returns new URL object from the given string URL.
+     * Devuelve una nueva URL del String proporcionado con la informacion de la URL
      */
     private static URL createUrl(String stringUrl) {
         URL url = null;
@@ -59,7 +59,7 @@ public final class QueryUtils {
     }
 
     /**
-     * Make an HTTP request to the given URL and return a String as the response.
+     * Hace una peticion HTTP a la URL dada y devuelve in String como respuesta
      */
     public static String makeHttpRequest(URL url) throws java.io.IOException {
         String jsonResponse = "";
@@ -100,8 +100,7 @@ public final class QueryUtils {
     }
 
     /**
-     * Convert the {@link InputStream} into a String which contains the
-     * whole JSON response from the server.
+     * Convierte el input en un String que contiene el JSON al completo de la respuesta del servidor
      */
     private static String readFromStream(InputStream inputStream) throws java.io.IOException {
         StringBuilder output = new StringBuilder();
@@ -117,6 +116,11 @@ public final class QueryUtils {
         return output.toString();
     }
 
+    /**
+     * Extrae las entidades de la respuesta del servidor
+     * @param jsonResponse Strign con la respuesta del servidor
+     * @return lista de String con la informacion relevante de la respuesta
+     */
     public static ArrayList<String> extractEntities(String jsonResponse) {
 
         // Create an empty ArrayList that we can start adding earthquakes to

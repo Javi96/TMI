@@ -37,10 +37,6 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".IngredientsActivity"
-            android:label="@string/title_activity_ingredients"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".DietScheduleActivity"
             android:label="@string/title_activity_diet_schedule"
             android:theme="@style/AppTheme.NoActionBar" />

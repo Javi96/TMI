@@ -29,8 +29,14 @@ import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
+/**
+ * <h1>Actividad que permite editar los elementos de un plato</h1>
+ */
 public class EditPlateActivity extends AppCompatActivity implements View.OnClickListener{
 
+    /**
+     * Atributos de clase
+     */
     LinearLayout layout;
 
     Button btn_edit_plate;
@@ -42,6 +48,9 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
     private String position;
 
+    /**
+     * Clase interna que configura un LinearLayout
+     */
     private class HorLay extends LinearLayout{
 
         private final LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
@@ -53,6 +62,11 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
+    /**
+     * Genera un EditText configurado para los platos
+     * @param context Contexto de la aplicacion
+     * @return Devuelve un EditText configurado
+     */
     private EditText PlateText(Context context){
         EditText resul = new EditText(context);
         resul.setOnLongClickListener(new View.OnLongClickListener() {
@@ -68,6 +82,12 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         return resul;
     }
 
+    /**
+     * Genera un EditText configurado para los ingredientes
+     * @param context Contexto de la aplicacion
+     * @param auxLay Layout padre del componente
+     * @return Devuelve un EditText configurado
+     */
     private EditText IngrText(Context context, final LinearLayout auxLay){
         EditText resul = new EditText(context);
         resul.setOnLongClickListener(new View.OnLongClickListener() {
@@ -88,25 +108,23 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_plate);
 
+        // configuramos los atributos internos
         btn_edit_plate = findViewById(R.id.btn_edit_plate);
         btn_add_ingr = findViewById(R.id.act_edit_plate_add_ingr);
 
+        // cargamos los datos de la actividad anterior
         Intent intent = getIntent();
         message = intent.getStringExtra("plate");
         todos_platos = intent.getStringExtra("plates");
         position = intent.getStringExtra("pos");
 
+        // configuramos el layout interno con los platos y los ingredientes de forma dinamica
         LinearLayout myRoot = (LinearLayout) findViewById(R.id.act_edit_plate_layout1);
         myRoot.setPadding(64,16,64,16);
         layout =  findViewById(R.id.act_edit_plate_sub_layout);
 
-        //layout.setPadding(16,16,16,16);
-
-        //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
-
         Plate plato = EncodeDecodeUtil.decodePlates(message).get(0);
 
-        //final LinearLayout nombrLay = findViewById(R.id.act_edit_plate_sub_horz);
         final EditText editText = PlateText(getApplicationContext());
         editText.setText(plato.getName());
 
@@ -185,18 +203,6 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
                 final ArrayList<Plate> resul = new ArrayList<Plate>();
                 resul.add( new Plate(nombrePlato, ingredientes) );
 
-                /*
-                final StringBuilder stringBuilder = new StringBuilder();
-
-                int count = layout.getChildCount();
-                EditText edt = null;
-                for(int i=0; i<count; i++) {
-                    edt =  (EditText) layout.getChildAt(i);
-
-                    stringBuilder.append( edt.getText().toString().replace(' ', '_') + "_");
-                }
-                */
-
                 final RoundButton btn = findViewById(R.id.btn_edit_plate);
 
                 btn.startAnimation();
@@ -226,7 +232,6 @@ public class EditPlateActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
 
         Intent intent = new Intent();
         intent.putExtra("plate", message);

@@ -42,10 +42,17 @@ import java.util.regex.Pattern;
 
 import es.dmoral.toasty.Toasty;
 
+/**
+ * <h1>Actividad que muestra la configuracion del menu</h1>
+ * Permite al usuario configurar el menu de cada dia. Para ello
+ * cuenta con un Spinner para seleccionar el dia de la semana asi
+ * como un TextView con la informacion del menu de ese dia
+ */
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView textView;
-
+    /**
+     * Atributos privados
+     */
     private TextView button3;
 
     private LinearLayout layout;
@@ -56,6 +63,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private RoundButton floatingActionButton;
 
+    /**
+     * Genere un componente TextView autoconfigurado para un plato
+     * @param context Contexto de la aplicacion
+     * @return Devuelve un objeto TextView ya configurado
+     */
     private static TextView PlateText(Context context){
         TextView resul = new TextView(context);
         resul.setTextSize(24);
@@ -64,6 +76,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         return resul;
     }
 
+    /**
+     * Genere un componente TextView autoconfigurado para un ingrediente
+     * @param context Contexto de la aplicacion
+     * @return Devuelve un objeto TextView ya configurado
+     */
     private static TextView IngrText(Context context){
         TextView resul = new TextView(context);
         resul.setTextSize(20);
@@ -77,8 +94,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        // decodificamos los platos
         plates = EncodeDecodeUtil.decodePlates(getIntent().getStringExtra("plates").toLowerCase());
 
+        /*
+        * Configuramos los atributos privados
+        */
         TextView textView = findViewById(R.id.cmp_sub_title1);
         button3 = findViewById(R.id.cmp_sub_title2);
         textView.setText("Day:");
@@ -93,10 +114,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
 
         layout =  findViewById(R.id.act_menu_sub_layout);
-
-        //layout.setPadding(16,16,16,16);
-
-        //Toast.makeText(getApplicationContext(), "Has seleccionado: " + message, Toast.LENGTH_LONG).show();
+        /*
+        * Generamos el layout de forma dinamica con la informacion de los platos
+        * */
         for(Plate plate : plates){
             TextView editText = PlateText(getApplicationContext());
             editText.setText(plate.getName());
@@ -109,37 +129,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         /*
-        for(String plate: data) {
-            String[] items = plate.split("_");
-            int len = items.length;
-            for (int i = 0; i < len; i++) {
-                TextView editText = new TextView(getApplicationContext());
-                editText.setText(items[i]);
-                if (i == 0) {
-                    editText.setTextSize(24);
-                    Typeface font = Typeface.createFromAsset(getAssets(), "ultra.ttf");
-                    editText.setTypeface(font);
-                    editText.setTextColor(getResources().getColor(R.color.colorBlack));
-                } else {
-                    editText.setTextSize(20);
-                    Typeface font = Typeface.createFromAsset(getAssets(), "lato_bold.ttf");
-                    editText.setTypeface(font);
-                    editText.setTextColor(getResources().getColor(R.color.colorBlue));
-                }
-                layout.addView(editText);
-            }
-        }
-        */
-
-
-
-
-
+        * Configuramos el comportamiento del spinner
+        * */
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //textView.setText(parent.getItemAtPosition(position).toString());
-                //button3.setText("Estos son los platos para el " + parent.getItemAtPosition(position).toString());
                 day = parent.getItemAtPosition(position).toString();
             }
 
@@ -171,41 +165,29 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.act_menu_confirm:
+                // cargamos el almacenamiento interno
                 SharedPreferences prefs =
                         getSharedPreferences("menus", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
 
+                // ejecutamos sobre un hilo en parelelo las peticiones a la DB
                 StrictMode.ThreadPolicy old = StrictMode.getThreadPolicy();
                 StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitAll().build());
-
                 new FoodRepository(this.getApplication()).insertPlates(plates);
-
                 StrictMode.setThreadPolicy(old);
 
+                // compactamos la informacion de los platos y la guardamos en el alm interno
                 StringBuilder sb = new StringBuilder();
                 for( Plate plate : plates)
                     sb.append(plate.getName() + '_');
 
                 sb.deleteCharAt(sb.length()-1);
-
-                /*
-                for( String str : this.plates.split("-")){
-                    String[] ingr = str.split("_");
-                    sb.append(ingr[0]+ '_');
-                }
-                */
-
-
-
-
                 editor.putString(this.day, sb.toString());
-
                 editor.putString("return", "MenuActivity");
-
                 editor.apply();
 
 
-
+                // configuramos las animaciones de los botones
                 floatingActionButton.startAnimation();
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -221,11 +203,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
                     }
                 }, 2000);
-
-
-
-
-
         }
     }
 }
